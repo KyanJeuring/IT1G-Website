@@ -6,3 +6,10 @@
     --companyOrange: #f15b39;
     --companyYellow: #fecd3e;
 }
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
