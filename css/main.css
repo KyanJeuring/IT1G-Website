@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'NexaBold';
+    src: url('resources/fonts/Nexa-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'NexaLight';
+    src: url('resources/fonts/Nexa-Light.otf') format('opentype');
+}
+
 :root
 {
     --companyBlue: #1e407a;
@@ -12,4 +22,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body
+{
+    font-family: NexaLight;
 }
