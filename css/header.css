@@ -1,0 +1,24 @@
+#header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 86px;
+    padding: 1.25rem;
+}
+
+#header .section
+{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    gap: 2rem;
+}
+
+#header button
+{
+    all: unset;
+    font-size: 1.25rem;
+    width: fit-content;
+    height: 100%;
+}
