@@ -12,6 +12,10 @@ export function loadToContentContainer(content)
 export function setupButtonListeners()
 {
     document.getElementById("logoButton").onclick = function() { loadToContentContainer("content/landingPage.php"); };
+    document.getElementById("aboutButton").onclick = function() { loadToContentContainer("content/aboutPage.php"); };
+    document.getElementById("shopButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
+    document.getElementById("menButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
+    document.getElementById("womenButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
 
     console.log("Buttons loaded successfully");
 }
