@@ -33,10 +33,28 @@
     </div>
     <div id="content"></div>
     <footer>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section>
+            <img src="./resources/Logo's/png/sunny_logos-01.png" alt="Sunny Socks Logo" id="footerLogo">
+            <div class="socials">
+                <a href="#"><img src="./resources/icons/socialMedia/xLogo.svg" alt="X"></a>
+                <a href="#"><img src="" alt="Instagram"></a>
+                <a href="#"><img src="" alt="Facebook"></a>
+                <a href="#"><img src="" alt="LinkedIn"></a>
+            </div>
+            <p>Making the world more sustainable, one sock at a time</p>
+        </section>
+        <section>
+            <h2>Products</h2>
+        </section>
+        <section>
+            <h2>Buying</h2>
+        </section>
+        <section>
+            <h2>Social</h2>
+        </section>
+        <section>
+            <h2>Pages</h2>
+        </section>
     </footer>
 </body>
 </html>

@@ -1,0 +1,57 @@
+footer
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    background-color: var(--companyBlue);
+    justify-content: space-between;
+}
+
+footer > section
+{
+    margin-top: 2%;
+    margin-bottom: 0.4%;
+    width: 20%;
+    overflow-wrap: break-word;
+    color: white;
+    padding: 3%;
+    padding-bottom: 1%;
+}
+
+#footerLogo
+{
+    padding: 2%;
+    height: auto;
+    width: 60%;
+}
+
+.socials
+{
+    padding: 2%;
+}
+
+@media (max-width: 48em) 
+{
+    footer
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        background-color: var(--companyBlue);
+    }
+    footer > section
+    {
+        margin: 0%;
+        width: 100%;
+        overflow-wrap: break-word;
+        color: white;
+        padding: 3%;
+    }
+}
