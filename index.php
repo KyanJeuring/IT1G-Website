@@ -18,16 +18,16 @@
             </button>
         </div>
         <div class="section center">    
-            <button type="button">ABOUT</button>
-            <button type="button">MEN</button>
-            <button type="button">WOMEN</button>
-            <button type="button">SHOP</button>
-            <button type="button">CONTACT</button>
+            <button id="aboutButton" type="button">ABOUT</button>
+            <button id="menButton" type="button">MEN</button>
+            <button id="womenButton" type="button">WOMEN</button>
+            <button id="shopButton" type="button">SHOP</button>
+            <button id="contactButton" type="button">CONTACT</button>
         </div>
         <div class="section right">
-            <button><img src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
-            <button><img src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-            <button><img src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+            <button id="searchButton"><img src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
+            <button id="shoppingCartButton"><img src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
+            <button id="userButton"><img src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
         </div>
     </div>
     <div id="content"></div>
