@@ -68,7 +68,7 @@ footer a
     margin: 3%;
 }
 
-@media (min-width: 768px) 
+@media (max-width: 768px) 
 {
     footer
     {
