@@ -17,12 +17,12 @@
         </div>
         <footer>
             <section>
-                <img src="./resources/Logo's/png/sunny_logos-01.png" alt="Sunny Socks Logo" id="footerLogo">
+                <img src="../resources/Logo's/png/sunny_logos-01.png" alt="Sunny Socks Logo" id="footerLogo">
                 <div class="socials">
-                    <a href="#"><img src="./resources/icons/socialMedia/xLogo.svg" alt="X"></a>
-                    <a href="#"><img src="./resources/icons/socialMedia/instagramLogo.svg" alt="Instagram"></a>
-                    <a href="#"><img src="./resources/icons/socialMedia/facebookLogo.svg" alt="Facebook"></a>
-                    <a href="#"><img src="./resources/icons/socialMedia/linkedinLogo.svg" alt="LinkedIn"></a>
+                    <a href="#"><img src="../resources/icons/socialMedia/xLogo.svg" alt="X"></a>
+                    <a href="#"><img src="../resources/icons/socialMedia/instagramLogo.svg" alt="Instagram"></a>
+                    <a href="#"><img src="../resources/icons/socialMedia/facebookLogo.svg" alt="Facebook"></a>
+                    <a href="#"><img src="../resources/icons/socialMedia/linkedinLogo.svg" alt="LinkedIn"></a>
                 </div>
                 <p>Making the world more sustainable, one sock at a time</p>
             </section>
@@ -60,7 +60,7 @@
                 <ul>
                     <li><a href="../index.php">Home</a></li>
                     <li><a href="./aboutPage.php">About</a></li>
-                    <li><a href="./content/storePage.php">Store</a></li>
+                    <li><a href="./storePage.php">Store</a></li>
                 </ul>
             </section>
         </footer>
