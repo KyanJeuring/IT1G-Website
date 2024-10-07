@@ -1,10 +1,15 @@
 #header
 {
+    position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 86px;
+    width: 100%;
     padding: 1.25rem;
+    top: 0;
+
+    background-color: white;
 }
 
 #header .section
