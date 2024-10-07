@@ -13,13 +13,11 @@ footer
 
 footer section
 {
-    margin-top: 2%;
-    margin-bottom: 0.4%;
+    margin-block: 2% 0.4%;
     width: 20%;
     overflow-wrap: break-word;
     color: white;
-    padding: 2%;
-    padding-bottom: 1%;
+    padding: 2% 2% 1% 2%;
 }
 
 #footerLogo
@@ -48,8 +46,7 @@ footer ul
 
 footer li
 {
-    padding-top: 3%;
-    padding-bottom: 3%;
+    padding: 3% 0;
 }
 
 footer a
@@ -84,8 +81,6 @@ footer a
         overflow-wrap: break-word;
         color: white;
         padding: 0%;
-        padding-left: 5%;
-        padding-right: 5%;
         justify-content: center;
         text-align: center;
     }
