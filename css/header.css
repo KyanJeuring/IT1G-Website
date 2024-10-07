@@ -19,11 +19,6 @@
     height: 100%;
     gap: 2rem;
 }
-.section.left
-.section.right
-{
-    flex: 1;
-}
 
 .section.center
 {
