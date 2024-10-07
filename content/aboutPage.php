@@ -41,7 +41,7 @@
                     <li><a href="#">shop</a></li>
                     <li><a href="#">Terms Of Use</a></li>
                     <li><a href="#">Privacy</a></li>
-                    <li><a href="#">How Iy Works</a></li>
+                    <li><a href="#">How It Works</a></li>
                     <li><a href="#">Services</a></li>
                 </ul>
             </section>
