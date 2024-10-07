@@ -13,7 +13,7 @@
 <body>
     <div id="header">
         <div class="section left">
-            <button id="logoButton" href="index.php">
+            <button id="logoButton">
                 <img src="resources/Logo's/png/sunny_logos_blue.png" alt="Sunny socks logo">
             </button>
         </div>
