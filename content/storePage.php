@@ -58,9 +58,9 @@
             <section>
                 <h2>Pages</h2>
                 <ul>
-                    <li><a href="./index.php">Home</a></li>
-                    <li><a href="./content/aboutPage.php">About</a></li>
-                    <li><a href="./content/storePage.php">Store</a></li>
+                    <li><a href="../index.php">Home</a></li>
+                    <li><a href="./aboutPage.php">About</a></li>
+                    <li><a href="./storePage.php">Store</a></li>
                 </ul>
             </section>
         </footer>
