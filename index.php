@@ -71,15 +71,6 @@
                     <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
                 </ul>
             </section>
-            <section>
-                <h2>Pages</h2>
-                <ul>
-                    <li><a href="./index.php">Home</a></li>
-                    <li><a href="./content/aboutPage.php">About</a></li>
-                    <li><a href="./content/contactPage.php">Contact</a></li>
-                    <li><a href="./content/storePage.php">Store</a></li>
-                </ul>
-            </section>
         </footer>
     </body>
 </html>
