@@ -76,6 +76,7 @@
                 <ul>
                     <li><a href="./index.php">Home</a></li>
                     <li><a href="./content/aboutPage.php">About</a></li>
+                    <li><a href="./content/contactPage.php">Contact</a></li>
                     <li><a href="./content/storePage.php">Store</a></li>
                 </ul>
             </section>

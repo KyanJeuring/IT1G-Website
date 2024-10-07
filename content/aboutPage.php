@@ -59,6 +59,7 @@
                 <ul>
                     <li><a href="../index.php">Home</a></li>
                     <li><a href="./aboutPage.php">About</a></li>
+                    <li><a href="./contactPage.php">Contact</a></li>
                     <li><a href="./storePage.php">Store</a></li>
                 </ul>
             </section>
