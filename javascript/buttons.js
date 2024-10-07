@@ -16,6 +16,7 @@ export function setupButtonListeners()
     document.getElementById("shopButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
     document.getElementById("menButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
     document.getElementById("womenButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
+    document.getElementById("contactButton").onclick = function() { loadToContentContainer("content/contactPage.php"); };
 
     console.log("Buttons loaded successfully");
 }
