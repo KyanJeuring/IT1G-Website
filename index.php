@@ -12,9 +12,6 @@
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
         <script>
-            function showLogin() {
-            document.getElementById('login').style.display="block";
-            }
         </script>
     </head>
     <body>
@@ -34,7 +31,7 @@
             <div class="section right">
                 <button><img src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
                 <button><img src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-                <button onclick="showLogin()"><img src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+                <button id="toggleLogin"><img src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
             </div>
         </div>
         <div id="login">
