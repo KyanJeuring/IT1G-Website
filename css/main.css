@@ -26,9 +26,12 @@
 
 body
 {
-    font-family: NexaLight;
-    background-color: white;
-    height: 200vh;
+    font-family: "NexaLight";
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "NexaBold";
 }
 
 img
