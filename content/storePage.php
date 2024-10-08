@@ -18,6 +18,7 @@
             </div>
             <div class="product-list">
                 <?php
+                //list of products
                 $products = [
                     ['name' => 'Ocean Breeze', 'color' => 'blue', 'design' => 'striped'],
                     ['name' => 'Navy Drift', 'color' => 'light blue', 'design' => 'striped'],
@@ -39,20 +40,48 @@
                     ['name' => 'Warm Flowers', 'color' => 'multicolor', 'design' => 'unique'],
                 ];
 
+
+                // Search query checker
                 if(isset($_POST['search']) && !empty($_POST['search']))
                 {
-                    $searchQuery = strtolower($_POST['search']);
-                    $filteredProducts = [];
+                    $searchQuery = strtolower($_POST['search']); // case sense
+                    $filteredProducts = []; 
+                    
 
+                    // product loop
                     foreach($products as $product)
                     {
+                        //product check
                         if (strpos(strtolower($product['name']), $searchQuery) !== false || strpos(strtolower($product['color']), $searchQuery) !== false || strpos(strtolower($product['size']), $searchQuery) !== false);
                         {
+                            //if match, add to products array
                             $filteredProducts[] = $product;
                         }
                     }
-                }
 
+                    //product display
+                    if(!empty($filteredProducts))
+                    {
+                        foreach($filteredProducts as $product)
+                        {
+                            echo "<div class= 'product-item>";
+                            echo "<h3>" . $product['name'] . "</h3>";
+                            echo "<p>Color: " . $product['color'] . "</p>";
+                            echo "<p>Size: " . $product['size'] . "</p>";
+                            echo "<p>Price: $" . $product['price'] . "</p>";
+                            echo "</div>";
+                        }
+                    }
+                    else 
+                    {
+                        echo "No products found.";
+                    }
+                }
+                else 
+                {
+                    
+                }
+                
                 ?>
             </div>
         </div>
