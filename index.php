@@ -37,7 +37,15 @@
         <div id="login">
             <h2>Profile</h2>
             <form action="./index.php" action="post">
-                <input type="text" name="username" placeholder="Username:">
+                <input type="text" name="username" placeholder="Username">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit" name="login">Login</button>
+                <hr>
+                <h3>Not a member yet?</h3>
+                <input type="email" name="email" placeholder="Email">
+                <button type="submit" name="signup">Sign Up</button>
+                <?php
+                ?>
             </form>
         </div>
         <div id="content"></div>

@@ -15,7 +15,7 @@ function showLogin()
 {
     if(toggle == false)
     {
-        document.getElementById('login').style.display="block";
+        document.getElementById('login').style.display="flex";
         toggle = true;
     }
     else
