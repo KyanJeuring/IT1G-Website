@@ -1,0 +1,12 @@
+#login
+{
+    display: none;
+    width: 15em;
+    padding: 2em;
+    right: 0;
+    position: fixed;
+    background-color: #fff;
+    border: 2px solid var(--companyBlue);
+    border-radius: 15px;
+    color: var(--companyBlue);
+}

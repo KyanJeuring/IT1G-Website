@@ -8,8 +8,14 @@
         <link rel="stylesheet" href="./css/header.css" type="text/css">
         <link rel="stylesheet" href="./css/main.css" type="text/css">
         <link rel="stylesheet" href="./css/footer.css" type="text/css">
+        <link rel="stylesheet" href="./css/login.css" type="text/css">
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
+        <script>
+            function showLogin() {
+            document.getElementById('login').style.display="block";
+            }
+        </script>
     </head>
     <body>
         <div id="header">
@@ -28,8 +34,14 @@
             <div class="section right">
                 <button><img src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
                 <button><img src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-                <button><img src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+                <button onclick="showLogin()"><img src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
             </div>
+        </div>
+        <div id="login">
+            <h2>Profile</h2>
+            <form action="./index.php" action="post">
+                <input type="text" name="username" placeholder="Username:">
+            </form>
         </div>
         <div id="content"></div>
         <footer>
