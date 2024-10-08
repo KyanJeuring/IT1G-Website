@@ -35,3 +35,8 @@
     width: fit-content;
     height: 100%;
 }
+
+#header .icon
+{
+    padding: 12%;
+}

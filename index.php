@@ -29,9 +29,9 @@
                 <button id="contactButton" type="button">CONTACT</button>
             </div>
             <div class="section right">
-                <button><img src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
-                <button><img src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-                <button id="toggleLogin"><img src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+                <button><img class="icon" src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
+                <button><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
+                <button><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
             </div>
         </div>
         <div id="login">
