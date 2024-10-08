@@ -49,6 +49,7 @@
             </form>
         </div>
         <div id="content"></div>
+        <p>Flavius test</p>
         <footer>
             <section>
                 <img src="./resources/Logo's/png/sunny_logos-01.png" alt="Sunny Socks Logo" id="footerLogo">
