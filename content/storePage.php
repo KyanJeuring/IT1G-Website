@@ -39,7 +39,19 @@
                     ['name' => 'Warm Flowers', 'color' => 'multicolor', 'design' => 'unique'],
                 ];
 
-                
+                if(isset($_POST['search']) && !empty($_POST['search']))
+                {
+                    $searchQuery = strtolower($_POST['search']);
+                    $filteredProducts = [];
+
+                    foreach($products as $product)
+                    {
+                        if (strpos(strtolower($product['name']), $searchQuery) !== false || strpos(strtolower($product['color']), $searchQuery) !== false || strpos(strtolower($product['size']), $searchQuery) !== false);
+                        {
+                            $filteredProducts[] = $product;
+                        }
+                    }
+                }
 
                 ?>
             </div>
