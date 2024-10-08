@@ -37,7 +37,10 @@
                     ['name' => 'Wooble Double', 'color' => 'multicolor', 'design' => 'unique'],
                     ['name' => 'Splashy Colors', 'color' => 'multicolor', 'design' => 'unique'],
                     ['name' => 'Warm Flowers', 'color' => 'multicolor', 'design' => 'unique'],
-                ]
+                ];
+
+                
+
                 ?>
             </div>
         </div>
