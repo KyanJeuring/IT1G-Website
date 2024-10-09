@@ -1,6 +1,8 @@
 #login
 {
     display: none;
+    /* z-index is for the layers. If the z-index 2 will overlap z-index 1(default) */
+    z-index: 2; 
     flex-direction: column;
     justify-content: center;
     text-align: center;
