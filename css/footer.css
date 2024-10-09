@@ -75,6 +75,13 @@ footer a
         position: static;
     }
 
+    #footerLogo
+    {
+        padding: 3%;
+        height: auto;
+        width: 50%;
+    }
+
     footer > section
     {
         margin: 0%;
@@ -86,7 +93,7 @@ footer a
         text-align: center;
     }
 
-    footer h2
+    footer h2    
     {
         padding: 5%;
     }
