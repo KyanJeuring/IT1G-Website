@@ -1,12 +1,8 @@
-export function loadToContentContainer(content)
+import { contentSwitcher } from "./navigation.js";
+
+function setButtonOnClick(buttonID, action)
 {
-    fetch(content)
-        .then(response => response.text()) // Get the response as text (HTML content)
-        .then(data => {
-            document.getElementById("content").innerHTML = data; // Inject the content  
-            console.log(content + " loaded successfully");   // Log success      
-        })
-        .catch(error => console.error('Error loading external HTML:', error));
+    document.getElementById(buttonID).onclick = action;
 }
 
 // Create a function that changes the display value in css for the login form
@@ -27,13 +23,13 @@ function showLogin()
 
 export function setupButtonListeners()
 {
-    document.getElementById("logoButton").onclick = function() { loadToContentContainer("content/landingPage.php"); };
-    document.getElementById("aboutButton").onclick = function() { loadToContentContainer("content/aboutPage.php"); };
-    document.getElementById("shopButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
-    document.getElementById("menButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
-    document.getElementById("womenButton").onclick = function() { loadToContentContainer("content/storePage.php"); };
-    document.getElementById("contactButton").onclick = function() { loadToContentContainer("content/contactPage.php"); };
-    document.getElementById("toggleLogin").onclick = function() { showLogin(); };
+    setButtonOnClick("logoButton", function() { contentSwitcher.loadPage("Home"); });
+    setButtonOnClick("aboutButton", function() { contentSwitcher.loadPage("About"); });
+    setButtonOnClick("shopButton", function() { contentSwitcher.loadPage("Store"); });
+    setButtonOnClick("menButton", function() { contentSwitcher.loadPage("Store"); });
+    setButtonOnClick("womenButton", function() { contentSwitcher.loadPage("Store"); });
+    setButtonOnClick("contactButton", function() { contentSwitcher.loadPage("Contact"); });
+    setButtonOnClick("toggleLogin", function() { showLogin(); });
 
     console.log("Buttons loaded successfully");
 }
