@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="./css/header.css" type="text/css">
         <link rel="stylesheet" href="./css/main.css" type="text/css">
         <link rel="stylesheet" href="./css/footer.css" type="text/css">
+        <link rel="stylesheet" href="./css/navLinks.css" type="text/css">
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
     </head>
@@ -30,6 +31,8 @@
                 <button><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
                 <button><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
             </div>
+        </div>
+        <div id="navLinks">
         </div>
         <div id="content"></div>
         <footer>
