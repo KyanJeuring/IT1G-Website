@@ -55,6 +55,11 @@ footer a
     color: #fff;
 }
 
+footer a:hover
+{
+    color: var(--companyOrange);
+}
+
 .socials
 {
     padding: 2%;
