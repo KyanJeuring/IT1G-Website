@@ -5,7 +5,7 @@ footer
     flex-wrap: wrap;
     bottom: 0;
     margin: 0;
-    position: absolute;
+    position: relative;
     width: 100%;
     background-color: var(--companyBlue);
     justify-content: space-between;
@@ -55,6 +55,11 @@ footer a
     color: #fff;
 }
 
+footer a:hover
+{
+    color: var(--companyOrange);
+}
+
 .socials
 {
     padding: 2%;
@@ -77,7 +82,7 @@ footer a
 
     #footerLogo
     {
-        padding: 3%;
+        padding: 8% 0 3% 0;
         height: auto;
         width: 50%;
     }

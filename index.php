@@ -56,7 +56,7 @@
         <footer>
             <section>
                 <img src="./resources/Logo's/png/sunny_logos-01.png" alt="Sunny Socks Logo" id="footerLogo">
-                <div class="socials">
+                <div class="socials1">
                     <a href="https://x.com/X" target="_blank"><img src="./resources/icons/socialMedia/xLogo.svg" alt="X"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="./resources/icons/socialMedia/instagramLogo.svg" alt="Instagram"></a>
                     <a href="https://www.facebook.com/" target="_blank"><img src="./resources/icons/socialMedia/facebookLogo.svg" alt="Facebook"></a>
@@ -91,6 +91,12 @@
                     <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
                     <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
                 </ul>
+                <div class="socials2">
+                    <a href="https://x.com/X" target="_blank"><img src="./resources/icons/socialMedia/xLogo.svg" alt="X"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="./resources/icons/socialMedia/instagramLogo.svg" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="./resources/icons/socialMedia/facebookLogo.svg" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="./resources/icons/socialMedia/linkedinLogo.svg" alt="LinkedIn"></a>
+                </div>
             </section>
         </footer>
     </body>
