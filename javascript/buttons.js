@@ -21,6 +21,21 @@ function showLogin()
     }
 }
 
+var toggleOffer = false
+function showOffer()
+{
+    if(toggleOffer == false)
+    {
+        document.getElementById('offerPopup').style.display="block";
+        toggleOffer = true;
+    }
+    else
+    {
+        document.getElementById('offerPopup').style.display="none";
+        toggleOffer = false;
+    }
+}
+
 export function setupButtonListeners()
 {
     setButtonOnClick("logoButton", function() { contentSwitcher.loadPage("Home"); });
