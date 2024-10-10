@@ -21,7 +21,6 @@ function showLogin()
     }
 }
 
-// Create a function that changes the display value in css for the offer pop-up
 var toggleOffer = false
 function showOffer()
 {

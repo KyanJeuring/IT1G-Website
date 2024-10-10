@@ -59,7 +59,7 @@
             <h1>Special Offer!</h1>
             <h2>Use Coupon Code</h2>
             <button id="shopButton" type="button">FUNSOX</button>
-            <h2>for 30% off!</h2>
+            <h2>for 30% off</h2>
         </div>
         <div id="content"></div>
         <footer>
