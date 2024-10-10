@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./css/footer.css" type="text/css">
         <link rel="stylesheet" href="./css/login.css" type="text/css">
         <link rel="stylesheet" href="./css/navLinks.css" type="text/css">
+        <link rel="stylesheet" href="./css/offerButton.css" type="text/css">
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
         <script>
@@ -49,6 +50,8 @@
                 ?>
             </form>
         </div>
+        <div id="offerButton">
+            <button id="toggleOffer"><img src="resources/icons/offerIcon.svg" alt="Offer button"></button>
         </div>
         <div id="navLinks">
         </div>

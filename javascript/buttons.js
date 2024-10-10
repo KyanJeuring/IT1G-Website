@@ -6,18 +6,18 @@ function setButtonOnClick(buttonID, action)
 }
 
 // Create a function that changes the display value in css for the login form
-var toggle = false
+var toggleLogin = false
 function showLogin()
 {
-    if(toggle == false)
+    if(toggleLogin == false)
     {
         document.getElementById('login').style.display="flex";
-        toggle = true;
+        toggleLogin = true;
     }
     else
     {
         document.getElementById('login').style.display="none";
-        toggle = false;
+        toggleLogin = false;
     }
 }
 
