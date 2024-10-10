@@ -77,7 +77,8 @@
                     }
                     //product display (the echos are temporary, I will update them with the actual products when the time comes)
                     if (!empty($filteredProducts)) {
-                        foreach ($filteredProducts as $product) {
+                        foreach ($filteredProducts as $product) 
+                        {
                             echo "<div class='product-item'>";
                             echo "<h3>" . (isset($product['name']) ? $product['name'] : 'No name') . "</h3>"; 
                             echo "<p>Color: " . (isset($product['color']) ? $product['color'] : 'No color') . "</p>";
