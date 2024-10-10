@@ -9,7 +9,7 @@
 
 #offerPopup
 {
-    display: block;
+    display: none;
     left: 35%;
     position: fixed;
     z-index: 2; 

@@ -50,10 +50,16 @@
                 ?>
             </form>
         </div>
+        <div id="navLinks">
+        </div>
         <div id="offerButton">
             <button id="toggleOffer" class="pulseAnimation"><img src="resources/icons/offerIcon.svg" alt="Offer button"></button>
         </div>
-        <div id="navLinks">
+        <div id="offerPopup">
+            <h1>Special Offer!</h1>
+            <h2>Use Coupon Code</h2>
+            <button id="shopButton" type="button">FUNSOX</button>
+            <h2>for 30% off</h2>
         </div>
         <div id="content"></div>
         <footer>
