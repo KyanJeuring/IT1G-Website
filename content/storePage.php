@@ -19,7 +19,8 @@
             <div class="product-list">
                 <?php
                 //list of products
-                $products = [
+                $products = 
+                [
                     ['name' => 'Ocean Breeze', 'color' => 'blue', 'design' => 'striped'],
                     ['name' => 'Navy Drift', 'color' => 'light blue', 'design' => 'striped'],
                     ['name' => 'Sunny Socks', 'color' => 'yellow', 'design' => 'solid'],
