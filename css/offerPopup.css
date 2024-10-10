@@ -6,3 +6,28 @@
     right: 0;
     position: fixed;
 }
+
+/* Creating the offer button animation (infinite loop) called pulseAnimation */
+.pulseAnimation
+{
+    animation: pulse 2s ease infinite;
+}
+
+/* Creating the keyframes that scale the size of the button */
+@keyframes pulse
+{
+    0%
+    {
+        transform: scale3d(1, 1, 1);
+    }
+
+    50%
+    {
+        transform: scale3d(1.5, 1.5, 1.5);
+    }
+
+    100%
+    {
+        transform: scale3d(1, 1, 1);
+    }
+} 

@@ -51,7 +51,7 @@
             </form>
         </div>
         <div id="offerButton">
-            <button id="toggleOffer"><img src="resources/icons/offerIcon.svg" alt="Offer button"></button>
+            <button id="toggleOffer" class="pulseAnimation"><img src="resources/icons/offerIcon.svg" alt="Offer button"></button>
         </div>
         <div id="navLinks">
         </div>
