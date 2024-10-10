@@ -45,6 +45,7 @@ export function setupButtonListeners()
     setButtonOnClick("womenButton", function() { contentSwitcher.loadPage("Store"); });
     setButtonOnClick("contactButton", function() { contentSwitcher.loadPage("Contact"); });
     setButtonOnClick("toggleLogin", function() { showLogin(); });
+    setButtonOnClick("toggleLogin", function() { showOffer(); });
 
     console.log("Buttons loaded successfully");
 }
