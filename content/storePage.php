@@ -50,25 +50,38 @@
 
                     // product loop
                     foreach($products as $product)
+                    
                     {
+                        $nameMatch = false;
+                        $designMatch = false;
+                        $colorMatch = false;
+
                         //product check
-                        if (strpos(strtolower($product['name']), $searchQuery) !== false || strpos(strtolower($product['color']), $searchQuery) !== false || strpos(strtolower($product['size']), $searchQuery) !== false);
+                        if (isset($product['name'])) 
                         {
-                            //if match, add to products array
+                            $nameMatch = strpos(strtolower($product['name']), $searchQuery) !== false;
+                        }
+                        if (isset($product['design'])) 
+                        {
+                            $designMatch = strpos(strtolower($product['design']), $searchQuery) !== false;
+                        }
+                        if (isset($product['color'])) {
+                            $colorMatch = strpos(strtolower($product['color']), $searchQuery) !== false;
+                        }
+
+                        //if there's a match, it enters the filtered products variable
+                        if ($nameMatch || $colorMatch || $designMatch) 
+                        {
                             $filteredProducts[] = $product;
                         }
                     }
-
-                    //product display
-                    if(!empty($filteredProducts))
-                    {
-                        foreach($filteredProducts as $product)
-                        {
-                            echo "<div class= 'product-item>";
-                            echo "<h3>" . $product['name'] . "</h3>";
-                            echo "<p>Color: " . $product['color'] . "</p>";
-                            echo "<p>Size: " . $product['size'] . "</p>";
-                            echo "<p>Price: $" . $product['price'] . "</p>";
+                    //product display (the echos are temporary, I will update them with the actual products when the time comes)
+                    if (!empty($filteredProducts)) {
+                        foreach ($filteredProducts as $product) {
+                            echo "<div class='product-item'>";
+                            echo "<h3>" . (isset($product['name']) ? $product['name'] : 'No name') . "</h3>"; // Fallback for missing names
+                            echo "<p>Color: " . (isset($product['color']) ? $product['color'] : 'No color') . "</p>";
+                            echo "<p>Design: " . (isset($product['design']) ? $product['design'] : 'No design') . "</p>"; // Fallback for missing sizes
                             echo "</div>";
                         }
                     }
