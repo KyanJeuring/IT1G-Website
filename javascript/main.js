@@ -1,7 +1,9 @@
-import { loadToContentContainer, setupButtonListeners } from "./buttons.js";
+import { setupButtonListeners } from "./buttons.js";
+import { contentSwitcher } from "./navigation.js";
 
 window.onload = function()
 {
-    loadToContentContainer("content/landingPage.php");
     setupButtonListeners();
+
+    contentSwitcher.loadPage("Home");
 }
