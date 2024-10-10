@@ -21,22 +21,6 @@ function showLogin()
     }
 }
 
-// Create a function that changes the display value in css for the offer pop-up
-var toggleOffer = false
-function showOffer()
-{
-    if(toggleOffer == false)
-    {
-        document.getElementById('offerPopup').style.display="block";
-        toggleOffer = true;
-    }
-    else
-    {
-        document.getElementById('offerPopup').style.display="none";
-        toggleOffer = false;
-    }
-}
-
 export function setupButtonListeners()
 {
     setButtonOnClick("logoButton", function() { contentSwitcher.loadPage("Home"); });
@@ -46,7 +30,6 @@ export function setupButtonListeners()
     setButtonOnClick("womenButton", function() { contentSwitcher.loadPage("Store"); });
     setButtonOnClick("contactButton", function() { contentSwitcher.loadPage("Contact"); });
     setButtonOnClick("toggleLogin", function() { showLogin(); });
-    setButtonOnClick("toggleOffer", function() { showOffer(); });
 
     console.log("Buttons loaded successfully");
 }

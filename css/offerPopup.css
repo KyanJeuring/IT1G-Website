@@ -7,6 +7,41 @@
     position: fixed;
 }
 
+#offerPopup
+{
+    display: block;
+    left: 35%;
+    position: fixed;
+    z-index: 2; 
+    width: 30em;
+    height: 22em;
+    padding: 2em;
+    background-color: var(--companyBlue);
+    border: 0.6em solid var(--companyGreen);
+    border-radius: 2em;
+    text-align: center;
+    color: #fff;
+}
+
+#offerPopup > h1
+{
+    font-size: 3em;
+}
+
+#offerPopup > h2
+{
+    padding: 0.5em;
+    font-size: 2em;
+}
+
+#offerPopup > button
+{
+    padding: 1em 2em 1em 2em;
+    background-color: #fff;
+    font-size: 1.5em;
+    color: #000;
+}
+
 /* Creating the offer button animation (infinite loop) called pulseAnimation */
 .pulseAnimation
 {
