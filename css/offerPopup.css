@@ -37,6 +37,7 @@
 #offerPopup > button
 {
     padding: 1em 2em 1em 2em;
+    border-radius: 1em;
     background-color: #fff;
     font-size: 1.5em;
     color: #000;
