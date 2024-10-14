@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="./css/login.css" type="text/css">
         <link rel="stylesheet" href="./css/navLinks.css" type="text/css">
         <link rel="stylesheet" href="./css/storePage.css" type="text/css">
+        <link rel="stylesheet" href="./css/offerPopup.css" type="text/css">
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
         <script>
@@ -50,14 +51,22 @@
                 ?>
             </form>
         </div>
-        </div>
         <div id="navLinks">
+        </div>
+        <div id="offerButton">
+            <button id="toggleOffer" class="pulseAnimation"><img src="resources/icons/offerIcon.svg" alt="Offer button"></button>
+        </div>
+        <div id="offerPopup">
+            <h1>Special Offer!</h1>
+            <h2>Use Coupon Code</h2>
+            <button id="shopButton" type="button">FUNSOX</button>
+            <h2>for 30% off</h2>
         </div>
         <div id="content"></div>
         <footer>
             <section>
                 <img src="./resources/Logo's/png/sunny_logos-01.png" alt="Sunny Socks Logo" id="footerLogo">
-                <div class="socials">
+                <div class="socials1">
                     <a href="https://x.com/X" target="_blank"><img src="./resources/icons/socialMedia/xLogo.svg" alt="X"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="./resources/icons/socialMedia/instagramLogo.svg" alt="Instagram"></a>
                     <a href="https://www.facebook.com/" target="_blank"><img src="./resources/icons/socialMedia/facebookLogo.svg" alt="Facebook"></a>
@@ -92,6 +101,12 @@
                     <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
                     <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
                 </ul>
+                <div class="socials2">
+                    <a href="https://x.com/X" target="_blank"><img src="./resources/icons/socialMedia/xLogo.svg" alt="X"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="./resources/icons/socialMedia/instagramLogo.svg" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="./resources/icons/socialMedia/facebookLogo.svg" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="./resources/icons/socialMedia/linkedinLogo.svg" alt="LinkedIn"></a>
+                </div>
             </section>
         </footer>
     </body>

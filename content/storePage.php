@@ -48,7 +48,7 @@
             </form>
         </div>
 
-        <div id="products">
+        <!-- <div id="products">
             <div class="ocean-breeze">
                 <a href="">
                     <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg" alt="Ocean Breeze">
@@ -56,86 +56,101 @@
                     <p>$25.99</p>
                 </a>
             </div>
-
-            <div class="navy-drift">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_green.jpg" alt="Navy Drift">
-                    <p>Navy Drift</p>
-                    <p>$25.99</p>
-                </a>
-            </div>
-
-            <div class="sunny-socks">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_uni_yellow.jpg" alt="Sunny Socks">
-                    <p>Sunny Socks</p>
-                    <p>$33.99</p>
-                </a>
-            </div>
-
-            <div class="glam-walkers">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_pink_01.jpg" alt="Glam Walkers">
-                    <p>Glam Walkers</p>
-                    <p>$25.99</p>
-                </a>
-            </div>
-
-            <div class="crimson-web">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_red.jpg" alt="Crimson Web">
-                    <p>Crimson Web</p>
-                    <p>$25.99</p>
-                </a>
-            </div>
-
-            <div class="cool-blue">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_uni_blue.jpg" alt="Cool Blue">
-                    <p>Cool Blue</p>
-                    <p>$33.99</p>
-                </a>
-            </div>
-
-            <div class="navy-drift2">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_uni_green.jpg" alt="Navy Drift">
-                    <p>Navy Drift</p>
-                    <p>$33.99</p>
-                </a>
-            </div>
-
-            <div class="cotton-candy">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_uni_pink.jpg" alt="Cotton Candy">
-                    <p>Cotton Candy</p>
-                    <p>$25.99</p>
-                </a>
-            </div>
-
-            <div class="tomato">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_uni_red.jpg" alt="Tomato">
-                    <p>Tomato</p>
-                    <p>$33.99</p>
-                </a>
-            </div>
-
-            <div class="lemon-whirl">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_yellow.jpg" alt="Lemon Whirl">
-                    <p>Lemon Whirl</p>
-                    <p>$25.99</p>
-                </a>
-            </div>
-
-            <div class="sporty">
-                <a href="">
-                    <img src="" alt="Sporty">
-                    <p>Sporty</p>
-                    <p>$35.99</p>
-                </a>
-            </div>
-        </div>
+        </div> -->
+        
     </main>
 </div>
+        <div class="search-container">
+            <div class="filter-section">
+                <form action="" method="POST">
+                    <input type="search" name="search" placeholder="search">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+            <div class="product-list">
+                <?php
+                //list of products
+                $products = 
+                [
+                    ['name' => 'Ocean Breeze', 'color' => 'blue', 'design' => 'striped'],
+                    ['name' => 'Navy Drift', 'color' => 'light blue', 'design' => 'striped'],
+                    ['name' => 'Sunny Socks', 'color' => 'yellow', 'design' => 'solid'],
+                    ['name' => 'Glam Walkers', 'color' => 'pink', 'design' => 'striped'],
+                    ['name' => 'Crimson Web', 'color' => 'red', 'design' => 'striped'],
+                    ['name' => 'Cool Blue', 'color' => 'blue', 'design' => 'solid'],
+                    ['name' => 'Navy Drift', 'color' => 'light blue', 'design' => 'solid'],
+                    ['name' => 'Cotton Candy', 'color' => 'pink', 'design' => 'solid'],
+                    ['name' => 'Tomato', 'color' => 'red', 'design' => 'solid'],
+                    ['name' => 'Lemon Whirl', 'color' => 'yellow', 'design' => 'striped'],
+                    ['name' => 'Sporty', 'color' => 'white', 'design' => 'striped'],
+                    ['name' => 'Long Stripes', 'color' => 'multicolor','design' => 'striped'],
+                    ['name' => 'White Dream', 'color' => 'white', 'design' => 'solid'],
+                    ['name' => 'Grey Dream', 'color' => 'grey', 'design' => 'solid'],
+                    ['name' => 'Confusion', 'color' => 'multicolor', 'design' => 'unique'],
+                    ['name' => 'Wooble Double', 'color' => 'multicolor', 'design' => 'unique'],
+                    ['name' => 'Splashy Colors', 'color' => 'multicolor', 'design' => 'unique'],
+                    ['name' => 'Warm Flowers', 'color' => 'multicolor', 'design' => 'unique'],
+                ];
+
+
+                // Search query checker
+                if(isset($_POST['search']) && !empty($_POST['search']))
+                {
+                    $searchQuery = strtolower($_POST['search']); // case sense
+                    $filteredProducts = []; 
+                    
+
+                    // product loop
+                    foreach($products as $product)
+                    
+                    {
+                        $nameMatch = false;
+                        $designMatch = false;
+                        $colorMatch = false;
+
+                        //product check
+                        if (isset($product['name'])) 
+                        {
+                            $nameMatch = strpos(strtolower($product['name']), $searchQuery) !== false;
+                        }
+                        if (isset($product['design'])) 
+                        {
+                            $designMatch = strpos(strtolower($product['design']), $searchQuery) !== false;
+                        }
+                        if (isset($product['color'])) 
+                        {
+                            $colorMatch = strpos(strtolower($product['color']), $searchQuery) !== false;
+                        }
+
+                        //if there's a match, it enters the filtered products variable
+                        if ($nameMatch || $colorMatch || $designMatch) 
+                        {
+                            $filteredProducts[] = $product;
+                        }
+                    }
+                    //product display (the echos are temporary, I will update them with the actual products when the time comes)
+                    if (!empty($filteredProducts)) {
+                        foreach ($filteredProducts as $product) 
+                        {
+                            echo "<div class='product-item'>";
+                            echo "<h3>" . (isset($product['name']) ? $product['name'] : 'No name') . "</h3>"; 
+                            echo "<p>Color: " . (isset($product['color']) ? $product['color'] : 'No color') . "</p>";
+                            echo "<p>Design: " . (isset($product['design']) ? $product['design'] : 'No design') . "</p>"; 
+                            echo "</div>";
+                        }
+                    }
+                    else 
+                    {
+                        echo "No products found.";
+                    }
+                }
+                else 
+                {
+                    
+                }
+                
+                ?>
+            </div>
+        </div>
+    </body>
+</html>

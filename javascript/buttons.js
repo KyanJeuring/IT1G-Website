@@ -6,18 +6,33 @@ function setButtonOnClick(buttonID, action)
 }
 
 // Create a function that changes the display value in css for the login form
-var toggle = false
+var toggleLogin = false
 function showLogin()
 {
-    if(toggle == false)
+    if(toggleLogin == false)
     {
         document.getElementById('login').style.display="flex";
-        toggle = true;
+        toggleLogin = true;
     }
     else
     {
         document.getElementById('login').style.display="none";
-        toggle = false;
+        toggleLogin = false;
+    }
+}
+
+var toggleOffer = false
+function showOffer()
+{
+    if(toggleOffer == false)
+    {
+        document.getElementById('offerPopup').style.display="block";
+        toggleOffer = true;
+    }
+    else
+    {
+        document.getElementById('offerPopup').style.display="none";
+        toggleOffer = false;
     }
 }
 
@@ -30,6 +45,7 @@ export function setupButtonListeners()
     setButtonOnClick("womenButton", function() { contentSwitcher.loadPage("Store"); });
     setButtonOnClick("contactButton", function() { contentSwitcher.loadPage("Contact"); });
     setButtonOnClick("toggleLogin", function() { showLogin(); });
+    setButtonOnClick("toggleOffer", function() { showOffer(); });
 
     console.log("Buttons loaded successfully");
 }
