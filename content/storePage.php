@@ -66,7 +66,8 @@
                         {
                             $designMatch = strpos(strtolower($product['design']), $searchQuery) !== false;
                         }
-                        if (isset($product['color'])) {
+                        if (isset($product['color'])) 
+                        {
                             $colorMatch = strpos(strtolower($product['color']), $searchQuery) !== false;
                         }
 
