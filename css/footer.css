@@ -60,14 +60,26 @@ footer a:hover
     color: var(--companyOrange);
 }
 
-.socials
+.socials1
 {
+    display: block;
     padding: 2%;
 }
 
-.socials > a
+.socials1 > a
 {
     margin: 3%;
+}
+
+.socials2
+{
+    display: none;
+    padding: 2% 2% 5% 2%;
+}
+
+.socials2 > a
+{
+    margin: 1%;
 }
 
 /* Make a responsive footer for mobile view*/
@@ -114,5 +126,15 @@ footer a:hover
         list-style-type: none;
         padding: 5%;
         padding-top: 0%;
+    }
+
+    .socials1
+    {
+        display: none;
+    }
+
+    .socials2
+    {
+        display: block;
     }
 }
