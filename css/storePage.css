@@ -108,6 +108,13 @@ main
     margin-bottom: 2em;
 }
 
+#bar .search label
+{
+    position: relative;
+    right: 28%;
+    color: rgb(212, 212, 212);
+}
+
 #products
 {
     display: flex;

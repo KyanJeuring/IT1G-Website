@@ -43,7 +43,8 @@
     <main>
         <div id="bar">
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" class="search">
-                <input type="text" name="search">
+                <input type="search" name="search">
+                <label for="search">Search</label>
             </form>
         </div>
 
