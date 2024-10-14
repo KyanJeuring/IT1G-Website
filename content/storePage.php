@@ -17,29 +17,48 @@
             </div>
             <div class="product-list">
                 <?php
-                //list of products
-                $products = 
-                [
-                    ['name' => 'Ocean Breeze', 'color' => 'blue', 'design' => 'striped'],
-                    ['name' => 'Navy Drift', 'color' => 'light blue', 'design' => 'striped'],
-                    ['name' => 'Sunny Socks', 'color' => 'yellow', 'design' => 'solid'],
-                    ['name' => 'Glam Walkers', 'color' => 'pink', 'design' => 'striped'],
-                    ['name' => 'Crimson Web', 'color' => 'red', 'design' => 'striped'],
-                    ['name' => 'Cool Blue', 'color' => 'blue', 'design' => 'solid'],
-                    ['name' => 'Navy Drift', 'color' => 'light blue', 'design' => 'solid'],
-                    ['name' => 'Cotton Candy', 'color' => 'pink', 'design' => 'solid'],
-                    ['name' => 'Tomato', 'color' => 'red', 'design' => 'solid'],
-                    ['name' => 'Lemon Whirl', 'color' => 'yellow', 'design' => 'striped'],
-                    ['name' => 'Sporty', 'color' => 'white', 'design' => 'striped'],
-                    ['name' => 'Long Stripes', 'color' => 'multicolor','design' => 'striped'],
-                    ['name' => 'White Dream', 'color' => 'white', 'design' => 'solid'],
-                    ['name' => 'Grey Dream', 'color' => 'grey', 'design' => 'solid'],
-                    ['name' => 'Confusion', 'color' => 'multicolor', 'design' => 'unique'],
-                    ['name' => 'Wooble Double', 'color' => 'multicolor', 'design' => 'unique'],
-                    ['name' => 'Splashy Colors', 'color' => 'multicolor', 'design' => 'unique'],
-                    ['name' => 'Warm Flowers', 'color' => 'multicolor', 'design' => 'unique'],
-                ];
 
+                    // product class
+                    class product
+                    {
+                        public $name;
+                        public $color;
+                        public $design;
+    
+                        public function __construct($name, $color, $design)
+                        {
+                            $this->name = $name;
+                            $this->color = $color;
+                            $this->design = $design;
+                        }
+                    }
+    
+                      // list of products
+                    $products =
+                    [
+                        new product('Ocean Breeze', 'blue', 'striped'),
+                        new product('Navy Drift', 'light blue', 'striped'),
+                        new product('Sunny Socks', 'yellow', 'solid'),
+                        new product('Glam Walkers', 'pink', 'striped'),
+                        new product('Crimson Web', 'red', 'striped'),
+                        new product('Cool Blue', 'blue', 'solid'),
+                        new product('Navy Drift', 'blue', 'solid'),
+                        new product('Cotton Candy', 'pink', 'solid'),
+                        new product('Tomato', 'red', 'solid'),
+                        new product('Lemon Whirl', 'yellow', 'striped'),
+                        new product('Sporty', 'white', 'striped'),
+                        new product('Long Stripes', 'multicolor', 'striped'),
+                        new product('White Dream', 'white', 'solid'),
+                        new product('Grey Dream', 'grey', 'solid'),
+                        new product('Confusion', 'multicolor', 'unique'),
+                        new product('Wooble Double', 'multicolor', 'unique'),
+                        new product('Splashy Colors', 'multicolor', 'unique'),
+                        new product('Warm Flowers', 'color', 'unique'),
+                    ];
+                
+    
+    
+                
 
                 // Search query checker
                 if(isset($_POST['search']) && !empty($_POST['search']))
@@ -57,17 +76,17 @@
                         $colorMatch = false;
 
                         //product check
-                        if (isset($product['name'])) 
+                        if (isset($product->name)) 
                         {
-                            $nameMatch = strpos(strtolower($product['name']), $searchQuery) !== false;
+                            $nameMatch = strpos(strtolower($product->name), $searchQuery) !== false;
                         }
-                        if (isset($product['design'])) 
+                        if (isset($product->design)) 
                         {
-                            $designMatch = strpos(strtolower($product['design']), $searchQuery) !== false;
+                            $designMatch = strpos(strtolower($product->design), $searchQuery) !== false;
                         }
-                        if (isset($product['color'])) 
+                        if (isset($product->color)) 
                         {
-                            $colorMatch = strpos(strtolower($product['color']), $searchQuery) !== false;
+                            $colorMatch = strpos(strtolower($product->color), $searchQuery) !== false;
                         }
 
                         //if there's a match, it enters the filtered products variable
@@ -81,9 +100,9 @@
                         foreach ($filteredProducts as $product) 
                         {
                             echo "<div class='product-item'>";
-                            echo "<h3>" . (isset($product['name']) ? $product['name'] : 'No name') . "</h3>"; 
-                            echo "<p>Color: " . (isset($product['color']) ? $product['color'] : 'No color') . "</p>";
-                            echo "<p>Design: " . (isset($product['design']) ? $product['design'] : 'No design') . "</p>"; 
+                            echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
+                            echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
+                            echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
                             echo "</div>";
                         }
                     }
