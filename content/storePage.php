@@ -61,9 +61,9 @@
                 
 
                 // Search query checker
-                if(isset($_POST['search']) && !empty($_POST['search']))
+                if(isset($_GET['search']) && !empty($_GET['search']))
                 {
-                    $searchQuery = strtolower($_POST['search']); // case sense
+                    $searchQuery = strtolower($_GET['search']); // case sense
                     $filteredProducts = []; 
                     
 
