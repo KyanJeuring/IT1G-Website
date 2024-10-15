@@ -57,3 +57,24 @@
     border-top: 2px solid gray;
     margin: 4% 0;
 }
+
+@media (max-width: 768px)
+{
+    #login
+    {
+        display: none;
+        /* z-index is for the layers. If the z-index 2 will overlap z-index 1(default) */
+        z-index: 2; 
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 2em;
+        right: 0;
+        position: fixed;
+        background-color: #fff;
+        border: 3px solid var(--companyBlue);
+        border-radius: 15px;
+        color: var(--companyBlue);
+    }
+    }
