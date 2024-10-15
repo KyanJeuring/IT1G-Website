@@ -27,6 +27,7 @@ function showOffer()
     if(toggleOffer == false)
     {
         document.getElementById('offerPopup').style.display="block";
+        document.getElementById('offerPopup').className = 'fadeInAnimation';
         toggleOffer = true;
     }
     else
