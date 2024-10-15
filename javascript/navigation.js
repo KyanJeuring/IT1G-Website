@@ -6,7 +6,26 @@ class Page
         this.contentPath = contentPath;
         this.childPages = childPages;
         this.parentPage = parentPage;
+
         this.setParentChildPages();
+        this.content = this.fetchSelfContent();
+    }
+
+    fetchSelfContent()
+    {
+        this.contentLoadedPromise = new Promise((resolve, reject) => {
+            fetch(this.contentPath)
+                .then(response => response.text()) // Get the response as text (HTML content)
+                .then(data => {
+                    console.log("Loaded external HTML:", this.contentPath);
+                    this.content = data; // save the content    
+                    resolve();
+                })
+                .catch(error => {
+                    console.error('Error loading external HTML:', error)
+                    reject();
+            });
+        });        
     }
 
     setParentChildPages() {
@@ -55,14 +74,11 @@ export class contentSwitcher
             new Page("Contact", "content/contactPage.php", []),
         ]);
 
-    static loadToContentContainer(content)
+    static loadToContentContainer(page)
     {
-        fetch(content)
-            .then(response => response.text()) // Get the response as text (HTML content)
-            .then(data => {
-                document.getElementById("content").innerHTML = data; // Inject the content  
-            })
-            .catch(error => console.error('Error loading external HTML:', error));
+        page.contentLoadedPromise.then(() => {
+            document.getElementById("content").innerHTML = page.content; // Inject the content  
+        });
     }  
 
     static findPage(pageName, parentPage = this.rootPage) {
@@ -88,7 +104,7 @@ export class contentSwitcher
             return false
         }
         
-        this.loadToContentContainer(page.contentPath);
+        this.loadToContentContainer(page);
         NavLinks.displayPath(page);
 
         return true;

@@ -62,7 +62,9 @@
             <button id="shopButton" type="button">FUNSOX</button>
             <h2>for 30% off</h2>
         </div>
-        <div id="content"></div>
+        <div id="content">
+            <?php include("content/landingPage.php"); ?>
+        </div>
         <footer>
             <section>
                 <img src="./resources/Logo's/png/sunny_logos-01.png" alt="Sunny Socks Logo" id="footerLogo">
