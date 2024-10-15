@@ -1,3 +1,8 @@
+<?php
+    if(!session_id()) session_start();
+    if(isset($_GET['search'])) $_SESSION['search'] = $_GET['search'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -63,7 +68,11 @@
             <h2>for 30% off</h2>
         </div>
         <div id="content">
-            <?php include("content/landingPage.php"); ?>
+            <?php
+                if(!isset($_GET["search"])) {
+                    include("content/landingPage.php");
+                }
+            ?>
         </div>
         <footer>
             <section>

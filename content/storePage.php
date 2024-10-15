@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+<?php
+    if(!session_id()) session_start();
+?>
         <h1>Store page content</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias provident eos doloribus quas aspernatur. Suscipit nihil dignissimos aliquid animi neque voluptatem, fugit quam voluptas ad hic natus. Eaque, deserunt quia.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt harum quae optio distinctio? Possimus ullam vitae, iste doloremque officiis in? In sapiente debitis tempora doloribus iusto corporis commodi aspernatur.</p>
         <div class="search-container">
             <div class="filter-section">
-                <form action="" method="POST">
+                <form action="" method="GET">
                     <input type="search" name="search" placeholder="search">
                     <button type="submit">Search</button>
                 </form>
@@ -61,12 +57,11 @@
                 
 
                 // Search query checker
-                if(isset($_GET['search']) && !empty($_GET['search']))
+                if(isset($_SESSION["search"]))
                 {
-                    $searchQuery = strtolower($_GET['search']); // case sense
+                    $searchQuery = strtolower($_SESSION["search"]); // case sense
                     $filteredProducts = []; 
                     
-
                     // product loop
                     foreach($products as $product)
                     

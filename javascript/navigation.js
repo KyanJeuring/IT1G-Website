@@ -74,6 +74,11 @@ export class contentSwitcher
             new Page("Contact", "content/contactPage.php", []),
         ]);
 
+    static
+    {
+        NavLinks.displayPath(this.rootPage);
+    }
+
     static loadToContentContainer(page)
     {
         page.contentLoadedPromise.then(() => {
