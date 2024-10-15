@@ -1,0 +1,35 @@
+.introImageContainer
+{
+    /* position: relative; */
+    background-image: url(../resources/otherPhotos/Hero.png);
+    min-width: 100dvw;
+    min-height: 90dvh;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.introHeaderText
+{
+    text-transform: uppercase;
+}
+
+.oneLineBlockElement
+{
+    display: block;
+}
+
+.semitransparentContentBox
+{
+    background:rgba(30,64,122,0.75);
+    grid-area: 2 / 1 / 4 / 3;
+
+    border-radius: 2rem;
+
+    padding: 3rem;
+    color: white;
+}

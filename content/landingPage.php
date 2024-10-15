@@ -1,13 +1,10 @@
 <!-- creating the main page container which all content will fall into -->
 <main class="pageContainer">
     <!-- hero intro section (container) | this is what the viewer sees when they first load in -->
-    <section class="introContainer">
-        <!-- setting the background image -->
-        <img src="" alt="an image of a grassy land" class="introImage">
-
+    <section class="introImageContainer">
         <!-- creating the info box -->
         <div class="semitransparentContentBox">
-            <h1 class="introHeaderText">Lets change the world one sock at a time</h1>
+            <h1 class="introHeaderText"><span class="oneLineBlockElement">Lets change</span> <span class="oneLineBlockElement">the world</span> <span class="oneLineBlockElement">one sock at a time</span></h1>
             <p class="generalText">We like to add some color to one of the the most everyday moments of life.</p>
             <button class="ctaButtonArrow">Make The Change Today</button>
         </div>
@@ -150,6 +147,9 @@
             </p>
             <button class="ctaButton">Learn More</button>
         </div>
+    </section>
 
-     </section>
+    <?php
+        include 'newsletterSignUpForm.php'
+    ?>
 </main>
