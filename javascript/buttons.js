@@ -5,7 +5,7 @@ function setButtonOnClick(buttonID, action)
     document.getElementById(buttonID).onclick = action;
 }
 
-// Create a function that changes the display value in css for the login form
+// Function that changes the display value in css for the login form
 var toggleLogin = false
 function showLogin()
 {
@@ -21,6 +21,7 @@ function showLogin()
     }
 }
 
+// functions that toggles the toggleOffer and changes the display value and calls an animation
 var toggleOffer = false
 function showOffer()
 {
