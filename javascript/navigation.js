@@ -52,7 +52,7 @@ export class NavLinks
     static displayPath(page) 
     {
         this.container.innerHTML = "";
-        this.createPathButtons(page);
+        if(page.name != "Home") this.createPathButtons(page);
     }
 
     static createPathButtons(page)

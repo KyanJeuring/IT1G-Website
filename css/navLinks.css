@@ -4,8 +4,12 @@
     flex-direction: row;
     gap: 1rem;
 
-    height: 40px;
     background-color: white;
     padding: 0 5rem;
     vertical-align: middle;
+}
+
+#navLinks button
+{
+    margin: 0.75rem 0;
 }
