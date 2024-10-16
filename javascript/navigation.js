@@ -72,6 +72,7 @@ export class contentSwitcher
             new Page("About", "content/aboutPage.php", []),
             new Page("Store", "content/storePage.php", []),
             new Page("Contact", "content/contactPage.php", []),
+            new Page("Login/Signup", "content/loginSignup.php", []),
         ]);
 
     static
