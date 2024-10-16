@@ -132,11 +132,12 @@
                     if (!empty($filteredProducts)) {
                         foreach ($filteredProducts as $product) 
                         {
-                            echo "<div class='product-item'>";
-                            echo "<h3>" . (isset($product['name']) ? $product['name'] : 'No name') . "</h3>"; 
-                            echo "<p>Color: " . (isset($product['color']) ? $product['color'] : 'No color') . "</p>";
-                            echo "<p>Design: " . (isset($product['design']) ? $product['design'] : 'No design') . "</p>"; 
-                            echo "</div>";
+                            echo "<div class='item'>";
+                            // echo "<div class='product-item'>";
+                            // echo "<h3>" . (isset($product['name']) ? $product['name'] : 'No name') . "</h3>"; 
+                            // echo "<p>Color: " . (isset($product['color']) ? $product['color'] : 'No color') . "</p>";
+                            // echo "<p>Design: " . (isset($product['design']) ? $product['design'] : 'No design') . "</p>"; 
+                            // echo "</div>";
                         }
                     }
                     else 
