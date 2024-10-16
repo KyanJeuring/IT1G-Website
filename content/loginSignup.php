@@ -38,6 +38,6 @@
         </form>
     </div>
     <div id="rightForm">
-        <h1>Continue</h1>
+        <h1>Other Login Options</h1>
     </div>
 </div>
