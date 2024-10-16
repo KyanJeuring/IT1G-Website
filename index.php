@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./css/header.css" type="text/css">
         <link rel="stylesheet" href="./css/main.css" type="text/css">
         <link rel="stylesheet" href="./css/footer.css" type="text/css">
-        <link rel="stylesheet" href="./css/login.css" type="text/css">
+        <link rel="stylesheet" href="./css/loginSignup.css" type="text/css">
         <link rel="stylesheet" href="./css/navLinks.css" type="text/css">
         <link rel="stylesheet" href="./css/offerPopup.css" type="text/css">
         <link rel="stylesheet" href="./css/aboutPage.css" type="text/css">

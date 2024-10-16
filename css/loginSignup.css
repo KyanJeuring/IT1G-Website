@@ -1,0 +1,78 @@
+.forms
+{
+    display: grid;
+    margin: 0 auto;
+    width: 50%;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.forms > div
+{
+    display: flex;
+    padding: 10%;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.forms > #leftForm
+{
+    border-right: 2px solid var(--companyOrange);
+}
+
+.forms > #rightForm
+{
+    border-left: 2px solid var(--companyOrange);
+}
+
+.forms h1
+{
+    font-family: "NexaLight";
+    color: var(--companyOrange);
+}
+
+.forms p
+{
+    font-family: "NexaLight";
+    color: var(--companyOrange);
+}
+
+.forms input
+{
+    width: 100%;
+    padding: 2%;
+    margin: 3% 0;
+    font-size: 1.5rem;
+    border: 2px solid grey;
+    border-radius: 15px;
+    color: grey;
+}
+
+.forms button
+{
+    width: 95%;
+    padding: 2%;
+    margin: 3% 0;
+    font-size: 1.5rem;
+    border: 3px solid var(--companyOrange);
+    border-radius: 15px;
+    background-color: var(--companyOrange);
+    color: #fff;
+}
+
+.errorMessage
+{
+    margin: 1% 0;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #ff0000;
+    text-align: center;
+}
+
+.errorMessage p
+{
+    padding: 1%;
+    color: #fff;
+    font-family: "NexaBold";
+}
