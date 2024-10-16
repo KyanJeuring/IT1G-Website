@@ -34,22 +34,8 @@
             <div class="section right">
                 <button><img class="icon" src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
                 <button><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-                <button id="toggleLogin"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+                <button id="loginButton"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
             </div>
-        </div>
-        <div id="login">
-            <h2>Profile</h2>
-            <form action="./index.php" action="post">
-                <input type="text" name="username" placeholder="Username">
-                <input type="password" name="password" placeholder="Password">
-                <button type="submit" name="login">Login</button>
-                <hr>
-                <h3>Not a member yet?</h3>
-                <input type="email" name="email" placeholder="Email">
-                <button type="submit" name="signup">Sign Up</button>
-                <?php
-                ?>
-            </form>
         </div>
         <div id="navLinks">
         </div>

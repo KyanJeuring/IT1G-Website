@@ -5,22 +5,6 @@ function setButtonOnClick(buttonID, action)
     document.getElementById(buttonID).onclick = action;
 }
 
-// Create a function that changes the display value in css for the login form
-var toggleLogin = false
-function showLogin()
-{
-    if(toggleLogin == false)
-    {
-        document.getElementById('login').style.display="flex";
-        toggleLogin = true;
-    }
-    else
-    {
-        document.getElementById('login').style.display="none";
-        toggleLogin = false;
-    }
-}
-
 var toggleOffer = false
 function showOffer()
 {
@@ -44,7 +28,7 @@ export function setupButtonListeners()
     setButtonOnClick("menButton", function() { contentSwitcher.loadPage("Store"); });
     setButtonOnClick("womenButton", function() { contentSwitcher.loadPage("Store"); });
     setButtonOnClick("contactButton", function() { contentSwitcher.loadPage("Contact"); });
-    setButtonOnClick("toggleLogin", function() { showLogin(); });
+    setButtonOnClick("loginButton", function() { contentSwitcher.loadPage("Login/Signup"); });
     setButtonOnClick("toggleOffer", function() { showOffer(); });
 
     console.log("Buttons loaded successfully");
