@@ -1,0 +1,8 @@
+#chatBox
+{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 5vw;
+    aspect-ratio: 1/1;
+}

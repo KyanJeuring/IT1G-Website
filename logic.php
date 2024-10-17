@@ -1,15 +1,13 @@
 <?php
     // instantiate contentSwitcher
     $contentSwitcher = new contentSwitcher();
+    $pageToDisplay = $contentSwitcher->rootPage;
     
-    $pageName = filter_input(INPUT_POST, "navBtn");
-    $pageToDisplay;
-    $location = "content/landingPage.php";
-
-    if(!empty($pageName)) 
+    if($_SERVER["REQUEST_METHOD"] === "POST")
     {
-        $pageToDisplay = $contentSwitcher->findPage($pageName);
-        $location = $pageToDisplay->location;    
+        // get the page name from the button that was clicked
+        $pageName = filter_input(INPUT_POST, "navBtn");
+        if(!empty($pageName)) $pageToDisplay = $contentSwitcher->findPage($pageName);
     }
 
     // page class represents a page on the website
