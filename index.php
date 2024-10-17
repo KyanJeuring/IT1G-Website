@@ -1,6 +1,5 @@
 <?php
-    if(!session_id()) session_start();
-    if(isset($_GET['search'])) $_SESSION['search'] = $_GET['search'];
+    include("logic.php");
 ?>
 
 <!DOCTYPE html>
@@ -22,30 +21,31 @@
         <link rel="stylesheet" href="./css/homePage.css" type="text/css">
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
-        <script>
-        </script>
     </head>
     <body>
         <div id="header">
-            <div class="section left">
-                <button id="logoButton" href="index.php">
+            <form class="section left" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+                <button id="logoButton" type="submit" name="navBtn" value="Home">
                     <img src="resources/Logo's/png/sunny_logos_blue.png" alt="Sunny socks logo">
                 </button>
-            </div>
-            <div class="section center">    
-                <button id="aboutButton" type="button">ABOUT</button>
-                <button id="menButton" type="button">MEN</button>
-                <button id="womenButton" type="button">WOMEN</button>
-                <button id="shopButton" type="button">SHOP</button>
-                <button id="contactButton" type="button">CONTACT</button>
-            </div>
-            <div class="section right">
+            </form>
+            <form class="section center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+                <button id="aboutButton" type="submit" name="navBtn" value="About">ABOUT</button>
+                <button id="menButton" type="submit" name="navBtn" value="Shop">MEN</button>
+                <button id="womenButton" type="submit" name="navBtn" value="Shop">WOMEN</button>
+                <button id="shopButton" type="submit" name="navBtn" value="Shop">SHOP</button>
+                <button id="contactButton" type="submit" name="navBtn" value="Contact">CONTACT</button>
+            </form>
+            <form class="section right" form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <button><img class="icon" src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
                 <button><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-                <button id="loginButton"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
-            </div>
+                <button id="loginButton" type="submit" name="navBtn" value="Login"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+            </form>
         </div>
         <div id="navLinks">
+            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+                <?php if($pageToDisplay->name != "Home") printNavLinks($pageToDisplay); ?>
+            </form>
         </div>
         <div id="offerButton">
             <button id="toggleOffer" class="pulseAnimation"><img src="resources/icons/offerIcon.svg" alt="Offer button"></button>
@@ -58,9 +58,8 @@
         </div>
         <div id="content">
             <?php
-                if(!isset($_GET["search"])) {
-                    include("content/landingPage.php");
-                }
+                // display content based on current location. See logic.php for more info
+                include($pageToDisplay->location);
             ?>
         </div>
         <footer>

@@ -1,15 +1,15 @@
-#navLinks
+#navLinks > form
 {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 
     background-color: white;
-    padding: 0 5rem;
+    padding: 0 12rem;
     vertical-align: middle;
 }
 
-#navLinks button
+#navLinks > form > button
 {
     margin: 0.75rem 0;
 }

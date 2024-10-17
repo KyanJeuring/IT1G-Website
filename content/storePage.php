@@ -1,9 +1,3 @@
-<?php
-    if(!session_id()) session_start();
-?>
-        <h1>Store page content</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias provident eos doloribus quas aspernatur. Suscipit nihil dignissimos aliquid animi neque voluptatem, fugit quam voluptas ad hic natus. Eaque, deserunt quia.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt harum quae optio distinctio? Possimus ullam vitae, iste doloremque officiis in? In sapiente debitis tempora doloribus iusto corporis commodi aspernatur.</p>
 <div id="container">
     <aside>
         <div class="categories">
@@ -16,7 +10,7 @@
                 <div class="modern">Modern x</div>
             </div>
 
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class="form">
                 <div id="filter">
                     <input type="checkbox" name="filter" value="men" checked="checked"> Men <br>
                     <input type="checkbox" name="filter" value="women" checked="checked"> Women <br>
@@ -48,8 +42,10 @@
 
     <main>
         <div id="bar">
-            <form action="" class="search">
+            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class="search">
                 <input type="search" name="search" placeholder="Search">
+                <!-- TODO: style this button / make it an icon -->
+                <button type="submit" name="navBtn" value="Shop">Search</button>
             </form>
         </div>
 
@@ -112,9 +108,9 @@
                 
 
                 // Search query checker
-                if(isset($_SESSION["search"]))
+                if(isset($_POST["search"]))
                 {
-                    $searchQuery = strtolower($_SESSION["search"]); // case sense
+                    $searchQuery = strtolower($_POST["search"]); // case sense
                     $filteredProducts = []; 
                     
                     // product loop
@@ -173,8 +169,3 @@
             </div>
     </main>
 </div>
-
-            
-        
-    </body>
-</html>
