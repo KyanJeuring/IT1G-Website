@@ -18,6 +18,8 @@
         <link rel="stylesheet" href="./css/offerPopup.css" type="text/css">
         <link rel="stylesheet" href="./css/aboutPage.css" type="text/css">
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/homePage.css" type="text/css">
+        <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
         <script>
         </script>
