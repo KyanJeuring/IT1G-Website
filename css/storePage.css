@@ -106,13 +106,15 @@ main
     border: 1px solid rgb(212, 212, 212);
     border-radius: 25px;
     margin-bottom: 2em;
+    padding: 2%;
+    font-size: 1.1em;
+    font-family: "NexaLight";
+    color: var(--companyBlue);
 }
 
-#bar .search label
+#bar .search input:focus
 {
-    position: relative;
-    right: 28%;
-    color: rgb(212, 212, 212);
+    outline: none;
 }
 
 #products

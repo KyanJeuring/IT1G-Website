@@ -49,8 +49,7 @@
     <main>
         <div id="bar">
             <form action="" class="search">
-                <input type="search" name="search">
-                <label for="search">Search</label>
+                <input type="search" name="search" placeholder="Search">
             </form>
         </div>
 
