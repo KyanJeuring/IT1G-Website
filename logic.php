@@ -45,7 +45,11 @@
 
     function printNavLinks($page)
     {
-        if($page->parent !== null) printNavLinks($page->parent);
+        if($page->parent !== null) 
+        {
+            printNavLinks($page->parent);
+            echo " <img src='resources/icons/svg/rightArrow.svg' alt='arrowIcon'> ";
+        }
         echo $page->getButton();
     }
 

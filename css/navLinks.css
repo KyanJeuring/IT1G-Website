@@ -13,3 +13,9 @@
 {
     margin: 0.75rem 0;
 }
+
+#navLinks > form > img
+{
+    margin: auto 0;
+    height: 15px;
+}
