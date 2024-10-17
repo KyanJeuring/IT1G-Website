@@ -1,10 +1,18 @@
 <?php
-    $pageName = filter_input(INPUT_POST, "navBtn");
-    $location = "content/landingPage.php";
+    // instantiate contentSwitcher
     $contentSwitcher = new contentSwitcher();
+    
+    $pageName = filter_input(INPUT_POST, "navBtn");
+    $pageToDisplay;
+    $location = "content/landingPage.php";
 
-    if(!empty($pageName)) $contentSwitcher->switchContent($pageName);
+    if(!empty($pageName)) 
+    {
+        $pageToDisplay = $contentSwitcher->findPage($pageName);
+        $location = $pageToDisplay->location;    
+    }
 
+    // page class represents a page on the website
     class page
     {
         public $name;
@@ -28,6 +36,19 @@
                 $subPage->parent = $this;
             }
         }
+
+        function getButton()
+        {
+            return "<button type='submit' name='navBtn' value='$this->name'>$this->name</button>";
+        }
+    }
+
+    function printNavLinks($page)
+    {
+        if($page->name == "Home") return; //don't display navLinks on home page
+        
+        if($page->parent !== null) printNavLinks($page->parent);
+        echo $page->getButton();
     }
 
     class contentSwitcher
@@ -42,11 +63,6 @@
                 new page("Contact", "content/contactPage.php", []),
                 new page("Login", "content/loginSignup.php", [])
             ]);
-        }
-
-        function switchContent($pageName)
-        {
-            $GLOBALS['location'] = $this->findPage($pageName)->location;
         }
 
         function findPage($pageName, $parentPage = null)

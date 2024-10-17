@@ -19,9 +19,7 @@
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
         <link rel="stylesheet" href="./css/homePage.css" type="text/css">
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
-        <script src="javascript/main.js" type="module"></script>
-        <script>
-        </script>
+        <!-- <script src="javascript/main.js" type="module"></script> -->
     </head>
     <body>
         <div id="header">
@@ -44,6 +42,7 @@
             </form>
         </div>
         <div id="navLinks">
+            <?php printNavLinks($pageToDisplay); ?>
         </div>
         <div id="offerButton">
             <button id="toggleOffer" class="pulseAnimation"><img src="resources/icons/offerIcon.svg" alt="Offer button"></button>
@@ -57,7 +56,7 @@
         <div id="content">
             <?php
                 // display content based on current location. See logic.php for more info
-                include($location);
+                include($pageToDisplay->location);
             ?>
         </div>
         <footer>
