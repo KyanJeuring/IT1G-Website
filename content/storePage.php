@@ -48,12 +48,13 @@
 
     <main>
         <div id="bar">
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" class="search">
+            <form action="" class="search">
                 <input type="search" name="search">
                 <label for="search">Search</label>
             </form>
         </div>
 
+        
         <!-- <div id="products">
             <div class="ocean-breeze">
                 <a href="">
@@ -63,17 +64,7 @@
                 </a>
             </div>
         </div> -->
-        
-    </main>
-</div>
-        <div class="search-container">
-            <div class="filter-section">
-                <form action="" method="GET">
-                    <input type="search" name="search" placeholder="search">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-            <div class="product-list">
+        <div class="product-list">
                 <?php
 
                     // product class
@@ -82,6 +73,7 @@
                         public $name;
                         public $color;
                         public $design;
+
     
                         public function __construct($name, $color, $design)
                         {
@@ -89,29 +81,32 @@
                             $this->color = $color;
                             $this->design = $design;
                         }
+
+
+
                     }
     
                       // list of products
                     $products =
                     [
-                        new product('Ocean Breeze', 'blue', 'striped'),
-                        new product('Navy Drift', 'light blue', 'striped'),
-                        new product('Sunny Socks', 'yellow', 'solid'),
-                        new product('Glam Walkers', 'pink', 'striped'),
-                        new product('Crimson Web', 'red', 'striped'),
-                        new product('Cool Blue', 'blue', 'solid'),
-                        new product('Navy Drift', 'blue', 'solid'),
-                        new product('Cotton Candy', 'pink', 'solid'),
-                        new product('Tomato', 'red', 'solid'),
-                        new product('Lemon Whirl', 'yellow', 'striped'),
-                        new product('Sporty', 'white', 'striped'),
-                        new product('Long Stripes', 'multicolor', 'striped'),
-                        new product('White Dream', 'white', 'solid'),
-                        new product('Grey Dream', 'grey', 'solid'),
-                        new product('Confusion', 'multicolor', 'unique'),
-                        new product('Wooble Double', 'multicolor', 'unique'),
-                        new product('Splashy Colors', 'multicolor', 'unique'),
-                        new product('Warm Flowers', 'color', 'unique'),
+                        new product('Ocean Breeze', 'blue', 'striped', 'ocean-breeze'),
+                        new product('Navy Drift', 'light blue', 'striped', ''),
+                        new product('Sunny Socks', 'yellow', 'solid',''),
+                        new product('Glam Walkers', 'pink', 'striped',''),
+                        new product('Crimson Web', 'red', 'striped',''),
+                        new product('Cool Blue', 'blue', 'solid',''),
+                        new product('Navy Drift', 'blue', 'solid',''),
+                        new product('Cotton Candy', 'pink', 'solid',''),
+                        new product('Tomato', 'red', 'solid',''),
+                        new product('Lemon Whirl', 'yellow', 'striped',''),
+                        new product('Sporty', 'white', 'striped',''),
+                        new product('Long Stripes', 'multicolor', 'striped',''),
+                        new product('White Dream', 'white', 'solid',''),
+                        new product('Grey Dream', 'grey', 'solid',''),
+                        new product('Confusion', 'multicolor', 'unique',''),
+                        new product('Wooble Double', 'multicolor', 'unique',''),
+                        new product('Splashy Colors', 'multicolor', 'unique',''),
+                        new product('Warm Flowers', 'color', 'unique',''),
                     ];
                 
     
@@ -153,14 +148,17 @@
                         }
                     }
                     //product display (the echos are temporary, I will update them with the actual products when the time comes)
-                    if (!empty($filteredProducts)) {
+                    if (!empty($filteredProducts)) 
+                    {
                         foreach ($filteredProducts as $product) 
                         {
+                            
                             echo "<div class='product-item'>";
                             echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
                             echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
                             echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
                             echo "</div>";
+
                         }
                     }
                     else 
@@ -170,11 +168,15 @@
                 }
                 else 
                 {
-                    
+                    echo "<p> test text</p>";
                 }
                 
                 ?>
             </div>
-        </div>
+    </main>
+</div>
+
+            
+        
     </body>
 </html>
