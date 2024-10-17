@@ -73,7 +73,6 @@
                         public $name;
                         public $color;
                         public $design;
-
     
                         public function __construct($name, $color, $design)
                         {
@@ -89,24 +88,24 @@
                       // list of products
                     $products =
                     [
-                        new product('Ocean Breeze', 'blue', 'striped', 'ocean-breeze'),
-                        new product('Navy Drift', 'light blue', 'striped', ''),
-                        new product('Sunny Socks', 'yellow', 'solid',''),
-                        new product('Glam Walkers', 'pink', 'striped',''),
-                        new product('Crimson Web', 'red', 'striped',''),
-                        new product('Cool Blue', 'blue', 'solid',''),
-                        new product('Navy Drift', 'blue', 'solid',''),
-                        new product('Cotton Candy', 'pink', 'solid',''),
-                        new product('Tomato', 'red', 'solid',''),
-                        new product('Lemon Whirl', 'yellow', 'striped',''),
-                        new product('Sporty', 'white', 'striped',''),
-                        new product('Long Stripes', 'multicolor', 'striped',''),
-                        new product('White Dream', 'white', 'solid',''),
-                        new product('Grey Dream', 'grey', 'solid',''),
-                        new product('Confusion', 'multicolor', 'unique',''),
-                        new product('Wooble Double', 'multicolor', 'unique',''),
-                        new product('Splashy Colors', 'multicolor', 'unique',''),
-                        new product('Warm Flowers', 'color', 'unique',''),
+                        new product('Ocean Breeze', 'blue', 'striped',),
+                        new product('Navy Drift', 'light blue', 'striped'),
+                        new product('Sunny Socks', 'yellow', 'solid'),
+                        new product('Glam Walkers', 'pink', 'striped'),
+                        new product('Crimson Web', 'red', 'striped'),
+                        new product('Cool Blue', 'blue', 'solid'),
+                        new product('Navy Drift', 'blue', 'solid'),
+                        new product('Cotton Candy', 'pink', 'solid'),
+                        new product('Tomato', 'red', 'solid'),
+                        new product('Lemon Whirl', 'yellow', 'striped'),
+                        new product('Sporty', 'white', 'striped'),
+                        new product('Long Stripes', 'multicolor', 'striped'),
+                        new product('White Dream', 'white', 'solid'),
+                        new product('Grey Dream', 'grey', 'solid'),
+                        new product('Confusion', 'multicolor', 'unique'),
+                        new product('Wooble Double', 'multicolor', 'unique'),
+                        new product('Splashy Colors', 'multicolor', 'unique'),
+                        new product('Warm Flowers', 'color', 'unique'),
                     ];
                 
     
