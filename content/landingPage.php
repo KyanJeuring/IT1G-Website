@@ -6,20 +6,14 @@
         <div class="semitransparentContentBox">
             <h1 class="introHeaderText"><span class="oneLineBlockElement">Lets change</span> <span class="oneLineBlockElement">the world</span> <span class="oneLineBlockElement">one sock at a time</span></h1>
             <p class="generalText">We like to add some color to one of the the most everyday moments of life.</p>
-            <button class="ctaButtonArrow">Make The Change Today</button>
+            <button class="ctaButtonArrow" onclick="document.getElementById('galleryContainer').scrollIntoView({ behavior: 'smooth' });">Make The Change Today</button>
         </div>
     </section>
 
     <!-- gallery/carousel section (container) -->
-    <section class="galleryContainer">
+    <section class="galleryContainer" id="galleryContainer">
         <h1 class="headerText">Browse Our Collections</h1>
         <div class="galleryCarousel">
-            <!-- setting the background images that will dynamically change upon clicking cta buttons -->
-            <img src="" alt="image of socks in the winter" class="dynamicImage" id="js-dynamicImage">
-            <img src="" alt="image of socks in the summer" class="dynamicImage" id="js-dynamicImage">
-            <img src="" alt="image of socks in autumn" class="dynamicImage" id="js-dynamicImage">
-            <img src="" alt="image of socks in spring" class="dynamicImage" id="js-dynamicImage">
-
             <!-- setting up carousel structure such as: button-left | info box | button-right -->
             <button class="galleryButton" id="galleryLeftButton"><img src="" alt="image of arrow pointing to the left"></button>
             <div class="semitransparentContentBox">
@@ -27,8 +21,8 @@
                 <p class="generalText">Keep cool and stylish with our lightweight summer socks, ideal for every sun-filled adventure.</p>
                 <button class="ctaButton">Summary Collection</button>
             </div>
-            <button class="galleryButton" id="galleryLeftButton"><img src="" alt="image of arrow pointing to the right"></button>
-        </div>
+            <button class="galleryButton" id="galleryRightButton"><img src="" alt="image of arrow pointing to the right"></button>
+        </div>        
     </section>
 
     <!-- Short product catalog section (container) -->
@@ -39,12 +33,14 @@
         <div class="productCatalog">
             <!-- Creating the box containers -->
             <div class="productBox">
-                <img src="" alt="image of product item" class="productImage">
+                <img src="../resources/socksImages/blue.png" alt="image of product item" class="productImage">
                 <div class="productInfoBox">
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
-                    <p class="productNewPrice">$ New Price</p>
-                    <p class="productOldPrice">$ Old Price</p>
+                    <div class="productPrices">
+                        <p class="productNewPrice">$ New Price</p>
+                        <p class="productOldPrice">$ Old Price</p>                       
+                    </div>
                 </div>
             </div>
             <div class="productBox">
@@ -52,8 +48,10 @@
                 <div class="productInfoBox">
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
-                    <p class="productNewPrice">$ New Price</p>
-                    <p class="productOldPrice">$ Old Price</p>
+                    <div class="productPrices">
+                        <p class="productNewPrice">$ New Price</p>
+                        <p class="productOldPrice">$ Old Price</p>                       
+                    </div>
                 </div>
             </div>
             <div class="productBox">
@@ -61,8 +59,10 @@
                 <div class="productInfoBox">
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
-                    <p class="productNewPrice">$ New Price</p>
-                    <p class="productOldPrice">$ Old Price</p>
+                    <div class="productPrices">
+                        <p class="productNewPrice">$ New Price</p>
+                        <p class="productOldPrice">$ Old Price</p>                        
+                    </div>
                 </div>
             </div>
             <div class="productBox">
@@ -70,8 +70,10 @@
                 <div class="productInfoBox">
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
-                    <p class="productNewPrice">$ New Price</p>
-                    <p class="productOldPrice">$ Old Price</p>
+                    <div class="productPrices">
+                        <p class="productNewPrice">$ New Price</p>
+                        <p class="productOldPrice">$ Old Price</p>                        
+                    </div>
                 </div>
             </div>
             <div class="productBox">
@@ -79,8 +81,10 @@
                 <div class="productInfoBox">
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
-                    <p class="productNewPrice">$ New Price</p>
-                    <p class="productOldPrice">$ Old Price</p>
+                    <div class="productPrices">
+                        <p class="productNewPrice">$ New Price</p>
+                        <p class="productOldPrice">$ Old Price</p>                        
+                    </div>
                 </div>
             </div>
             <div class="productBox">
@@ -88,8 +92,10 @@
                 <div class="productInfoBox">
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
-                    <p class="productNewPrice">$ New Price</p>
-                    <p class="productOldPrice">$ Old Price</p>
+                    <div class="productPrices">
+                        <p class="productNewPrice">$ New Price</p>
+                        <p class="productOldPrice">$ Old Price</p>                        
+                    </div>
                 </div>
             </div>
             <div class="productBox">
@@ -97,8 +103,10 @@
                 <div class="productInfoBox">
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
-                    <p class="productNewPrice">$ New Price</p>
-                    <p class="productOldPrice">$ Old Price</p>
+                    <div class="productPrices">
+                        <p class="productNewPrice">$ New Price</p>
+                        <p class="productOldPrice">$ Old Price</p>                        
+                    </div>
                 </div>
             </div>
             <div class="productBox">
@@ -106,8 +114,10 @@
                 <div class="productInfoBox">
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
-                    <p class="productNewPrice">$ New Price</p>
-                    <p class="productOldPrice">$ Old Price</p>
+                    <div class="productPrices">
+                        <p class="productNewPrice">$ New Price</p>
+                        <p class="productOldPrice">$ Old Price</p>                        
+                    </div>
                 </div>
             </div>
         </div>

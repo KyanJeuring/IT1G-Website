@@ -1,21 +1,66 @@
+.headerText
+{
+    font-size: 3rem;
+}
+
+.semitransparentContentBox
+{
+    background:rgba(30,64,122,0.75);
+
+    border-radius: 2rem;
+    padding: 3rem;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .introImageContainer
 {
-    /* position: relative; */
-    background-image: url(../resources/otherPhotos/Hero.png);
     min-width: 100dvw;
     min-height: 90dvh;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire container */
+    background-image: url(../resources/otherPhotos/Hero.png);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     display: grid;
-    grid-template-columns: 1.5fr 2fr 1.5fr;
+    grid-template-columns: 1fr 1.4fr 1fr;
     grid-template-rows: repeat(4, 1fr);
+}
+
+.introImageContainer > .semitransparentContentBox
+{
+    grid-area: 2 / 2 / 4 / 3;
 }
 
 .introHeaderText
 {
     text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.generalText
+{
+    font-size: 1.5rem;
+}
+
+.ctaButtonArrow,
+.ctaButton
+{
+    background-color: #F15B39;
+
+    padding: 1em 2em;
+    border-radius: 2em;
+}
+
+.semitransparentContentBox .ctaButtonArrow,
+.semitransparentContentBox .ctaButton
+{
+    align-self: flex-start;
 }
 
 .oneLineBlockElement
@@ -23,13 +68,80 @@
     display: block;
 }
 
-.semitransparentContentBox
+/* Browse Our Wares - Section of homepage */
+
+.galleryContainer
 {
-    background:rgba(30,64,122,0.75);
-    grid-area: 2 / 1 / 4 / 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    max-width: 80dvw;
+    min-height: 100dvh;
+
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.galleryCarousel
+{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin: 3rem;
+
+    background-image: url('../resources/socksImages/summer_socks_homepage.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    grid-template-rows: 0.6fr 1fr 0.6fr;
 
     border-radius: 2rem;
+}
 
-    padding: 3rem;
-    color: white;
+.galleryCarousel > .semitransparentContentBox
+{
+    grid-area: 2 / 2 / 3 / 3;
+    gap: 2rem;
+}
+
+.galleryButton
+{
+    margin: 1rem;
+}
+
+#galleryLeftButton
+{
+    grid-area: 2 / 1 / 2 / 1;
+    justify-self: start;
+}
+
+#galleryRightButton
+{
+    grid-area: 2 / 3 / 2 / 3;
+    justify-self: end;
+}
+
+
+/* Product Catalog Section */
+
+.productCatalogSection
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productCatalog
+{
+    display: grid;
+    grid-template-columns: repeat(4, 15vw);
+    grid-template-rows: repeat(2, 30vh);
+}
+
+.productPrices
+{
+    display: inline-flex;
 }
