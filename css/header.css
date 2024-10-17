@@ -18,9 +18,15 @@
     flex-direction: row;
     height: 100%;
     gap: 2rem;
+    align-items: center;
 }
 
-.section.center
+#header .section.left button
+{
+    height: 100%;
+}
+
+#header .section.center
 {
     position: absolute;
     left: 50%;
@@ -28,13 +34,16 @@
     top: 0;
 }
 
-#header button
-{
+#header .section.center button {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+
+    height: 25%;
     font-size: 1.25rem;
-    height: 100%;
 }
 
-#header .icon
+#header .section p
 {
-    padding: 20%;
+    font-family: NexaLight;
 }
