@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="./css/footer.css" type="text/css">
         <link rel="stylesheet" href="./css/loginSignup.css" type="text/css">
         <link rel="stylesheet" href="./css/navLinks.css" type="text/css">
+        <link rel="stylesheet" href="./css/storePage.css" type="text/css">
         <link rel="stylesheet" href="./css/offerPopup.css" type="text/css">
         <link rel="stylesheet" href="./css/aboutPage.css" type="text/css">
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
