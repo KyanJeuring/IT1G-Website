@@ -45,8 +45,6 @@
 
     function printNavLinks($page)
     {
-        if($page->name == "Home") return; //don't display navLinks on home page
-        
         if($page->parent !== null) printNavLinks($page->parent);
         echo $page->getButton();
     }
