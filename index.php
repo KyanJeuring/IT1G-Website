@@ -1,5 +1,5 @@
 <?php
-    $location = filter_input(INPUT_POST, "navBtn"); 
+    include("logic.php");
 ?>
 
 <!DOCTYPE html>
@@ -26,21 +26,21 @@
     <body>
         <div id="header">
             <form class="section left" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
-                <button id="logoButton" type="submit" name="navBtn" value="content/landingPage.php">
+                <button id="logoButton" type="submit" name="navBtn" value="Home">
                     <img src="resources/Logo's/png/sunny_logos_blue.png" alt="Sunny socks logo">
                 </button>
             </form>
             <form class="section center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
-                <button id="aboutButton" type="submit" name="navBtn" value="content/aboutPage.php">ABOUT</button>
-                <button id="menButton" type="submit" name="navBtn" value="content/storePage.php">MEN</button>
-                <button id="womenButton" type="submit" name="navBtn" value="content/storePage.php">WOMEN</button>
-                <button id="shopButton" type="submit" name="navBtn" value="content/storePage.php">SHOP</button>
-                <button id="contactButton" type="submit" name="navBtn" value="content/contactPage.php">CONTACT</button>
+                <button id="aboutButton" type="submit" name="navBtn" value="About">ABOUT</button>
+                <button id="menButton" type="submit" name="navBtn" value="Shop">MEN</button>
+                <button id="womenButton" type="submit" name="navBtn" value="Shop">WOMEN</button>
+                <button id="shopButton" type="submit" name="navBtn" value="Shop">SHOP</button>
+                <button id="contactButton" type="submit" name="navBtn" value="Contact">CONTACT</button>
             </form>
             <form class="section right" form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
                 <button><img class="icon" src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
                 <button><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-                <button id="loginButton" type="submit" name="navBtn" value="content/loginSignup.php"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+                <button id="loginButton" type="submit" name="navBtn" value="Login"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
             </form>
         </div>
         <div id="navLinks">
@@ -56,8 +56,8 @@
         </div>
         <div id="content">
             <?php
-                if(!empty($location)) include($location);
-                else include("content/landingPage.php");
+                // display content based on current location. See logic.php for more info
+                include($location);
             ?>
         </div>
         <footer>

@@ -2,7 +2,7 @@
             <div class="filter-section">
                 <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                     <input type="search" name="search" placeholder="search">
-                    <button type="submit" name="navBtn" value="content/storePage.php">Search</button>
+                    <button type="submit" name="navBtn" value="Shop">Search</button>
                 </form>
             </div>
             <div class="product-list">
