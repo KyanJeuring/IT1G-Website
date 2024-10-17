@@ -21,7 +21,7 @@
         ?>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <input type="text" name="uname" placeholder="Username" required>
-            <input type="text" name="password" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" required>
             <button type="submit" name="navBtn" value="Login">Login</button>
             <button>Not a member yet?</button>
         </form>
