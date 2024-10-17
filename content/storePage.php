@@ -69,29 +69,6 @@
             </div>
             <div class="product-list">
                 <?php
-                //list of products
-                $products = 
-                [
-                    ['name' => 'Ocean Breeze', 'color' => 'blue', 'design' => 'striped'],
-                    ['name' => 'Navy Drift', 'color' => 'light blue', 'design' => 'striped'],
-                    ['name' => 'Sunny Socks', 'color' => 'yellow', 'design' => 'solid'],
-                    ['name' => 'Glam Walkers', 'color' => 'pink', 'design' => 'striped'],
-                    ['name' => 'Crimson Web', 'color' => 'red', 'design' => 'striped'],
-                    ['name' => 'Cool Blue', 'color' => 'blue', 'design' => 'solid'],
-                    ['name' => 'Navy Drift', 'color' => 'light blue', 'design' => 'solid'],
-                    ['name' => 'Cotton Candy', 'color' => 'pink', 'design' => 'solid'],
-                    ['name' => 'Tomato', 'color' => 'red', 'design' => 'solid'],
-                    ['name' => 'Lemon Whirl', 'color' => 'yellow', 'design' => 'striped'],
-                    ['name' => 'Sporty', 'color' => 'white', 'design' => 'striped'],
-                    ['name' => 'Long Stripes', 'color' => 'multicolor','design' => 'striped'],
-                    ['name' => 'White Dream', 'color' => 'white', 'design' => 'solid'],
-                    ['name' => 'Grey Dream', 'color' => 'grey', 'design' => 'solid'],
-                    ['name' => 'Confusion', 'color' => 'multicolor', 'design' => 'unique'],
-                    ['name' => 'Wooble Double', 'color' => 'multicolor', 'design' => 'unique'],
-                    ['name' => 'Splashy Colors', 'color' => 'multicolor', 'design' => 'unique'],
-                    ['name' => 'Warm Flowers', 'color' => 'multicolor', 'design' => 'unique'],
-                ];
-
 
                 // Search query checker
                 if(isset($_POST['search']) && !empty($_POST['search']))
