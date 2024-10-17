@@ -9,16 +9,6 @@
             {
                 $uname = filter_input(INPUT_POST, "uname");
                 $password = filter_input(INPUT_POST, "password");
-                if(empty($_POST['uname']))
-                {
-                    echo "<div class='errorMessage'><p>Please provide an username.</p></div>";
-                }
-                if(empty($_POST['password']))
-                {
-                    echo "<div class='errorMessage'><p>Please provide a password.</p></div>";
-                }
-                else
-                {
                     if($uname != "user" || $password != "1234")
                     {
                         echo "<div class='errorMessage'><p>The credentials are incorrect!</p></div>";
@@ -27,12 +17,11 @@
                     {
                         echo "<h1>Login Success!</h1>";
                     }
-                }
             }
         ?>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-            <input type="text" name="uname" placeholder="Username">
-            <input type="text" name="password" placeholder="Password">
+            <input type="text" name="uname" placeholder="Username" required>
+            <input type="text" name="password" placeholder="Password" required>
             <button type="submit" name="navBtn" value="Login">Login</button>
             <button>Not a member yet?</button>
         </form>
