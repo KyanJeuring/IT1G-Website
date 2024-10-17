@@ -1,14 +1,8 @@
-<?php
-    if(!session_id()) session_start();
-?>
-        <h1>Store page content</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias provident eos doloribus quas aspernatur. Suscipit nihil dignissimos aliquid animi neque voluptatem, fugit quam voluptas ad hic natus. Eaque, deserunt quia.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt harum quae optio distinctio? Possimus ullam vitae, iste doloremque officiis in? In sapiente debitis tempora doloribus iusto corporis commodi aspernatur.</p>
         <div class="search-container">
             <div class="filter-section">
-                <form action="" method="GET">
+                <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                     <input type="search" name="search" placeholder="search">
-                    <button type="submit">Search</button>
+                    <button type="submit" name="navBtn" value="content/storePage.php">Search</button>
                 </form>
             </div>
             <div class="product-list">
@@ -57,9 +51,9 @@
                 
 
                 // Search query checker
-                if(isset($_SESSION["search"]))
+                if(isset($_POST["search"]))
                 {
-                    $searchQuery = strtolower($_SESSION["search"]); // case sense
+                    $searchQuery = strtolower($_POST["search"]); // case sense
                     $filteredProducts = []; 
                     
                     // product loop

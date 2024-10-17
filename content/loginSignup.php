@@ -33,7 +33,7 @@
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
             <input type="text" name="uname" placeholder="Username">
             <input type="text" name="password" placeholder="Password">
-            <button type="submit" name="login">Login</button>
+            <button type="submit" name="navBtn" value="content/loginSignup.php">Login</button>
             <button>Not a member yet?</button>
         </form>
     </div>

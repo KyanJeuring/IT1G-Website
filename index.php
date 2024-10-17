@@ -1,6 +1,5 @@
 <?php
-    if(!session_id()) session_start();
-    if(isset($_GET['search'])) $_SESSION['search'] = $_GET['search'];
+    $location = filter_input(INPUT_POST, "navBtn"); 
 ?>
 
 <!DOCTYPE html>
@@ -26,23 +25,23 @@
     </head>
     <body>
         <div id="header">
-            <div class="section left">
-                <button id="logoButton" href="index.php">
+            <form class="section left" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
+                <button id="logoButton" type="submit" name="navBtn" value="content/landingPage.php">
                     <img src="resources/Logo's/png/sunny_logos_blue.png" alt="Sunny socks logo">
                 </button>
-            </div>
-            <div class="section center">    
-                <button id="aboutButton" type="button">ABOUT</button>
-                <button id="menButton" type="button">MEN</button>
-                <button id="womenButton" type="button">WOMEN</button>
-                <button id="shopButton" type="button">SHOP</button>
-                <button id="contactButton" type="button">CONTACT</button>
-            </div>
-            <div class="section right">
+            </form>
+            <form class="section center" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
+                <button id="aboutButton" type="submit" name="navBtn" value="content/aboutPage.php">ABOUT</button>
+                <button id="menButton" type="submit" name="navBtn" value="content/storePage.php">MEN</button>
+                <button id="womenButton" type="submit" name="navBtn" value="content/storePage.php">WOMEN</button>
+                <button id="shopButton" type="submit" name="navBtn" value="content/storePage.php">SHOP</button>
+                <button id="contactButton" type="submit" name="navBtn" value="content/contactPage.php">CONTACT</button>
+            </form>
+            <form class="section right" form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
                 <button><img class="icon" src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
                 <button><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-                <button id="loginButton"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
-            </div>
+                <button id="loginButton" type="submit" name="navBtn" value="content/loginSignup.php"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+            </form>
         </div>
         <div id="navLinks">
         </div>
@@ -57,9 +56,8 @@
         </div>
         <div id="content">
             <?php
-                if(!isset($_GET["search"])) {
-                    include("content/landingPage.php");
-                }
+                if(!empty($location)) include($location);
+                else include("content/landingPage.php");
             ?>
         </div>
         <footer>
