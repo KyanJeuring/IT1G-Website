@@ -28,12 +28,14 @@
 
 .forms h1
 {
+    font-size: 2.5em;
     font-family: "NexaLight";
     color: var(--companyOrange);
 }
 
 .forms p
 {
+    font-size: 1.3em;
     font-family: "NexaLight";
     color: var(--companyOrange);
 }

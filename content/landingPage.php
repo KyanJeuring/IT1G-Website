@@ -127,7 +127,7 @@
     </section>
 
     <!-- About section that gives information about the company (container) -->
-     <section class="aboutGridContainer">
+    <section class="aboutGridContainer">
         <div class="aboutGridElement">
             <img src="" alt="image of lady standing on towel wearing socks">
         </div>
@@ -160,6 +160,6 @@
     </section>
 
     <?php
-        include 'newsletterSignUpForm.php'
+        include ('newsletterSignUpForm.php');
     ?>
 </main>
