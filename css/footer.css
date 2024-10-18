@@ -49,7 +49,7 @@ footer li
     padding: 3% 0;
 }
 
-footer a
+footer a, footer a:visited
 {
     text-decoration: none;
     color: #fff;
