@@ -1,9 +1,9 @@
-
 <?php
     if(!session_id()) session_start();
 ?>
-        
-
+        <h1>Store page content</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias provident eos doloribus quas aspernatur. Suscipit nihil dignissimos aliquid animi neque voluptatem, fugit quam voluptas ad hic natus. Eaque, deserunt quia.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt harum quae optio distinctio? Possimus ullam vitae, iste doloremque officiis in? In sapiente debitis tempora doloribus iusto corporis commodi aspernatur.</p>
 <div id="container">
     <aside>
         <div class="categories">
@@ -26,7 +26,7 @@
                 <div id="price">
                     <label for="price">Price Range</label>
                     <label for="price">$0-100</label>
-                    <input type="range" name="price" min="0" max="100" step="1" value="50" />
+                    <input type="range" name="price" min="0" max="100" step="1" defauk="0" />
                 </div>
 
                 <div id="color">
@@ -48,13 +48,14 @@
 
     <main>
         <div id="bar">
-            <form action="" method="get" class="search">
+            <form action="" class="search">
                 <input type="search" name="search">
                 <label for="search">Search</label>
             </form>
         </div>
 
-        <div id="products">
+        
+        <!-- <div id="products">
             <div class="ocean-breeze">
                 <a href="">
                     <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg" alt="Ocean Breeze">
@@ -62,18 +63,8 @@
                     <p>$25.99</p>
                 </a>
             </div>
-        </div>
-        
-    </main>
-</div>
-        <div class="search-container">
-            <div class="filter-section">
-                <form action="" method="POST">
-                    <input type="search" name="search" placeholder="search">
-                    <button type="submit">Search</button>
-                </form>
-            </div>
-            <div class="product-list">
+        </div> -->
+        <div class="product-list">
                 <?php
 
                     // product class
@@ -89,12 +80,15 @@
                             $this->color = $color;
                             $this->design = $design;
                         }
+
+
+
                     }
     
                       // list of products
                     $products =
                     [
-                        new product('Ocean Breeze', 'blue', 'striped'),
+                        new product('Ocean Breeze', 'blue', 'striped',),
                         new product('Navy Drift', 'light blue', 'striped'),
                         new product('Sunny Socks', 'yellow', 'solid'),
                         new product('Glam Walkers', 'pink', 'striped'),
@@ -113,8 +107,6 @@
                         new product('Splashy Colors', 'multicolor', 'unique'),
                         new product('Warm Flowers', 'color', 'unique'),
                     ];
-                
-    
                 
                 
 
@@ -155,20 +147,13 @@
                     //product display (the echos are temporary, I will update them with the actual products when the time comes)
                     if (!empty($filteredProducts)) 
                     {
-
-                        function showProduct()
-                        {
-                            
-                        }
                         foreach ($filteredProducts as $product) 
                         {
-                            
-
                             echo "<div id = 'products'>";
 
                                 if($product->name == 'Ocean Breeze')
                                 {
-                                    echo "<div>
+                                    echo "<div class='ocean-breeze'>
                                             <a href=''>
                                                 <img src='resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg' alt='Ocean Breeze'>
                                                 <p>Ocean Breeze</p>
@@ -177,31 +162,13 @@
                                         </div>";
                                 }
 
-                                
-
-                                // if($product->name == 'Navy Blue')
-                                // {
-                                //     echo "<div class='ocean-breeze'>
-                                //             <a href=''>
-                                //                 <img src='resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg' alt='Ocean Breeze'>
-                                //                 <p>Ocean Breeze</p>
-                                //                 <p>$25.99</p>
-                                //             </a>
-                                //         </div>";
-                                // }
-
-
-                        echo "</div>";
-                        // echo "<div class='product-item'>";
-                        // echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
-                        // echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
-                        // echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
-                        // echo "</div>";
+                            echo "</div>";
                             // echo "<div class='product-item'>";
                             // echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
                             // echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
                             // echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
                             // echo "</div>";
+
                         }
                     }
                     else 
@@ -211,11 +178,15 @@
                 }
                 else 
                 {
-                    
+                    echo "<p> test text</p>";
                 }
                 
                 ?>
             </div>
-        </div>
+    </main>
+</div>
+
+            
+        
     </body>
 </html>
