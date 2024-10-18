@@ -16,7 +16,7 @@
         <p>WOMEN</p>
         <img src="resources/icons/svg/downArrow.svg" alt="arrowIcon">
     </button>
-    <button id="shopButton" type="submit" name="navBtn" value="Shop">
+    <button class="shopButton" type="submit" name="navBtn" value="Shop">
         <p>SHOP</p>
         <img src="resources/icons/svg/downArrow.svg" alt="arrowIcon">
     </button>

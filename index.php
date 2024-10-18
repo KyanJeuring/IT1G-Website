@@ -38,7 +38,7 @@
             <h1>Special Offer!</h1>
             <h2>Use Coupon Code</h2>
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
-                <button id="shopButton" type="submit" name="navBtn" value="Shop">FUNSOX</button>
+                <button class="shopButton" type="submit" name="navBtn" value="Shop">FUNSOX</button>
             </form>
             <h2>for 30% off</h2>
         </div>
