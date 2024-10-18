@@ -1,10 +1,9 @@
-<<<<<<< Updated upstream
-=======
+
 <?php
     if(!session_id()) session_start();
 ?>
         
->>>>>>> Stashed changes
+
 <div id="container">
     <aside>
         <div class="categories">
@@ -154,16 +153,6 @@
                         }
                     }
                     //product display (the echos are temporary, I will update them with the actual products when the time comes)
-<<<<<<< Updated upstream
-                    if (!empty($filteredProducts)) {
-                        foreach ($filteredProducts as $product) 
-                        {
-                            echo "<div class='product-item'>";
-                            echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
-                            echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
-                            echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
-                            echo "</div>";
-=======
                     if (!empty($filteredProducts)) 
                     {
 
@@ -213,8 +202,6 @@
                             // echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
                             // echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
                             // echo "</div>";
-
->>>>>>> Stashed changes
                         }
                     }
                     else 
