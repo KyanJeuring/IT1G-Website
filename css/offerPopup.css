@@ -9,6 +9,7 @@
 
 #offerPopup
 {
+    cursor: default;
     display: none;
     left: 35%;
     position: fixed;
@@ -36,11 +37,18 @@
 
 #offerPopup button
 {
-    padding: 1em 2em 1em 2em;
+    padding: 1em 1.5em 1em 1.5em;
     border-radius: 1em;
-    background-color: #fff;
+    background-color: var(--companyOrange);
+    border: 3px solid var(--companyOrange);
     font-size: 1.5em;
-    color: #000;
+    color: #fff;
+}
+
+#offerPopup button:hover
+{
+    background-color: #fff;
+    color: var(--companyOrange);
 }
 
 /* Defining all the animations */
