@@ -10,7 +10,8 @@
 #offerPopup
 {
     cursor: default;
-    display: none;
+    display: block;
+    top: 35%;
     left: 35%;
     position: fixed;
     z-index: 2; 
