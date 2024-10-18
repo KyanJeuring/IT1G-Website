@@ -60,34 +60,34 @@ footer a:hover
     color: var(--companyOrange);
 }
 
-.socials1
+.socialsDesktop
 {
     display: block;
     padding: 2%;
 }
 
-.socials1 > a
+.socials > a
 {
     margin: 3%;
 }
 
-.socials1 svg
+.socials svg
 {
     fill: #fff;
 }
 
-.socials1 svg:hover
+.socials svg:hover
 {
     fill: var(--companyOrange);
 }
 
-.socials2
+.socialsMobile
 {
     display: none;
     padding: 2% 2% 5% 2%;
 }
 
-.socials2 > a
+.socialsMobile > a
 {
     margin: 1%;
 }
@@ -138,12 +138,12 @@ footer a:hover
         padding-top: 0%;
     }
 
-    .socials1
+    .socialsDesktop
     {
         display: none;
     }
 
-    .socials2
+    .socialsMobile
     {
         display: block;
     }
