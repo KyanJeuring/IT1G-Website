@@ -1,3 +1,8 @@
+<?php
+    if(!session_id()) session_start();
+    if(isset($_GET['search'])) $_SESSION['search'] = $_GET['search'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,8 +13,17 @@
         <link rel="stylesheet" href="./css/header.css" type="text/css">
         <link rel="stylesheet" href="./css/main.css" type="text/css">
         <link rel="stylesheet" href="./css/footer.css" type="text/css">
+        <link rel="stylesheet" href="./css/loginSignup.css" type="text/css">
+        <link rel="stylesheet" href="./css/navLinks.css" type="text/css">
+        <link rel="stylesheet" href="./css/storePage.css" type="text/css">
+        <link rel="stylesheet" href="./css/offerPopup.css" type="text/css">
+        <link rel="stylesheet" href="./css/aboutPage.css" type="text/css">
+        <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/homePage.css" type="text/css">
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
+        <script>
+        </script>
     </head>
     <body>
         <div id="header">
@@ -26,16 +40,33 @@
                 <button id="contactButton" type="button">CONTACT</button>
             </div>
             <div class="section right">
-                <button><img src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
-                <button><img src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
-                <button><img src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
+                <button><img class="icon" src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
+                <button><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
+                <button id="loginButton"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
             </div>
         </div>
-        <div id="content"></div>
+        <div id="navLinks">
+        </div>
+        <div id="offerButton">
+            <button id="toggleOffer" class="pulseAnimation"><img src="resources/icons/offerIcon.svg" alt="Offer button"></button>
+        </div>
+        <div id="offerPopup">
+            <h1>Special Offer!</h1>
+            <h2>Use Coupon Code</h2>
+            <button id="shopButton" type="button">FUNSOX</button>
+            <h2>for 30% off</h2>
+        </div>
+        <div id="content">
+            <?php
+                if(!isset($_GET["search"])) {
+                    include("content/landingPage.php");
+                }
+            ?>
+        </div>
         <footer>
             <section>
                 <img src="./resources/Logo's/png/sunny_logos-01.png" alt="Sunny Socks Logo" id="footerLogo">
-                <div class="socials">
+                <div class="socials1">
                     <a href="https://x.com/X" target="_blank"><img src="./resources/icons/socialMedia/xLogo.svg" alt="X"></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src="./resources/icons/socialMedia/instagramLogo.svg" alt="Instagram"></a>
                     <a href="https://www.facebook.com/" target="_blank"><img src="./resources/icons/socialMedia/facebookLogo.svg" alt="Facebook"></a>
@@ -70,6 +101,12 @@
                     <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
                     <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
                 </ul>
+                <div class="socials2">
+                    <a href="https://x.com/X" target="_blank"><img src="./resources/icons/socialMedia/xLogo.svg" alt="X"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="./resources/icons/socialMedia/instagramLogo.svg" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/" target="_blank"><img src="./resources/icons/socialMedia/facebookLogo.svg" alt="Facebook"></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><img src="./resources/icons/socialMedia/linkedinLogo.svg" alt="LinkedIn"></a>
+                </div>
             </section>
         </footer>
     </body>

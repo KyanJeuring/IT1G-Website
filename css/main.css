@@ -24,14 +24,20 @@
     box-sizing: border-box;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 body
 {
     font-family: "NexaLight";
 }
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, p
 {
     font-family: "NexaBold";
+    font-size: inherit;
 }
 
 img
@@ -42,6 +48,12 @@ img
 
 button
 {
+    all: unset;
     /* make sure all buttons still change your cursor to hand while hovering. Even after all:unset */
     cursor: pointer !important;
+}
+
+#content
+{
+    min-height: 100vh;
 }

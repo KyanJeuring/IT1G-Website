@@ -5,7 +5,7 @@ footer
     flex-wrap: wrap;
     bottom: 0;
     margin: 0;
-    position: absolute;
+    position: relative;
     width: 100%;
     background-color: var(--companyBlue);
     justify-content: space-between;
@@ -55,14 +55,31 @@ footer a
     color: #fff;
 }
 
-.socials
+footer a:hover
 {
+    color: var(--companyOrange);
+}
+
+.socials1
+{
+    display: block;
     padding: 2%;
 }
 
-.socials > a
+.socials1 > a
 {
     margin: 3%;
+}
+
+.socials2
+{
+    display: none;
+    padding: 2% 2% 5% 2%;
+}
+
+.socials2 > a
+{
+    margin: 1%;
 }
 
 /* Make a responsive footer for mobile view*/
@@ -73,6 +90,13 @@ footer a
         display: flex;
         flex-direction: column;
         position: static;
+    }
+
+    #footerLogo
+    {
+        padding: 8% 0 3% 0;
+        height: auto;
+        width: 50%;
     }
 
     footer > section
@@ -86,7 +110,7 @@ footer a
         text-align: center;
     }
 
-    footer h2
+    footer h2    
     {
         padding: 5%;
     }
@@ -102,5 +126,15 @@ footer a
         list-style-type: none;
         padding: 5%;
         padding-top: 0%;
+    }
+
+    .socials1
+    {
+        display: none;
+    }
+
+    .socials2
+    {
+        display: block;
     }
 }
