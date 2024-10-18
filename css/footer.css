@@ -71,6 +71,16 @@ footer a:hover
     margin: 3%;
 }
 
+.socials1 svg
+{
+    fill: #fff;
+}
+
+.socials1 svg:hover
+{
+    fill: var(--companyOrange);
+}
+
 .socials2
 {
     display: none;
