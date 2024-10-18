@@ -1,9 +1,7 @@
 <?php
     if(!session_id()) session_start();
 ?>
-        <h1>Store page content</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias provident eos doloribus quas aspernatur. Suscipit nihil dignissimos aliquid animi neque voluptatem, fugit quam voluptas ad hic natus. Eaque, deserunt quia.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed deserunt harum quae optio distinctio? Possimus ullam vitae, iste doloremque officiis in? In sapiente debitis tempora doloribus iusto corporis commodi aspernatur.</p>
+
 <div id="container">
     <aside>
         <div class="categories">
@@ -48,13 +46,13 @@
 
     <main>
         <div id="bar">
-            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" class="search">
+            <form action="" method="get" class="search">
                 <input type="search" name="search">
                 <label for="search">Search</label>
             </form>
         </div>
 
-        <!-- <div id="products">
+        <div id="products">
             <div class="ocean-breeze">
                 <a href="">
                     <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg" alt="Ocean Breeze">
@@ -62,13 +60,13 @@
                     <p>$25.99</p>
                 </a>
             </div>
-        </div> -->
+        </div>
         
     </main>
 </div>
         <div class="search-container">
             <div class="filter-section">
-                <form action="" method="GET">
+                <form action="" method="POST">
                     <input type="search" name="search" placeholder="search">
                     <button type="submit">Search</button>
                 </form>
