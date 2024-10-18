@@ -1,8 +1,32 @@
 #chatBox
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
     position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 5vw;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1;
+    width: 4vw;
+    height: 4vw;
+
+    transition: all 0.25s ease-in-out;
+
+    background-color: white;
+    border: 0.15rem solid var(--companyBlue);
+    border-radius: 25px;
+    padding: 0.75rem;
+}
+
+.expandChat
+{
+    width: 20vw !important;
+    height: 50vh !important;
+}
+
+#chatBtn
+{
+    filter: brightness(0) saturate(100%) invert(18%) sepia(19%) saturate(6011%) hue-rotate(203deg) brightness(93%) contrast(87%);
     aspect-ratio: 1/1;
 }

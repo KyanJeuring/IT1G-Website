@@ -20,9 +20,12 @@
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
         <link rel="stylesheet" href="./css/homePage.css" type="text/css">
         <link rel="icon" href="./resources\Favicons\ico\SunnySocksIcon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./css/chatBox.css" type="text/css">
+
         <script src="javascript/main.js" type="module"></script>
     </head>
     <body>
+        <?php include("content/chatBox.php"); ?>
         <div id="header">
             <?php include("content/header.php"); ?>
         </div>

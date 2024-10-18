@@ -19,9 +19,17 @@ function showOffer()
     }
 }
 
+var chatExpanded = false;
+function toggleChat()
+{
+    document.getElementById("chatBox").className = chatExpanded ? "" : "expandChat";
+    chatExpanded = !chatExpanded;
+}
+
 export function setupButtonListeners()
 {
     setButtonOnClick("toggleOffer", function() { showOffer(); });
+    setButtonOnClick("chatBtn", function() { toggleChat(); });
 
     console.log("Buttons loaded successfully");
 }
