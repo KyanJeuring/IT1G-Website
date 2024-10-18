@@ -74,7 +74,8 @@
 }
 
 /* Making all the animations keyframes*/
-@keyframes shake {
+@keyframes shake 
+{
     0%
     {
         transform: translate(1px, 1px) rotate(0deg);
@@ -150,7 +151,8 @@
     }
 }
 
-@keyframes scaleUp {
+@keyframes scaleUp 
+{
     0%
     {
 	transform: scale(0);
@@ -162,7 +164,8 @@
     }
 }
 
-@keyframes scaleDown {
+@keyframes scaleDown 
+{
     0%
     {
         transform: scale(1);
