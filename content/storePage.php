@@ -1,3 +1,10 @@
+<<<<<<< Updated upstream
+=======
+<?php
+    if(!session_id()) session_start();
+?>
+        
+>>>>>>> Stashed changes
 <div id="container">
     <aside>
         <div class="categories">
@@ -20,7 +27,7 @@
                 <div id="price">
                     <label for="price">Price Range</label>
                     <label for="price">$0-100</label>
-                    <input type="range" name="price" min="0" max="100" step="1" defauk="0" />
+                    <input type="range" name="price" min="0" max="100" step="1" value="50" />
                 </div>
 
                 <div id="color">
@@ -147,6 +154,7 @@
                         }
                     }
                     //product display (the echos are temporary, I will update them with the actual products when the time comes)
+<<<<<<< Updated upstream
                     if (!empty($filteredProducts)) {
                         foreach ($filteredProducts as $product) 
                         {
@@ -155,6 +163,58 @@
                             echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
                             echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
                             echo "</div>";
+=======
+                    if (!empty($filteredProducts)) 
+                    {
+
+                        function showProduct()
+                        {
+                            
+                        }
+                        foreach ($filteredProducts as $product) 
+                        {
+                            
+
+                            echo "<div id = 'products'>";
+
+                                if($product->name == 'Ocean Breeze')
+                                {
+                                    echo "<div>
+                                            <a href=''>
+                                                <img src='resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg' alt='Ocean Breeze'>
+                                                <p>Ocean Breeze</p>
+                                                <p>$25.99</p>
+                                            </a>
+                                        </div>";
+                                }
+
+                                
+
+                                // if($product->name == 'Navy Blue')
+                                // {
+                                //     echo "<div class='ocean-breeze'>
+                                //             <a href=''>
+                                //                 <img src='resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg' alt='Ocean Breeze'>
+                                //                 <p>Ocean Breeze</p>
+                                //                 <p>$25.99</p>
+                                //             </a>
+                                //         </div>";
+                                // }
+
+
+                        echo "</div>";
+                        // echo "<div class='product-item'>";
+                        // echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
+                        // echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
+                        // echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
+                        // echo "</div>";
+                            // echo "<div class='product-item'>";
+                            // echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
+                            // echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
+                            // echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
+                            // echo "</div>";
+
+>>>>>>> Stashed changes
                         }
                     }
                     else 
