@@ -3,7 +3,7 @@ function setButtonOnClick(buttonID, action)
     document.getElementById(buttonID).onclick = action;
 }
 
-var toggleOffer = true
+var toggleOffer = false
 function showOffer()
 {
     if(toggleOffer == false)
