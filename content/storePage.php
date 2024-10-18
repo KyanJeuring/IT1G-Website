@@ -1,7 +1,3 @@
-<?php
-    if(!session_id()) session_start();
-?>
-
 <div id="container">
     <aside>
         <div class="categories">
@@ -113,7 +109,7 @@
                     ];
                 
     
-    
+                
                 
 
                 // Search query checker
