@@ -36,22 +36,6 @@
     font-size: 2em;
 }
 
-#offerPopup button
-{
-    padding: 1em 2em 1em 2em;
-    border-radius: 1em;
-    background-color: var(--companyOrange);
-    border: 3px solid var(--companyOrange);
-    font-size: 1.5em;
-    color: #fff;
-}
-
-#offerPopup button:hover
-{
-    background-color: #fff;
-    color: var(--companyOrange);
-}
-
 /* Defining all the animations */
 .pulseAnimation
 {
