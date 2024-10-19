@@ -140,26 +140,13 @@
                         {
                             
                             echo "<div id='products'>";
-
-                            if(isset($product->color) == 'blue' || isset($product->name) == 'Ocean Breeze' || isset($product->design) == 'striped')
-                            {
-                                echo "<div class='ocean-breeze'>
-                                        <a href= ''>
-                                            <img src 'resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg' alt='Ocean Breeze'>
-                                            <p>Ocean Breeze</p>
-                                            <p>$25.99</p>
-                                        </a>
-                                    </div>";
-                            }
-                            
-
-                            // echo "<div class='product-item'>";
-                            // echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
-                            // echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
-                            // echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
-                            // echo "</div>";
-
-
+                                echo "<div>";
+                                    echo "<a href '#'>";
+                                        echo "<img src = 'resources/products/{$product->name}.jpg' alt='{product->name}'";
+                                        echo "<p>{$product->name}</p>";
+                                        echo "<p>$25.99</p>";
+                                    echo "</a>";
+                                echo "</div>";
                             echo "</div>";
                         }
                     }
