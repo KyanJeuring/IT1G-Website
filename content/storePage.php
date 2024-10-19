@@ -12,9 +12,18 @@
 
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class="form">
                 <div id="filter">
-                    <input type="checkbox" name="filter" value="men" checked="checked"> Men <br>
-                    <input type="checkbox" name="filter" value="women" checked="checked"> Women <br>
-                    <input type="checkbox" name="filter" value="kids" checked="checked"> Kids <br>
+                    <div>
+                        <input type="checkbox" name="filter" value="men" checked="checked">
+                        <label for="filter">Men</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="filter" value="women" checked="checked">
+                        <label for="filter">Women</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="filter" value="kids" checked="checked">
+                        <label for="filter">Kids</label>
+                    </div>
                 </div>
 
                 <div id="price">
@@ -25,16 +34,42 @@
 
                 <div id="color">
                     <p>Filter by Color</p>
-                    <input type="checkbox" name="color" value="red" checked="checked"> Red</input> <br>
-                    <input type="checkbox" name="color" value="blue" checked="checked"> Blue</input> <br>
-                    <input type="checkbox" name="color" value="yellow" checked="checked"> Yellow</input> <br>
+                    <div>
+                        <input type="checkbox" name="color" value="orange" checked="checked" style="accent-color: var(--companyOrange);">
+                        <label for="color">Orange</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" value="blue" checked="checked" style="accent-color: var(--companyBlue);">
+                        <label for="color">Blue</label>
+                    </div>                    
+                    <div>
+                        <input type="checkbox" name="color" value="yellow" checked="checked" style="accent-color: var(--companyYellow);">
+                        <label for="color">Yellow</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" value="green" checked="checked" style="accent-color: var(--companyGreen);">
+                        <label for="color">Green</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" value="pink" checked="checked" style="accent-color: var(--companyPink);">
+                        <label for="color">Pink</label>
+                    </div>
                 </div>
 
                 <div id="size">
                     <p>Filter by Size</p>
-                    <input type="checkbox" name="size" value="small" checked="checked"> Small</input> <br>
-                    <input type="checkbox" name="size" value="medium" checked="checked"> Medium</input> <br>
-                    <input type="checkbox" name="size" value="large" checked="checked"> Large</input> <br>
+                    <div>
+                        <input type="checkbox" name="size" value="small" checked="checked">
+                        <label for="size">Small</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="size" value="medium" checked="checked">
+                        <label for="size">Medium</label>
+                    </div>                    
+                    <div>
+                        <input type="checkbox" name="size" value="large" checked="checked">
+                        <label for="size">Large</label>
+                    </div>
                 </div>
             </form> 
         </div>
