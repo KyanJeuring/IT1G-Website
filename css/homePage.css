@@ -51,8 +51,18 @@
 .ctaButtonArrow,
 .ctaButton
 {
-    background-color: #F15B39;
+    background-color: var(--companyOrange);
+    border: 3px solid var(--companyOrange);
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 2em;
+}
 
+.ctaButtonArrow:hover,
+.ctaButton:hover
+{
+    background-color: #fff;
+    color: var(--companyOrange);
     padding: 1em 2em;
     border-radius: 2em;
 }
