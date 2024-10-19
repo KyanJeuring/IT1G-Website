@@ -50,15 +50,7 @@
         </div>
 
         
-        <!-- <div id="products">
-            <div class="ocean-breeze">
-                <a href="">
-                    <img src="resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg" alt="Ocean Breeze">
-                    <p>Ocean Breeze</p>
-                    <p>$25.99</p>
-                </a>
-            </div>
-        </div> -->
+        
         <div class="product-list">
                 <?php
 
@@ -89,7 +81,7 @@
                         new product('Glam Walkers', 'pink', 'striped'),
                         new product('Crimson Web', 'red', 'striped'),
                         new product('Cool Blue', 'blue', 'solid'),
-                        new product('Navy Drift', 'blue', 'solid'),
+                        new product('Cool Navy', 'blue', 'solid'),
                         new product('Cotton Candy', 'pink', 'solid'),
                         new product('Tomato', 'red', 'solid'),
                         new product('Lemon Whirl', 'yellow', 'striped'),
@@ -147,12 +139,28 @@
                         foreach ($filteredProducts as $product) 
                         {
                             
-                            echo "<div class='product-item'>";
-                            echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
-                            echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
-                            echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
-                            echo "</div>";
+                            echo "<div id='products'>";
 
+                            if(isset($product->color) == 'blue' || isset($product->name) == 'Ocean Breeze' || isset($product->design) == 'striped')
+                            {
+                                echo "<div class='ocean-breeze'>
+                                        <a href= ''>
+                                            <img src 'resources/sunny_socks_photos/catalogus/Sunny_socks_blue.jpg' alt='Ocean Breeze'>
+                                            <p>Ocean Breeze</p>
+                                            <p>$25.99</p>
+                                        </a>
+                                    </div>";
+                            }
+                            
+
+                            // echo "<div class='product-item'>";
+                            // echo "<h3>" . (isset($product->name) ? $product->name : 'No name') . "</h3>"; 
+                            // echo "<p>Color: " . (isset($product->color) ? $product->color : 'No color') . "</p>";
+                            // echo "<p>Design: " . (isset($product->design) ? $product->design : 'No design') . "</p>"; 
+                            // echo "</div>";
+
+
+                            echo "</div>";
                         }
                     }
                     else 
