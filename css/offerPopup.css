@@ -2,8 +2,9 @@
 {
     /* z-index is for the layers. If the z-index 2 will overlap z-index 1(default) */
     z-index: 1; 
+    fill: var(--companyOrange);
     padding: 2em;
-    right: 0;
+    right: 1em;
     position: fixed;
 }
 
