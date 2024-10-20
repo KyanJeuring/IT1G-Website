@@ -132,6 +132,7 @@
 
 .slider-wrapper
 {
+    z-index: -1;
     position: relative;
     max-width: 60rem;
     margin: 0 auto;
