@@ -135,7 +135,7 @@
                 </div>
             </form>
             <div class="donationInfo">
-                <p>Contribute to reduce global co2 emissions</p>
+                <p>Contribute to reduce global CO<sub>2</sub> emissions</p>
                 <p>Learn more about where your donations go on the About page</p>
             </div>
         </div>
