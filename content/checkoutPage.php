@@ -13,7 +13,7 @@
             <div class="coupon"></div>
             <div class="sectionSummary">
                 <h3>Total: </h3>
-                <p>12.34eur</p>
+                <p>&#8364;&#160;12.34</p>
             </div>
         </section>
 
@@ -54,7 +54,7 @@
             </form>
             <div class="sectionSummary">
                 <h3>Shipping: </h3>
-                <p>12.34eur</p>
+                <p>&#8364;&#160;12.34</p>
             </div>
         </section>
 
@@ -102,18 +102,18 @@
             <h1>Summary</h1>
             <div class="inLine">
                 <p>Items:</p>
-                <p>12.23eur</p>
+                <p>&#8364;&#160;12.23</p>
             </div>
             <div class="inLine">
                 <p>Shipping:</p>
-                <p>12.23eur</p>
+                <p>&#8364;&#160;12.23</p>
             </div>
         </div>
 
         <div>
             <div class="inLine">
                 <p>Discounts:</p>
-                <p>12.23eur</p>
+                <p>&#8364;&#160;12.23</p>
             </div>
             <form action="">
                 <div class="inLine">
@@ -126,7 +126,7 @@
         <div>
             <div class="inLine">
                 <p>Donations:</p>
-                <p>12.34eur</p>
+                <p>&#8364;&#160;12.34</p>
             </div>
             <form action="">
                 <div class="inLine">
@@ -143,7 +143,7 @@
         <div>
             <div class="inLine">
                 <h2>Total:</h2>
-                <h2>12.34eur</h2>
+                <h2>&#8364;&#160;12.34</h2>
             </div>
         </div>
 
