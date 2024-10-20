@@ -12,6 +12,6 @@
 </form>
 <form class="section right" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
     <button><img class="icon" src="resources/icons/svg/searchIcon.svg" alt="searchIcon"></button>
-    <button><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
+    <button id="cartButton" type="submit" name="navBtn" value="Checkout"><img class="icon" src="resources/icons/svg/shoppingBagIcon.svg" alt="cartIcon"></button>
     <button id="loginButton" type="submit" name="navBtn" value="Login"><img class="icon" src="resources/icons/svg/userIcon.svg" alt="profileIcon"></button>
 </form>
