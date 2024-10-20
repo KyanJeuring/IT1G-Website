@@ -22,34 +22,116 @@
     <section class="reviewsOnAboutPage">
         <div class="slider-wrapper">
             <div class="slider">
-                <div class="blueContainer">
-                    <div class="boxForReviews">
-                        <img class="photoCustomerMan" src="resources/otherPhotos/manPhoto.png" alt="photoCustomerMan">
-                        <div class="sectionOneforReviews">
-                            <div class="quotationMarks">
-                                <img id="slide-1" src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
+                <!-- Review 1 -->
+                <div id="R1" class="review">
+                    <section id="rS1">
+                        <img class="photoCustomer" src="resources/otherPhotos/manPhoto.png" alt="photoCustomer">
+                    </section>
+                    <section id="rS2">
+                        <div>
+                            <div class="qMkU">
+                                <img src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
                             </div>
-                            <div class="nameReview">
-                                <h2>Random Person - student</h2>
-                                <img class="fourStarsReview" src="resources/otherPhotos/star_rating.png" alt="fourStarsReview">
+                            <div class="nameAndStars">
+                                <h2>Person 1 - <span class="normalText">occupation</span></h2>
+                                <img class="reviewStars" src="resources/otherPhotos/star_rating.png" alt="reviewStars">
                             </div>
                             <div class="descriptionToTheReviews">
-                            <h3>THE BEST PAIR OF SOCKS I OWN</h3>
-                                <p>
-                                    The fit and feel of these socks are fantastic. They’re soft, breathable, and keep my feet
-                                    fresh all day. The only downside is I wish there were more colour options, but 
-                                    the sustainability aspect more than makes up for it!
+                            <h3>Header 3</h3>
+                                <p class="normalText">
+                                    Text
                                 </p>
                             </div>
-                            <div class="upsideDownQuotes">
-                                <img class="upsideDownQuotesPhoto" src="resources/otherPhotos/upsideDownQuotes.png" alt="upsideDownQuotesPhoto">
+                            <div class="qMD">
+                                <img src="resources/otherPhotos/upsideDownQuotes.png" alt="quotationMarks">
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
-            </div>   
+                <!-- Review 2 -->
+                <div id="R2" class="review">
+                    <section id="rS1">
+                        <img class="photoCustomer" src="resources/otherPhotos/manPhoto.png" alt="photoCustomer">
+                    </section>
+                    <section id="rS2">
+                        <div>
+                            <div class="qMkU">
+                                <img src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
+                            </div>
+                            <div class="nameAndStars">
+                                <h2>Person 2 - <span class="normalText">occupation</span></h2>
+                                <img class="reviewStars" src="resources/otherPhotos/star_rating.png" alt="reviewStars">
+                            </div>
+                            <div class="descriptionToTheReviews">
+                            <h3>Header 3</h3>
+                                <p class="normalText">
+                                    Text
+                                </p>
+                            </div>
+                            <div class="qMD">
+                                <img src="resources/otherPhotos/upsideDownQuotes.png" alt="quotationMarks">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Review 3 -->
+                <div id="R3" class="review">
+                    <section id="rS1">
+                        <img class="photoCustomer" src="resources/otherPhotos/manPhoto.png" alt="photoCustomer">
+                    </section>
+                    <section id="rS2">
+                        <div>
+                            <div class="qMkU">
+                                <img src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
+                            </div>
+                            <div class="nameAndStars">
+                                <h2>Person 3 - <span class="normalText">occupation</span></h2>
+                                <img class="reviewStars" src="resources/otherPhotos/star_rating.png" alt="reviewStars">
+                            </div>
+                            <div class="descriptionToTheReviews">
+                            <h3>Header 3</h3>
+                                <p class="normalText">
+                                    Text
+                                </p>
+                            </div>
+                            <div class="qMD">
+                                <img src="resources/otherPhotos/upsideDownQuotes.png" alt="quotationMarks">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                 <!-- Review 4 -->
+                 <div id="R4" class="review">
+                    <section id="rS1">
+                        <img class="photoCustomer" src="resources/otherPhotos/manPhoto.png" alt="photoCustomer">
+                    </section>
+                    <section id="rS2">
+                        <div>
+                            <div class="qMkU">
+                                <img src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
+                            </div>
+                            <div class="nameAndStars">
+                                <h2>Person 4 - <span class="normalText">occupation</span></h2>
+                                <img class="reviewStars" src="resources/otherPhotos/star_rating.png" alt="reviewStars">
+                            </div>
+                            <div class="descriptionToTheReviews">
+                            <h3>Header 3</h3>
+                                <p class="normalText">
+                                    Text
+                                </p>
+                            </div>
+                            <div class="qMD">
+                                <img src="resources/otherPhotos/upsideDownQuotes.png" alt="quotationMarks">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
             <div class="slider-nav">
-                <a href="#slide-1"></a>
+                <a href="#R1"></a>
+                <a href="#R2"></a>
+                <a href="#R3"></a>
+                <a href="#R4"></a>
             </div>
         </div>
     </section>
