@@ -2,8 +2,9 @@
 {
     /* z-index is for the layers. If the z-index 2 will overlap z-index 1(default) */
     z-index: 1; 
+    fill: var(--companyOrange);
     padding: 2em;
-    right: 0;
+    right: 1em;
     position: fixed;
 }
 
@@ -11,6 +12,7 @@
 {
     cursor: default;
     display: none;
+    top: 30%;
     left: 35%;
     position: fixed;
     z-index: 2; 
@@ -35,22 +37,6 @@
     font-size: 2em;
 }
 
-#offerPopup button
-{
-    padding: 1em 1.5em 1em 1.5em;
-    border-radius: 1em;
-    background-color: var(--companyOrange);
-    border: 3px solid var(--companyOrange);
-    font-size: 1.5em;
-    color: #fff;
-}
-
-#offerPopup button:hover
-{
-    background-color: #fff;
-    color: var(--companyOrange);
-}
-
 /* Defining all the animations */
 .pulseAnimation
 {
@@ -73,7 +59,8 @@
 }
 
 /* Making all the animations keyframes*/
-@keyframes shake {
+@keyframes shake 
+{
     0%
     {
         transform: translate(1px, 1px) rotate(0deg);
@@ -149,7 +136,8 @@
     }
 }
 
-@keyframes scaleUp {
+@keyframes scaleUp 
+{
     0%
     {
 	transform: scale(0);
@@ -161,7 +149,8 @@
     }
 }
 
-@keyframes scaleDown {
+@keyframes scaleDown 
+{
     0%
     {
         transform: scale(1);

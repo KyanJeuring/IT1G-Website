@@ -117,6 +117,17 @@ main
     outline: none;
 }
 
+#bar svg
+{
+    vertical-align: middle;
+    fill: #000;
+}
+
+#bar svg:hover
+{
+    fill: var(--companyOrange);
+}
+
 #products
 {
     display: flex;
