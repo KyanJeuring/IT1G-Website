@@ -35,7 +35,7 @@
                 <div id="color">
                     <p>Filter by Color</p>
                     <div>
-                        <input type="checkbox" name="color" value="orange" checked="checked" style="accent-color: var(--companyOrange);">
+                        <input type="checkbox" name="color" value="red" checked="checked" style="accent-color: var(--companyOrange);">
                         <label for="color">Orange</label>
                     </div>
                     <div>
@@ -47,7 +47,7 @@
                         <label for="color">Yellow</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="color" value="green" checked="checked" style="accent-color: var(--companyGreen);">
+                        <input type="checkbox" name="color" value="light blue" checked="checked" style="accent-color: var(--companyGreen);">
                         <label for="color">Green</label>
                     </div>
                     <div>
@@ -114,11 +114,11 @@
                         new product('Navy Drift', 'light blue', 'striped'),
                         new product('Sunny Socks', 'yellow', 'solid'),
                         new product('Glam Walkers', 'pink', 'striped'),
-                        new product('Crimson Web', 'red', 'striped'),
+                        new product('Crimson Web', 'orange', 'striped'),
                         new product('Cool Blue', 'blue', 'solid'),
                         new product('Cool Navy', 'blue', 'solid'),
                         new product('Cotton Candy', 'pink', 'solid'),
-                        new product('Tomato', 'red', 'solid'),
+                        new product('Tomato', 'orange', 'solid'),
                         new product('Lemon Whirl', 'yellow', 'striped'),
                         new product('Sporty', 'white', 'striped'),
                         new product('Long Stripes', 'multicolor', 'striped'),
@@ -142,7 +142,6 @@
                     
                     // product loop
                     foreach($products as $product)
-                    
                     {
                         $nameMatch = false;
                         $designMatch = false;
