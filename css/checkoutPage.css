@@ -188,6 +188,22 @@
     gap: 0.75rem;
 }
 
+#checkout .summary [type="submit"]
+{
+    font-size: 1.25rem;
+}
+
+#checkout .summary input[type="text"]
+{
+    width: 60%;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+
+    background-color: white;
+    border: 0.1rem solid var(--companyBlue);
+}
+
 #checkout .summary > div
 {
     display: flex;
