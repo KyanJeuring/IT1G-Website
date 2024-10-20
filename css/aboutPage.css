@@ -132,11 +132,11 @@
 
 .slider-wrapper
 {
-    z-index: -1;
     position: relative;
     max-width: 60rem;
     margin: 0 auto;
 }
+
 .slider
 {
     margin: 15%;
@@ -146,6 +146,7 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 }
+
 .slider .review
 {
     margin-inline: 10%;
@@ -239,12 +240,11 @@
     bottom: 3em;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
 }
 .slider-nav a
 {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.8rem;
+    height: 0.8rem;
     border-radius: 50%;
     background-color: rgb(253, 252, 252);
     opacity: 0.75;
