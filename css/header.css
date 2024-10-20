@@ -1,5 +1,6 @@
 #header
 {
+    z-index: 2;
     position: sticky;
     display: flex;
     flex-direction: row;
