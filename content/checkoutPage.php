@@ -1,3 +1,6 @@
+<?php include "storeLogic.php"; ?>
+<script src="javascript/checkoutPage.js"></script>
+
 <div id="checkout">
     <!-- MAIN FORM -->
     <div class="paymentForm">
@@ -115,10 +118,10 @@
                 <p>Discounts:</p>
                 <p>&#8364;&#160;12.23</p>
             </div>
-            <form action="">
+            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
                 <div class="inLine">
-                    <input type="text">
-                    <button type="submit">Enter</button>
+                    <input type="text" id="coupon" name="coupon">
+                    <button type="submit" name="navBtn" value="Checkout">Enter</button>
                 </div>
             </form>
         </div>
@@ -143,7 +146,7 @@
         <div>
             <div class="inLine">
                 <h2>Total:</h2>
-                <h2>&#8364;&#160;12.34</h2>
+                <h2>&#8364;&#160;<?php echo $_SESSION['shoppingCart']->totalPrice ?></h2>
             </div>
         </div>
 
