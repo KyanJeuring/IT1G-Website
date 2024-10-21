@@ -110,11 +110,11 @@
     <div id="contact-footer">
         <div class="contact-footer-item">
             <div class="contact-footer-img">
-                <img src="resources/contactPage/trophy 1.png" alt="">
+                <img src="resources/contactPage/trophy 1.png" alt="Icon of a trophy">
             </div>
             <div class="contact-footer-text">
                 <h2>
-                    High <span class="new-line">Quality</span>
+                    High Quality
                 </h2>
                 <p>
                     Crafted from top materials
