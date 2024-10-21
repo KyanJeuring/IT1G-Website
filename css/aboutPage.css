@@ -145,6 +145,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .slider .review
@@ -207,7 +208,7 @@
 
 .review .photoCustomer
 {
-    padding-block: 25%;
+    padding-block: 30%;
     padding-inline: 10%;
 }
 
