@@ -25,6 +25,7 @@
         public $postalCode;
         public $city;
         public $shippingCountry;
+        public $paymentMethod;
         
         //price vars
         public $currentCoupon;

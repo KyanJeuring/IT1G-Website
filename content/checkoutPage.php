@@ -13,7 +13,7 @@
             <div class="coupon"></div>
             <div class="sectionSummary">
                 <h3>Total: </h3>
-                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
+                <p><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->itemsTotal; ?></p>
             </div>
         </section>
 
@@ -37,7 +37,7 @@
                     <label for="email">E-mail</label>
                     <input type="text" id="email" name="email" placeholder="example@example.com" value="<?php echo $_SESSION["shoppingCart"]->email; ?>">
                 </section>
-                
+
                 <section>
                     <!-- Phone Section -->
                     <label for="phone">Phone</label>
@@ -63,7 +63,7 @@
             </form>
             <div class="sectionSummary">
                 <h3>Shipping: </h3>
-                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->shippingCost;?></p>
+                <p><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->shippingCost; ?></p>
             </div>
         </section>
 
@@ -72,36 +72,38 @@
                 <h2>3. Payment</h2>
                 <div class="separatorLine"></div>
             </div>
-            <form class= "paymentSelector" action="">
+            <form class="paymentSelector" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
                 <label for="applePay">
-                    <input type="radio" name=paymentMethod[] id="applePay" value="applePay">
+                    <input type="radio" name=payment-method id="applePay" value="applePay" <?php if($_SESSION["shoppingCart"]->paymentMethod == "applePay") echo "checked";?>>
                     <img src="resources/icons/svg/apple-pay.svg" alt="apple-pay">
                 </label>
                 <label for="googlePay">
-                    <input type="radio" name=paymentMethod[] id="googlePay" value="googlePay">
+                    <input type="radio" name=payment-method id="googlePay" value="googlePay" <?php if($_SESSION["shoppingCart"]->paymentMethod == "googlePay") echo "checked";?>>
                     <img src="resources/icons/svg/google-pay.svg" alt="google-pay">
                 </label>
                 <label for="visa">
-                    <input type="radio" name=paymentMethod[] id="visa" value="visa">
+                    <input type="radio" name=payment-method id="visa" value="visa" <?php if($_SESSION["shoppingCart"]->paymentMethod == "visa") echo "checked";?>>
                     <img src="resources/icons/svg/visa.svg" alt="visa">
                 </label>
                 <label for="mastercard">
-                    <input type="radio" name=paymentMethod[] id="mastercard" value="mastercard">
+                    <input type="radio" name=payment-method id="mastercard" value="mastercard" <?php if($_SESSION["shoppingCart"]->paymentMethod == "mastercard") echo "checked";?>>
                     <img src="resources/icons/svg/mastercard.svg" alt="mastercard">
                 </label>
                 <label for="payPal">
-                    <input type="radio" name=paymentMethod[] id="payPal" value="payPal">
+                    <input type="radio" name=payment-method id="payPal" value="payPal" <?php if($_SESSION["shoppingCart"]->paymentMethod == "payPal") echo "checked";?>>
                     <img src="resources/icons/svg/paypal.svg" alt="pay-pal">
                 </label>
                 <label for="bitcoin">
-                    <input type="radio" name=paymentMethod[] id="bitcoin" value="bitcoin">
+                    <input type="radio" name=payment-method id="bitcoin" value="bitcoin" <?php if($_SESSION["shoppingCart"]->paymentMethod == "bitcoin") echo "checked";?>>
                     <img src="resources/icons/svg/bitcoin.svg" alt="bitcoin">
                 </label>
                 <label for="ideal">
-                    <input type="radio" name=paymentMethod[] id="ideal" value="ideal">
+                    <input type="radio" name=payment-method id="ideal" value="ideal" <?php if($_SESSION["shoppingCart"]->paymentMethod == "ideal") echo "checked";?>>
                     <img src="resources/icons/svg/ideal.svg" alt="ideal">
                 </label>
-            </form> 
+                <input type="hidden" name="navBtn" value="Checkout">
+                <input type="submit" value="Save">
+            </form>
         </section>
     </div>
 
@@ -111,23 +113,23 @@
             <h1>Summary</h1>
             <div class="inLine">
                 <p>Items:</p>
-                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
+                <p><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->itemsTotal; ?></p>
             </div>
-            <?php if(isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
+            <?php if (isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
                 <div class="inLine">
                     <p>Discounts:</p>
-                    <p><?php echo "&#8364;&#160;-".$_SESSION["shoppingCart"]->discount;?></p>
+                    <p><?php echo "&#8364;&#160;-" . $_SESSION["shoppingCart"]->discount; ?></p>
                 </div>
             <?php endif ?>
-            <?php if(isset($_SESSION["shoppingCart"]->donation)): ?>
+            <?php if (isset($_SESSION["shoppingCart"]->donation)): ?>
                 <div class="inLine">
                     <p>Donations:</p>
-                    <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->donation;?></p>
+                    <p><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->donation; ?></p>
                 </div>
             <?php endif ?>
             <div class="inLine">
                 <p>Shipping:</p>
-                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->shippingCost;?></p>
+                <p><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->shippingCost; ?></p>
             </div>
         </div>
 
@@ -137,14 +139,14 @@
             </div>
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="inLine">
-                <?php if(isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
-                    <h2><?php echo $_SESSION["shoppingCart"]->currentCoupon->code." -".$_SESSION["shoppingCart"]->currentCoupon->discount."%"; ?></h2>
-                    <input type="hidden" name="couponRst" value="true">
-                    <button type="submit" name="navBtn" value="Checkout">Clear</button>
-                <?php else: ?>
-                    <input type="text" id="coupon" name="coupon">
-                    <button type="submit" name="navBtn" value="Checkout">Enter</button>
-                <?php endif; ?>
+                    <?php if (isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
+                        <h2><?php echo $_SESSION["shoppingCart"]->currentCoupon->code . " -" . $_SESSION["shoppingCart"]->currentCoupon->discount . "%"; ?></h2>
+                        <input type="hidden" name="couponRst" value="true">
+                        <button type="submit" name="navBtn" value="Checkout">Clear</button>
+                    <?php else: ?>
+                        <input type="text" id="coupon" name="coupon">
+                        <button type="submit" name="navBtn" value="Checkout">Enter</button>
+                    <?php endif; ?>
                 </div>
             </form>
         </div>
@@ -154,16 +156,16 @@
                 <p>Donations:</p>
             </div>
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
-            <div class="inLine">
-            <?php if(isset($_SESSION["shoppingCart"]->donation)): ?>
-                <h2><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->donation; ?></h2>
-                <input type="hidden" name="donationRst" value="true">
-                <button type="submit" name="navBtn" value="Checkout">Clear</button>
-            <?php else: ?>
-                <input type="text" name="donation">
-                <button type="submit" name="navBtn" value="Checkout">Enter</button>
-            <?php endif; ?>
-            </div>
+                <div class="inLine">
+                    <?php if (isset($_SESSION["shoppingCart"]->donation)): ?>
+                        <h2><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->donation; ?></h2>
+                        <input type="hidden" name="donationRst" value="true">
+                        <button type="submit" name="navBtn" value="Checkout">Clear</button>
+                    <?php else: ?>
+                        <input type="text" name="donation">
+                        <button type="submit" name="navBtn" value="Checkout">Enter</button>
+                    <?php endif; ?>
+                </div>
             </form>
             <div class="donationInfo">
                 <p>Contribute to reduce global CO<sub>2</sub> emissions</p>
@@ -174,10 +176,12 @@
         <div>
             <div class="inLine">
                 <h2>Total:</h2>
-                <h2><?php echo "&#8364;&#160;".$_SESSION['shoppingCart']->totalPrice ?></h2>
+                <h2><?php echo "&#8364;&#160;" . $_SESSION['shoppingCart']->totalPrice ?></h2>
             </div>
         </div>
 
-        <button class="checkoutButton" type="submit"><h1>Checkout</h1></button>
+        <button class="checkoutButton" type="submit">
+            <h1>Checkout</h1>
+        </button>
     </div>
 </div>

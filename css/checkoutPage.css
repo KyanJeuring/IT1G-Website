@@ -101,7 +101,7 @@
     border: 0.1rem solid var(--companyBlue);
 }
 
-#checkout .deliveryInfoForm input[type="submit"]
+#checkout input[type="submit"]
 {
     font-size: 1.5rem;
     border-radius: 1.5rem;
@@ -113,11 +113,12 @@
     cursor: pointer;
 }
 
-#checkout .deliveryInfoForm input[type="submit"]:hover
+#checkout input[type="submit"]:hover
 {
     background-color: white;
     color: var(--companyBlue);
 }
+
 #checkout .deliveryInfoForm #first-name
 {
     width: 20%;
@@ -146,18 +147,36 @@
 {
     width: 15%;
 }
+#checkout .paymentSelector
+{
+    padding: 4rem;
 
-#checkout .paymentSelector 
+    border-radius: 1.5rem;
+    background-color: var(--companyBlue);
+}
+
+#checkout .paymentSelector input[type="submit"]
+{
+    grid-column: 1 / 2;
+    border: transparent 0.1rem solid;
+    background-color: white;
+    color: var(--companyBlue);
+}
+
+#checkout .paymentSelector input[type="submit"]:hover
+{
+    border: white 0.1rem solid;
+    background-color: var(--companyBlue);
+    color: white;
+}
+
+#checkout .paymentSelector
 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
 
     gap: 3rem;
-    padding: 4rem;
-
-    border-radius: 1.5rem;
-    background-color: var(--companyBlue);
 }
 
 /* hide radio */

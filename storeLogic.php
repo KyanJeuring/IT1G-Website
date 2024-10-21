@@ -15,7 +15,7 @@
     $city = filter_input(INPUT_POST, "city");
     $postalCode = filter_input(INPUT_POST, "postal-code");
     $country = filter_input(INPUT_POST, "country");
-    $paymentMethod = filter_input(INPUT_POST, "payment-method", FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+    $paymentMethod = filter_input(INPUT_POST, "payment-method");
     
     $donation = filter_input(INPUT_POST, "donation", FILTER_VALIDATE_FLOAT);
     $donationRst = filter_input(INPUT_POST, "donationRst", FILTER_VALIDATE_BOOLEAN);
@@ -44,7 +44,8 @@
     if(isset($postalCode)) $_SESSION['shoppingCart']->postalCode = $postalCode;
     if(isset($city)) $_SESSION['shoppingCart']->city = $city;
     if(isset($country)) $_SESSION['shoppingCart']->shippingCountry = $country;
-    
+    if(isset($paymentMethod)) $_SESSION['shoppingCart']->paymentMethod = $paymentMethod;
+
     $_SESSION['shoppingCart']->calculatePrices();
 
     //TODO
