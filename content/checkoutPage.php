@@ -35,9 +35,18 @@
                 <section>
                     <!-- Email Section -->
                     <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="example@example.com">
+                    <input type="text" id="email" name="email" placeholder="example@example.com">
                 </section>
                 
+                <section>
+                    <!-- Phone Section -->
+                    <label for="phone">Phone</label>
+                    <div class="inline">
+                        <input type="text" id="country-code" name="country-code" placeholder="31">
+                        <input type="text" id="phone" name="phone">
+                    </div>
+                </section>
+
                 <section>
                     <!-- Address Section -->
                     <label for="address-line1">Address</label>
@@ -45,9 +54,7 @@
                         <input type="text" id="address-line1" name="address-line1" placeholder="Street Address">
                         <input type="text" id="house-number" name="house-number" placeholder="Apt / Suite">
                         <input type="text" id="postal-code" name="postal-code" placeholder="Postal Code">
-    
                     </div>
-    
                     <input type="text" id="city" name="city" placeholder="City">
                     <input type="text" id="country" name="country" placeholder="Country">
                 </section>

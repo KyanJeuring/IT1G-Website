@@ -8,7 +8,8 @@
     $firstName = filter_input(INPUT_POST, "first-name");
     $lastName = filter_input(INPUT_POST, "last-name");
     $email = filter_input(INPUT_POST, "email");
-    $phone = filter_input(INPUT_POST, "phone");
+    $countryCode = filter_input(INPUT_POST, "country-code", FILTER_VALIDATE_INT);
+    $phone = filter_input(INPUT_POST, "phone", FILTER_VALIDATE_INT);
     $address = filter_input(INPUT_POST, "address");
     $houseNumber = filter_input(INPUT_POST, "house-number");
     $city = filter_input(INPUT_POST, "city");

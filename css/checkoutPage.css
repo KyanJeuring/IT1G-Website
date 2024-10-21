@@ -95,7 +95,7 @@
     max-width: 80%;
     height: 2.5rem;
     border-radius: 5rem;
-    padding: 0 1rem;
+    padding: 0 0 0 1.5rem;
 
     background-color: white;
     border: 0.1rem solid var(--companyBlue);
@@ -115,10 +115,19 @@
 {
     width: 20%;
 }
+#checkout .deliveryInfoForm #country-code
+{
+    width: 5%;
+}
+
+#checkout .deliveryInfoForm #phone
+{
+    width: 30%;
+}
 
 #checkout .deliveryInfoForm #house-number
 {
-    width: 11%;
+    width: 12%;
 }
 
 #checkout .deliveryInfoForm #postal-code
