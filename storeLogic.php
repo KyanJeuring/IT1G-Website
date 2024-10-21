@@ -33,7 +33,7 @@
     else if(isset($donation) && $donation != false) $_SESSION['shoppingCart']->donation = round($donation, 2);
 
     //shipping cost handling
-    $_SESSION['shoppingCart']->shippingCountry = $country;
+    if(isset($country) && $country != false) $_SESSION['shoppingCart']->shippingCountry = $country;
     
     $_SESSION['shoppingCart']->calculatePrices();
 
