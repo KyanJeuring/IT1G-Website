@@ -12,6 +12,27 @@
     font-family: nexaLight;
 }
 
+#checkout input[type="submit"]
+{
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 0.25rem 1rem;
+    font-family: NexaBold;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#checkout .errorMessage
+{
+    all: unset;
+    color: red;
+    background-color: white;
+    font-size: 100% !important;
+    border: 0.1rem solid rgba(255, 0, 0, 0.25);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
 #checkout .separatorLine
 {
     width: 100%;
@@ -88,7 +109,7 @@
     font-size: 1.5rem;
 }
 
-#checkout .deliveryInfoForm input
+#checkout .deliveryInfoForm input[type="text"]
 {
     all: unset;
 
@@ -99,24 +120,6 @@
 
     background-color: white;
     border: 0.1rem solid var(--companyBlue);
-}
-
-#checkout input[type="submit"]
-{
-    font-size: 1.5rem;
-    border-radius: 1.5rem;
-    padding: 0.25rem 1rem;
-    background-color: var(--companyBlue);
-    color: white;   
-    font-family: NexaBold;
-    width: fit-content;
-    cursor: pointer;
-}
-
-#checkout input[type="submit"]:hover
-{
-    background-color: white;
-    color: var(--companyBlue);
 }
 
 #checkout .deliveryInfoForm #first-name
@@ -147,6 +150,22 @@
 {
     width: 15%;
 }
+
+#checkout .deliveryInfoForm input[type="submit"]
+{
+    border: 0.1rem solid var(--companyBlue);
+    background-color: var(--companyBlue);
+    color: white;
+}
+
+#checkout .deliveryInfoForm input[type="submit"]:hover
+{
+    background-color: white;
+    color: var(--companyBlue);
+}
+
+/* PAYMENT SELECTOR */
+
 #checkout .paymentSelector
 {
     padding: 4rem;
@@ -158,16 +177,16 @@
 #checkout .paymentSelector input[type="submit"]
 {
     grid-column: 1 / 2;
-    border: transparent 0.1rem solid;
-    background-color: white;
-    color: var(--companyBlue);
+    border: 0.1rem solid white;
+    background-color: var(--companyBlue);
+    color: white;
 }
 
 #checkout .paymentSelector input[type="submit"]:hover
 {
-    border: white 0.1rem solid;
-    background-color: var(--companyBlue);
-    color: white;
+    border: 0.1rem solid var(--companyBlue);
+    background-color: white;
+    color: var(--companyBlue);
 }
 
 #checkout .paymentSelector
@@ -267,18 +286,19 @@
     font-size: 1rem;
 }
 
-#checkout .checkoutButton
+#checkout input[type="submit"].checkoutButton 
 {
-    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
     border: 0.2rem solid var(--companyBlue);
-    border-radius: 1.5rem;
-    padding: 0.75rem;
-    
+    background-color: white;
     color: var(--companyBlue);
 }
 
-#checkout .checkoutButton:hover
+#checkout input[type="submit"].checkoutButton:hover
 {
+    border: 0.2rem solid var(--companyBlue);
     background-color: var(--companyBlue);
     color: white;
 }

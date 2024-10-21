@@ -22,6 +22,9 @@
                 <h2>2. Delivery information</h2>
                 <div class="separatorLine"></div>
             </div>
+            <?php if($incompleteShippingInfo): ?>
+                <p class="errorMessage">Please fill in all fields</p>
+            <?php endif ?>
             <form class="deliveryInfoForm" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
                 <section>
                     <!-- Name Section -->
@@ -72,6 +75,9 @@
                 <h2>3. Payment</h2>
                 <div class="separatorLine"></div>
             </div>
+            <?php if($missingPaymentMethod): ?>
+                <p class="errorMessage">Please select a payment method</p>
+            <?php endif ?>
             <form class="paymentSelector" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
                 <label for="applePay">
                     <input type="radio" name=payment-method id="applePay" value="applePay" <?php if($_SESSION["shoppingCart"]->paymentMethod == "applePay") echo "checked";?>>
@@ -132,11 +138,14 @@
                 <p><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->shippingCost; ?></p>
             </div>
         </div>
-
+        
         <div>
             <div class="inLine">
                 <p>Discounts:</p>
             </div>
+            <?php if($invalidCoupon): ?>
+                <p class="errorMessage">Invalid coupon</p>
+            <?php endif ?>
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="inLine">
                     <?php if (isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
@@ -155,6 +164,9 @@
             <div class="inLine">
                 <p>Donations:</p>
             </div>
+            <?php if($invalidDonation): ?>
+                <p class="errorMessage">Invalid donation</p>
+            <?php endif ?>
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="inLine">
                     <?php if (isset($_SESSION["shoppingCart"]->donation)): ?>
@@ -180,8 +192,10 @@
             </div>
         </div>
 
-        <button class="checkoutButton" type="submit">
-            <h1>Checkout</h1>
-        </button>
+        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
+            <input type="hidden" name="navBtn" id="Checkout">
+            <input type="hidden" nave="checkout" value="true">
+            <input class="checkoutButton" type="submit" value="Checkout">
+        </form>
     </div>
 </div>

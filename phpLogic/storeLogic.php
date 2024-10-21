@@ -21,11 +21,11 @@
     $donationRst = filter_input(INPUT_POST, "donationRst", FILTER_VALIDATE_BOOLEAN);
     $coupon = filter_input(INPUT_POST, "coupon");
     $couponRst = filter_input(INPUT_POST, "couponRst", FILTER_VALIDATE_BOOLEAN);
+    $checkout = filter_input(INPUT_POST, "checkout", FILTER_VALIDATE_BOOLEAN);
 
     // MAIN
     // coupon handling
     if($couponRst) $_SESSION['shoppingCart']->currentCoupon = null;
-    //TODO: if coupon is false add error message
     else if(!empty($coupon)) $_SESSION['shoppingCart']->applyCoupon($coupon);
 
     //donation handling
@@ -46,6 +46,11 @@
     if(isset($country)) $_SESSION['shoppingCart']->shippingCountry = $country;
     if(isset($paymentMethod)) $_SESSION['shoppingCart']->paymentMethod = $paymentMethod;
 
+    //error messages
+    $incompleteShippingInfo = empty($_SESSION['shoppingCart']->firstName) || empty($_SESSION['shoppingCart']->lastName) || empty($_SESSION['shoppingCart']->email) || empty($_SESSION['shoppingCart']->countryCode) || empty($_SESSION['shoppingCart']->phone) || empty($_SESSION['shoppingCart']->streetAddress) || empty($_SESSION['shoppingCart']->houseNumber) || empty($_SESSION['shoppingCart']->postalCode) || empty($_SESSION['shoppingCart']->city) || empty($_SESSION['shoppingCart']->shippingCountry);
+    $missingPaymentMethod = empty($_SESSION['shoppingCart']->paymentMethod);
+    $invalidCoupon = isset($coupon) && !empty($coupon) && $_SESSION['shoppingCart']->currentCoupon == null;
+    $invalidDonation = isset($donation) && $donation == false;
     $_SESSION['shoppingCart']->calculatePrices();
 
     //TODO
