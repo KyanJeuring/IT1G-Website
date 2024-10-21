@@ -13,7 +13,7 @@
             <div class="coupon"></div>
             <div class="sectionSummary">
                 <h3>Total: </h3>
-                <p>&#8364;&#160;12.34</p>
+                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
             </div>
         </section>
 
@@ -22,7 +22,7 @@
                 <h2>2. Delivery information</h2>
                 <div class="separatorLine"></div>
             </div>
-            <form class="deliveryInfoForm" action="">
+            <form class="deliveryInfoForm" action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
                 <section>
                     <!-- Name Section -->
                     <label for="first-name">Name</label>
@@ -49,12 +49,14 @@
                     </div>
     
                     <input type="text" id="city" name="city" placeholder="City">
-                    <input type="text" id="state" name="state" placeholder="State">
+                    <input type="text" id="country" name="country" placeholder="Country">
                 </section>
+                <!-- the submit button is hidden -->
+                <input type="submit" name="navBtn" value="Checkout">   
             </form>
             <div class="sectionSummary">
                 <h3>Shipping: </h3>
-                <p>&#8364;&#160;12.34</p>
+                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->shippingCost;?></p>
             </div>
         </section>
 
@@ -102,23 +104,40 @@
             <h1>Summary</h1>
             <div class="inLine">
                 <p>Items:</p>
-                <p>&#8364;&#160;12.23</p>
+                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
             </div>
+            <?php if(isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
+                <div class="inLine">
+                    <p>Discounts:</p>
+                    <p><?php echo "&#8364;&#160;-".$_SESSION["shoppingCart"]->discount;?></p>
+                </div>
+            <?php endif ?>
+            <?php if(isset($_SESSION["shoppingCart"]->donation)): ?>
+                <div class="inLine">
+                    <p>Donations:</p>
+                    <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->donation;?></p>
+                </div>
+            <?php endif ?>
             <div class="inLine">
                 <p>Shipping:</p>
-                <p>&#8364;&#160;12.23</p>
+                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->shippingCost;?></p>
             </div>
         </div>
 
         <div>
             <div class="inLine">
                 <p>Discounts:</p>
-                <p>&#8364;&#160;12.23</p>
             </div>
-            <form action="">
+            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="inLine">
-                    <input type="text">
-                    <button type="submit">Enter</button>
+                <?php if(isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
+                    <h2><?php echo $_SESSION["shoppingCart"]->currentCoupon->code." -".$_SESSION["shoppingCart"]->currentCoupon->discount."%"; ?></h2>
+                    <input type="hidden" name="couponRst" value="true">
+                    <button type="submit" name="navBtn" value="Checkout">Clear</button>
+                <?php else: ?>
+                    <input type="text" id="coupon" name="coupon">
+                    <button type="submit" name="navBtn" value="Checkout">Enter</button>
+                <?php endif; ?>
                 </div>
             </form>
         </div>
@@ -126,13 +145,18 @@
         <div>
             <div class="inLine">
                 <p>Donations:</p>
-                <p>&#8364;&#160;12.34</p>
             </div>
-            <form action="">
-                <div class="inLine">
-                    <input type="text">
-                    <button type="submit">Enter</button>
-                </div>
+            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+            <div class="inLine">
+            <?php if(isset($_SESSION["shoppingCart"]->donation)): ?>
+                <h2><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->donation; ?></h2>
+                <input type="hidden" name="donationRst" value="true">
+                <button type="submit" name="navBtn" value="Checkout">Clear</button>
+            <?php else: ?>
+                <input type="text" name="donation">
+                <button type="submit" name="navBtn" value="Checkout">Enter</button>
+            <?php endif; ?>
+            </div>
             </form>
             <div class="donationInfo">
                 <p>Contribute to reduce global CO<sub>2</sub> emissions</p>
@@ -143,7 +167,7 @@
         <div>
             <div class="inLine">
                 <h2>Total:</h2>
-                <h2>&#8364;&#160;12.34</h2>
+                <h2><?php echo "&#8364;&#160;".$_SESSION['shoppingCart']->totalPrice ?></h2>
             </div>
         </div>
 
