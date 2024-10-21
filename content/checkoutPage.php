@@ -27,23 +27,23 @@
                     <!-- Name Section -->
                     <label for="first-name">Name</label>
                     <div>
-                        <input type="text" id="first-name" name="first-name" value="<?php echo $firstName; ?>">
-                        <input type="text" id="last-name" name="last-name">
+                        <input type="text" id="first-name" name="first-name" value="<?php echo $_SESSION["shoppingCart"]->firstName; ?>">
+                        <input type="text" id="last-name" name="last-name" value="<?php echo $_SESSION["shoppingCart"]->lastName; ?>">
                     </div>
                 </section>
 
                 <section>
                     <!-- Email Section -->
                     <label for="email">E-mail</label>
-                    <input type="text" id="email" name="email" placeholder="example@example.com">
+                    <input type="text" id="email" name="email" placeholder="example@example.com" value="<?php echo $_SESSION["shoppingCart"]->email; ?>">
                 </section>
                 
                 <section>
                     <!-- Phone Section -->
                     <label for="phone">Phone</label>
                     <div class="inline">
-                        <input type="text" id="country-code" name="country-code" placeholder="31">
-                        <input type="text" id="phone" name="phone">
+                        <input type="text" id="country-code" name="country-code" placeholder="31" value="<?php echo $_SESSION["shoppingCart"]->countryCode; ?>">
+                        <input type="text" id="phone" name="phone" value="<?php echo $_SESSION["shoppingCart"]->phone; ?>">
                     </div>
                 </section>
 
@@ -51,12 +51,12 @@
                     <!-- Address Section -->
                     <label for="address-line1">Address</label>
                     <div>
-                        <input type="text" id="address-line1" name="address-line1" placeholder="Street Address">
-                        <input type="text" id="house-number" name="house-number" placeholder="Apt / Suite">
-                        <input type="text" id="postal-code" name="postal-code" placeholder="Postal Code">
+                        <input type="text" id="address" name="address" placeholder="Street Address" value="<?php echo $_SESSION["shoppingCart"]->streetAddress; ?>">
+                        <input type="text" id="house-number" name="house-number" placeholder="Apt / Suite" value="<?php echo $_SESSION["shoppingCart"]->houseNumber; ?>">
+                        <input type="text" id="postal-code" name="postal-code" placeholder="Postal Code" value="<?php echo $_SESSION["shoppingCart"]->postalCode; ?>">
                     </div>
-                    <input type="text" id="city" name="city" placeholder="City">
-                    <input type="text" id="country" name="country" placeholder="Country">
+                    <input type="text" id="city" name="city" placeholder="City" value="<?php echo $_SESSION["shoppingCart"]->city; ?>">
+                    <input type="text" id="country" name="country" placeholder="Country" value="<?php echo $_SESSION["shoppingCart"]->shippingCountry; ?>">
                 </section>
                 <!-- the submit button is hidden -->
                 <input type="submit" name="navBtn" value="Checkout">   

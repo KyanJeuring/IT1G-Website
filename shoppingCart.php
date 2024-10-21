@@ -14,9 +14,20 @@
     }
 
     class shoppingCart {
-        public $currentCoupon;
+        //user info
+        public $firstName;
+        public $lastName;
+        public $email;
+        public $countryCode;
+        public $phone;
+        public $streetAddress;
+        public $houseNumber;
+        public $postalCode;
+        public $city;
         public $shippingCountry;
-
+        
+        //price vars
+        public $currentCoupon;
         public $itemsTotal;
         public $discount;
         public $shippingCost;
