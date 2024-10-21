@@ -35,23 +35,23 @@
                 <div id="color">
                     <p>Filter by Color</p>
                     <div>
-                        <input type="checkbox" name="color" value="orange" checked="checked" style="accent-color: var(--companyOrange);">
+                        <input type="checkbox" name="color" value="orange" style="accent-color: var(--companyOrange);">
                         <label for="color">Orange</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="color" value="blue" checked="checked" style="accent-color: var(--companyBlue);">
+                        <input type="checkbox" name="color" value="blue" style="accent-color: var(--companyBlue);">
                         <label for="color">Blue</label>
                     </div>                    
                     <div>
-                        <input type="checkbox" name="color" value="yellow" checked="checked" style="accent-color: var(--companyYellow);">
+                        <input type="checkbox" name="color" value="yellow" style="accent-color: var(--companyYellow);">
                         <label for="color">Yellow</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="color" value="green" checked="checked" style="accent-color: var(--companyGreen);">
+                        <input type="checkbox" name="color" value="green" style="accent-color: var(--companyGreen);">
                         <label for="color">Green</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="color" value="pink" checked="checked" style="accent-color: var(--companyPink);">
+                        <input type="checkbox" name="color" value="pink" style="accent-color: var(--companyPink);">
                         <label for="color">Pink</label>
                     </div>
                 </div>
@@ -59,15 +59,15 @@
                 <div id="design">
                     <p>Filter by Design</p>
                     <div>
-                        <input type="checkbox" name="design" value="solid" checked="checked">
+                        <input type="checkbox" name="design" value="solid">
                         <label for="design">Solid</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="design" value="striped" checked="checked">
+                        <input type="checkbox" name="design" value="striped">
                         <label for="design">Striped</label>
                     </div>                    
                     <div>
-                        <input type="checkbox" name="design" value="unique" checked="checked">
+                        <input type="checkbox" name="design" value="unique">
                         <label for="design">Unique</label>
                     </div>
                 </div>
