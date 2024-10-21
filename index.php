@@ -1,10 +1,10 @@
 <?php
     // Classes need to be defined before session_start()
-    require_once("shoppingCart.php");
+    require_once("phpLogic/shoppingCart.php");
     session_start();
     
-    include("storeLogic.php");
-    include("logic.php");
+    include("phpLogic/storeLogic.php");
+    include("phpLogic/logic.php");
 ?>
 
 <!DOCTYPE html>
