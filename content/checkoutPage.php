@@ -58,8 +58,8 @@
                     <input type="text" id="city" name="city" placeholder="City" value="<?php echo $_SESSION["shoppingCart"]->city; ?>">
                     <input type="text" id="country" name="country" placeholder="Country" value="<?php echo $_SESSION["shoppingCart"]->shippingCountry; ?>">
                 </section>
-                <!-- the submit button is hidden -->
-                <input type="submit" name="navBtn" value="Checkout">   
+                <input type="hidden" name="navBtn" value="Checkout">
+                <input type="submit" value="Save">
             </form>
             <div class="sectionSummary">
                 <h3>Shipping: </h3>
