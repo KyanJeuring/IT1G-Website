@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="./css/homePage.css" type="text/css">
         <link rel="stylesheet" href="./css/toTopButton.css" type="text/css">
         <link rel="stylesheet" href="./css/checkoutPage.css" type="text/css">
+        <link rel="stylesheet" href="./css/contactPage.css" type="text/css">
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
     </head>
