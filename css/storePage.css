@@ -92,9 +92,10 @@ main
     margin-bottom: 1.5em;
 }
 
-#size > *
+#design > *
 {
     margin-bottom: 1em;
+    gap: 0.5em;
 }
 
 /* CATALOGUE */

@@ -35,7 +35,7 @@
                 <div id="color">
                     <p>Filter by Color</p>
                     <div>
-                        <input type="checkbox" name="color" value="red" checked="checked" style="accent-color: var(--companyOrange);">
+                        <input type="checkbox" name="color" value="orange" checked="checked" style="accent-color: var(--companyOrange);">
                         <label for="color">Orange</label>
                     </div>
                     <div>
@@ -47,7 +47,7 @@
                         <label for="color">Yellow</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="color" value="light blue" checked="checked" style="accent-color: var(--companyGreen);">
+                        <input type="checkbox" name="color" value="green" checked="checked" style="accent-color: var(--companyGreen);">
                         <label for="color">Green</label>
                     </div>
                     <div>
@@ -56,19 +56,19 @@
                     </div>
                 </div>
 
-                <div id="size">
-                    <p>Filter by Size</p>
+                <div id="design">
+                    <p>Filter by Design</p>
                     <div>
-                        <input type="checkbox" name="size" value="small" checked="checked">
-                        <label for="size">Small</label>
+                        <input type="checkbox" name="design" value="solid" checked="checked">
+                        <label for="design">Solid</label>
                     </div>
                     <div>
-                        <input type="checkbox" name="size" value="medium" checked="checked">
-                        <label for="size">Medium</label>
+                        <input type="checkbox" name="design" value="striped" checked="checked">
+                        <label for="design">Striped</label>
                     </div>                    
                     <div>
-                        <input type="checkbox" name="size" value="large" checked="checked">
-                        <label for="size">Large</label>
+                        <input type="checkbox" name="design" value="unique" checked="checked">
+                        <label for="design">Unique</label>
                     </div>
                 </div>
             </form> 
@@ -111,12 +111,12 @@
                     $products =
                     [
                         new product('Ocean Breeze', 'blue', 'striped',),
-                        new product('Navy Drift', 'light blue', 'striped'),
+                        new product('Navy Drift', 'green', 'striped'),
                         new product('Sunny Socks', 'yellow', 'solid'),
                         new product('Glam Walkers', 'pink', 'striped'),
                         new product('Crimson Web', 'orange', 'striped'),
                         new product('Cool Blue', 'blue', 'solid'),
-                        new product('Cool Navy', 'blue', 'solid'),
+                        new product('Cool Navy', 'green', 'solid'),
                         new product('Cotton Candy', 'pink', 'solid'),
                         new product('Tomato', 'orange', 'solid'),
                         new product('Lemon Whirl', 'yellow', 'striped'),
