@@ -132,9 +132,7 @@
                 
     
                     // Search query checker
-                // $searchQuery = "";
-                // if(isset($_POST["search"])) 
-                    $searchQuery = strtolower(filter_input(INPUT_POST, "search")); // case sense
+                    $searchQuery = strtolower(filter_input(INPUT_POST, "search"));
                     $filteredProducts = []; 
                     
                     // product loop
