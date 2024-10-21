@@ -3,13 +3,11 @@
     $contentSwitcher = new contentSwitcher();
     
     $pageName = filter_input(INPUT_POST, "navBtn");
-    $pageToDisplay;
-    $location = "content/landingPage.php";
+    $pageToDisplay = $contentSwitcher->rootPage;
 
     if(!empty($pageName)) 
     {
         $pageToDisplay = $contentSwitcher->findPage($pageName);
-        $location = $pageToDisplay->location;    
     }
 
     // page class represents a page on the website
@@ -63,7 +61,8 @@
                 new page("About", "content/aboutPage.php", []),
                 new page("Shop", "content/storePage.php", []),
                 new page("Contact", "content/contactPage.php", []),
-                new page("Login", "content/loginSignup.php", [])
+                new page("Login", "content/loginSignup.php", []),
+                new page("Checkout", "content/checkoutPage.php", [])
             ]);
         }
 
