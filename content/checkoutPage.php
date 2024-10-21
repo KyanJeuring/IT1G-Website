@@ -1,4 +1,3 @@
-<?php include "storeLogic.php"; ?>
 <script src="javascript/checkoutPage.js"></script>
 
 <div id="checkout">
@@ -118,10 +117,16 @@
                 <p>Discounts:</p>
                 <p>&#8364;&#160;12.23</p>
             </div>
-            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="post">
+            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="inLine">
+                <?php if(isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
+                    <h2><?php echo $_SESSION["shoppingCart"]->currentCoupon->code; ?></h2>
+                    <input type="hidden" id="coupon" name="coupon" value="reset">
+                    <button type="submit" name="navBtn" value="Checkout">Clear</button>
+                <?php else: ?>
                     <input type="text" id="coupon" name="coupon">
                     <button type="submit" name="navBtn" value="Checkout">Enter</button>
+                <?php endif; ?>
                 </div>
             </form>
         </div>
@@ -131,10 +136,10 @@
                 <p>Donations:</p>
                 <p>&#8364;&#160;12.34</p>
             </div>
-            <form action="">
+            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="inLine">
                     <input type="text">
-                    <button type="submit">Enter</button>
+                    <button type="submit" name="navBtn" value="Checkout">Enter</button>
                 </div>
             </form>
             <div class="donationInfo">

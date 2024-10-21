@@ -1,4 +1,9 @@
 <?php
+    // Classes need to be defined before session_start()
+    require_once("shoppingCart.php");
+    session_start();
+    
+    include("storeLogic.php");
     include("logic.php");
 ?>
 
