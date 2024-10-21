@@ -106,6 +106,12 @@
                 <p>Items:</p>
                 <p>&#8364;&#160;12.23</p>
             </div>
+            <?php if(isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
+                <div class="inLine">
+                    <p>Discounts:</p>
+                    <p>&#8364;&#160;12.23</p>
+                </div>
+            <?php endif ?>
             <div class="inLine">
                 <p>Shipping:</p>
                 <p>&#8364;&#160;12.23</p>
@@ -115,12 +121,11 @@
         <div>
             <div class="inLine">
                 <p>Discounts:</p>
-                <p>&#8364;&#160;12.23</p>
             </div>
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
                 <div class="inLine">
                 <?php if(isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
-                    <h2><?php echo $_SESSION["shoppingCart"]->currentCoupon->code; ?></h2>
+                    <h2><?php echo $_SESSION["shoppingCart"]->currentCoupon->code." -".$_SESSION["shoppingCart"]->currentCoupon->discount."%"; ?></h2>
                     <input type="hidden" id="coupon" name="coupon" value="reset">
                     <button type="submit" name="navBtn" value="Checkout">Clear</button>
                 <?php else: ?>
