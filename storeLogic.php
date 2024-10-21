@@ -4,18 +4,6 @@
         $_SESSION['shoppingCart'] = new shoppingCart();
     }  
     
-    // SET DEFAULTS
-    // $firstName = "";
-    // $lastName = "";
-    // $email = "";
-    // $phone = "";
-    // $address = "";
-    // $houseNumber = "";
-    // $city = "";
-    // $zip = "";
-    // $country = "";
-    // $paymentMethod = "";
-
     // INPUT DATA VALIDATION
     $firstName = filter_input(INPUT_POST, "first-name");
     $lastName = filter_input(INPUT_POST, "last-name");
