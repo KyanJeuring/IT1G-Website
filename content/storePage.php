@@ -131,13 +131,10 @@
                     ];
                 
     
-    
-                
-
-                // Search query checker
-                if(isset($_POST["search"]))
-                {
-                    $searchQuery = strtolower($_POST["search"]); // case sense
+                    // Search query checker
+                // $searchQuery = "";
+                // if(isset($_POST["search"])) 
+                    $searchQuery = strtolower(filter_input(INPUT_POST, "search")); // case sense
                     $filteredProducts = []; 
                     
                     // product loop
@@ -181,17 +178,7 @@
                                     echo "</a>";
                         }
                         echo "</div>";
-                    }
-                    else 
-                    {
-                        echo "No products found.";
-                    }
-                }
-                else 
-                {
-                    echo "<p> test text</p>";
-                }
-                
+                    }   
                 ?>
             </div>
     </main>
