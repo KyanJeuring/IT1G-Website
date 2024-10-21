@@ -1,8 +1,10 @@
 .backgroundImageContainer
 {
     background-image: url("../resources/otherPhotos/NaturePicture.png");
-    width: 100%;
-    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 .backgroundImageContainer > h1
 {
@@ -17,90 +19,45 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,1fr);
+    padding: 5% 15% 5% 15%;
 }
+
+.contentOfThePage > div
+{
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    border-radius: 20px;
+    background-color: #1e407aa2;
+    padding: 5%;
+    color: #fff;
+}
+
+.contentOfThePage > div p
+{
+    padding-inline: 1em;
+}
+
+
 .boxPositivity
 {
-    background-color: #1e407aa2;;
     grid-column: 1/3;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: row;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-left: 15%;
+    grid-row: 1/3;
+
 }
-.headingPositivity > h2
-{
-    grid-column: 1/2;
-    grid-row: 1/2; 
-    font-size: 20px;
-    color: white;
-    padding: 20px;
-    padding-top: 30%;
-}
-.positivityDescription > p
-{
-    grid-column: 2/3;
-    grid-row: 1/2;
-    color: white;
-    padding-top: 15%;
-    padding-inline: 5%;
-}
+
 .boxColorful
 {
-    background-color: #1e407aa2;;
     grid-column: 4/6;
     grid-row: 2/3;
-    border-radius: 18px;
-    display: flex;
-    flex-direction: row;
-    margin-right: 15%;
 }
-.headingColorful > h3
-{
-    font-size: 20px;
-    color: white;
-    grid-column: 4/5;
-    grid-row: 2/3; 
-    padding: 40px;
-    padding-left: 15px;
-    padding-top: 45%;
-}
-.colorfulDescription > p
-{
-    color: white;
-    padding-top: 70px;
-    padding-inline: 10px;
-}
+
 .boxBeneficial
 {
-    background-color: #1e407aa2;;
     grid-column: 1/3;
     grid-row: 3/4;
-    border-radius: 18px;
-    display: flex;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-inline: 5%;
-    margin-left: 10%;
 }
-.headingBeneficial > h4
-{
-    font-size: 20px;
-    color: white;
-    padding: 20px;
-    padding-top: 10%;
-}
-.beneficialDescription > p
-{
-    color: white;
-    font-weight: 100;
-    padding: 20px;
-}
-.filler
-{
-    height: 5vh;
-}
+
 .heroHeaderAboutContainer
 {
     display: grid;
@@ -111,7 +68,6 @@
 .familyPicture
 {
     grid-column: 1/2;
-    width: 100%;
 }
 .companyMotives
 {

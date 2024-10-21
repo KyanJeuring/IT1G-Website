@@ -154,7 +154,7 @@
         </div>
         <div class="boxColorful">
            <div class="headingColorful">
-                <h3>COLORFUL</h3>
+                <h2>COLORFUL</h2>
             </div>
             <div class="colorfulDescription">
                 <p>
@@ -163,20 +163,18 @@
                     we celebrate individuality and joy.
                 </p>
             </div>
-            <div class="boxBeneficial">       
-                <div class="headingBeneficial">
-                    <h4>BENEFICIAL</h4>
-                </div>
-                <div class="beneficialDescription">
-                    <p>
-                        At Sunny, we strive for win-win scenarios. Our business model ensures that everyone involved—from the materials 
-                        suppliers to our factory workers—benefits. Our products are crafted with respect for the Earth, 
-                        offering fair wages in our factories, fair profits for our retailers, and high-quality, 
-                        priced socks for our customers.
-                    </p>
-                </div>
-            </div>
         </div>
-        <div class="filler"> 
+        <div class="boxBeneficial">       
+            <div class="headingBeneficial">
+                <h2>BENEFICIAL</h2>
+            </div>
+            <div class="beneficialDescription">
+                <p>
+                    At Sunny, we strive for win-win scenarios. Our business model ensures that everyone involved—from the materials 
+                    suppliers to our factory workers—benefits. Our products are crafted with respect for the Earth, 
+                    offering fair wages in our factories, fair profits for our retailers, and high-quality, 
+                    priced socks for our customers.
+                </p>
+            </div>
         </div>
 </section>
