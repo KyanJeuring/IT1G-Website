@@ -22,7 +22,6 @@
     <section class="reviewsOnAboutPage">
         <div class="slider-wrapper">
             <div class="slider">
-                <!-- Review 1 -->
                 <div id="R1" class="review">
                     <section id="rS1">
                         <img class="photoCustomer" src="resources/otherPhotos/manPhoto.png" alt="photoCustomer">
@@ -33,13 +32,15 @@
                                 <img src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
                             </div>
                             <div class="nameAndStars">
-                                <h2>Person 1 - <span class="normalText">occupation</span></h2>
+                                <h2>Random Person<span class="normalText">-student</span></h2>
                                 <img class="reviewStars" src="resources/otherPhotos/star_rating.png" alt="reviewStars">
                             </div>
                             <div class="descriptionToTheReviews">
-                            <h3>Header 3</h3>
+                            <h3>THE BEST PAIR OF SOCKS I OWN</h3>
                                 <p class="normalText">
-                                    Text
+                                    The fit and feel of these socks are fantastic. They’re soft, breathable, 
+                                    and keep my feet fresh all day. The only downside is I wish there were 
+                                    more colour options, but the sustainability aspect more than makes up for it!
                                 </p>
                             </div>
                             <div class="qMD">
@@ -48,10 +49,10 @@
                         </div>
                     </section>
                 </div>
-                <!-- Review 2 -->
+                
                 <div id="R2" class="review">
                     <section id="rS1">
-                        <img class="photoCustomer" src="resources/otherPhotos/manPhoto.png" alt="photoCustomer">
+                        <img class="photoCustomer" src="resources/otherPhotos/girlPhoto.png" alt="photoCustomer">
                     </section>
                     <section id="rS2">
                         <div>
@@ -59,13 +60,15 @@
                                 <img src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
                             </div>
                             <div class="nameAndStars">
-                                <h2>Person 2 - <span class="normalText">occupation</span></h2>
-                                <img class="reviewStars" src="resources/otherPhotos/star_rating.png" alt="reviewStars">
+                                <h2>Random Person<span class="normalText">-employee</span></h2>
+                                <img class="reviewStars" src="resources/otherPhotos/fiveStars.png" alt="reviewStars">
                             </div>
                             <div class="descriptionToTheReviews">
-                            <h3>Header 3</h3>
+                            <h3>I FELL IN LOVE WITH NEW COLLECTION</h3>
                                 <p class="normalText">
-                                    Text
+                                I love that Sunny Socks focuses on sustainability without sacrificing quality. 
+                                These socks are soft, stretchy, and last longer than most brands I’ve tried. 
+                                Plus, the fact that they’re made from organic materials makes me feel good about my purchase.
                                 </p>
                             </div>
                             <div class="qMD">
@@ -74,10 +77,10 @@
                         </div>
                     </section>
                 </div>
-                <!-- Review 3 -->
+               
                 <div id="R3" class="review">
                     <section id="rS1">
-                        <img class="photoCustomer" src="resources/otherPhotos/manPhoto.png" alt="photoCustomer">
+                        <img class="photoCustomer" src="resources/otherPhotos/boyPhoto.png" alt="photoCustomer">
                     </section>
                     <section id="rS2">
                         <div>
@@ -85,13 +88,15 @@
                                 <img src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
                             </div>
                             <div class="nameAndStars">
-                                <h2>Person 3 - <span class="normalText">occupation</span></h2>
+                                <h2>Random Person<span class="normalText">-athlete</span></h2>
                                 <img class="reviewStars" src="resources/otherPhotos/star_rating.png" alt="reviewStars">
                             </div>
                             <div class="descriptionToTheReviews">
-                            <h3>Header 3</h3>
+                            <h3>COMFORT THAT LASTS</h3>
                                 <p class="normalText">
-                                    Text
+                                    Sunny Socks are fantastic for outdoor activities! I wore them for a weekend of camping,
+                                    and they held up perfectly. They stayed warm even when it rained. I just wish they had a
+                                    thicker winter version, but overall, they’re amazing.
                                 </p>
                             </div>
                             <div class="qMD">
@@ -100,10 +105,10 @@
                         </div>
                     </section>
                 </div>
-                 <!-- Review 4 -->
+                 
                  <div id="R4" class="review">
                     <section id="rS1">
-                        <img class="photoCustomer" src="resources/otherPhotos/manPhoto.png" alt="photoCustomer">
+                        <img class="photoCustomer" src="resources/otherPhotos/womanPhoto.png" alt="photoCustomer">
                     </section>
                     <section id="rS2">
                         <div>
@@ -111,13 +116,15 @@
                                 <img src="resources/otherPhotos/quotationMark.png" alt="quotationMarks">
                             </div>
                             <div class="nameAndStars">
-                                <h2>Person 4 - <span class="normalText">occupation</span></h2>
-                                <img class="reviewStars" src="resources/otherPhotos/star_rating.png" alt="reviewStars">
+                                <h2>Random Person<span class="normalText">-designer</span></h2>
+                                <img class="reviewStars" src="resources/otherPhotos/fiveStars.png" alt="reviewStars">
                             </div>
                             <div class="descriptionToTheReviews">
-                            <h3>Header 3</h3>
+                            <h3>SOCK HEAVEN: COMFORT & FASHION </h3>
                                 <p class="normalText">
-                                    Text
+                                    The fit and feel of these socks are fantastic. They’re soft, breathable, 
+                                    and keep my feet fresh all day. The only downside is I wish there were 
+                                    more colour options, but the sustainability aspect more than makes up for it!
                                 </p>
                             </div>
                             <div class="qMD">

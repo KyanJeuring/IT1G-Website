@@ -103,7 +103,6 @@
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
-
 .slider .review
 {
     margin-inline: 10%;
@@ -116,42 +115,42 @@
     object-fit: cover;
     color: #fff;
 }
-
 .review > section
 {
     padding: 5%;
     display: flex;
     align-items: center;
 }
-
 .review p
 {
     padding-block: 0 5%;
 }
-
 .review h3
 {
-    padding-block: 2% 0;
+    padding-block: 5% 5%;
+    
 }
-
 .review h2
 {
     display: flex;
     align-items: center;
     padding: 0%;
-    font-size: 1.2em;
 }
 
 .review .reviewStars
 {
-    width: 40%;
+    width: 35%;
 }
 
 .normalText
 {
     font-family: "NexaLight";
+    
 }
-
+.normalText p
+{
+    margin: 10px;
+}
 .rS1
 {
     grid-column: 1/2;
