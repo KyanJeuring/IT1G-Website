@@ -132,7 +132,8 @@
                 
     
                     // Search query checker
-                    $searchQuery = strtolower(filter_input(INPUT_POST, "search"));
+                    if(isset($_POST["search"])) $searchQuery = strtolower(filter_input(INPUT_POST, "search"));
+                    else $searchQuery = "";
                     $filteredProducts = []; 
                     
                     // product loop
