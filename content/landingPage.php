@@ -38,8 +38,8 @@
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
                     <div class="productPrices">
-                        <p class="productNewPrice">$ New Price</p>
-                        <p class="productOldPrice">$ Old Price</p>                       
+                        <p class="productNewPrice">&#8364;&#160;New Price</p>
+                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                       
                     </div>
                 </div>
             </div>
@@ -49,8 +49,8 @@
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
                     <div class="productPrices">
-                        <p class="productNewPrice">$ New Price</p>
-                        <p class="productOldPrice">$ Old Price</p>                       
+                        <p class="productNewPrice">&#8364;&#160;New Price</p>
+                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                       
                     </div>
                 </div>
             </div>
@@ -60,8 +60,8 @@
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
                     <div class="productPrices">
-                        <p class="productNewPrice">$ New Price</p>
-                        <p class="productOldPrice">$ Old Price</p>                        
+                        <p class="productNewPrice">&#8364;&#160;New Price</p>
+                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
                     </div>
                 </div>
             </div>
@@ -71,8 +71,8 @@
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
                     <div class="productPrices">
-                        <p class="productNewPrice">$ New Price</p>
-                        <p class="productOldPrice">$ Old Price</p>                        
+                        <p class="productNewPrice">&#8364;&#160;New Price</p>
+                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
                     </div>
                 </div>
             </div>
@@ -82,8 +82,8 @@
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
                     <div class="productPrices">
-                        <p class="productNewPrice">$ New Price</p>
-                        <p class="productOldPrice">$ Old Price</p>                        
+                        <p class="productNewPrice">&#8364;&#160;New Price</p>
+                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
                     </div>
                 </div>
             </div>
@@ -93,8 +93,8 @@
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
                     <div class="productPrices">
-                        <p class="productNewPrice">$ New Price</p>
-                        <p class="productOldPrice">$ Old Price</p>                        
+                        <p class="productNewPrice">&#8364;&#160;New Price</p>
+                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
                     </div>
                 </div>
             </div>
@@ -104,8 +104,8 @@
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
                     <div class="productPrices">
-                        <p class="productNewPrice">$ New Price</p>
-                        <p class="productOldPrice">$ Old Price</p>                        
+                        <p class="productNewPrice">&#8364;&#160;New Price</p>
+                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
                     </div>
                 </div>
             </div>
@@ -115,8 +115,8 @@
                     <h2 class="productName">Socks</h2>
                     <p class="productSlogan">Slogan</p>
                     <div class="productPrices">
-                        <p class="productNewPrice">$ New Price</p>
-                        <p class="productOldPrice">$ Old Price</p>                        
+                        <p class="productNewPrice">&#8364;&#160;New Price</p>
+                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
                     </div>
                 </div>
             </div>

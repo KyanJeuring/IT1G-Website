@@ -173,7 +173,7 @@
                                     echo "<a href '#'>";
                                         echo "<img src = 'resources/products/{$product->name}.jpg' alt='{product->name}'";
                                         echo "<p>{$product->name}</p>";
-                                        echo "<p>$25.99</p>";
+                                        echo "<p>&#8364;&#160;25.99</p>";
                                     echo "</a>";
                         }
                         echo "</div>";
