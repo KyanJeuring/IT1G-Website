@@ -27,7 +27,7 @@
                     <!-- Name Section -->
                     <label for="first-name">Name</label>
                     <div>
-                        <input type="text" id="first-name" name="first-name">
+                        <input type="text" id="first-name" name="first-name" value="<?php echo $firstName; ?>">
                         <input type="text" id="last-name" name="last-name">
                     </div>
                 </section>

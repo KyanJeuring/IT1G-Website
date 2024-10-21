@@ -4,6 +4,18 @@
         $_SESSION['shoppingCart'] = new shoppingCart();
     }  
     
+    // SET DEFAULTS
+    // $firstName = "";
+    // $lastName = "";
+    // $email = "";
+    // $phone = "";
+    // $address = "";
+    // $houseNumber = "";
+    // $city = "";
+    // $zip = "";
+    // $country = "";
+    // $paymentMethod = "";
+
     // INPUT DATA VALIDATION
     $firstName = filter_input(INPUT_POST, "first-name");
     $lastName = filter_input(INPUT_POST, "last-name");
@@ -22,6 +34,8 @@
     $couponRst = filter_input(INPUT_POST, "couponRst", FILTER_VALIDATE_BOOLEAN);
 
     // MAIN
+    
+
     // coupon handling
     if($couponRst) $_SESSION['shoppingCart']->currentCoupon = null;
     //TODO: if coupon is false add error message
