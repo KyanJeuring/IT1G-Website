@@ -163,16 +163,16 @@
                             $filteredProducts[] = $product;
                         }
                     }
-                    //product display (the echos are temporary, I will update them with the actual products when the time comes)
+                    //product display
                     if (isset($filteredProducts)) 
                     {
                         echo "<div id='products'>";
 
                         foreach ($filteredProducts as $product) 
                         {
-                                    echo "<a href '#'>";
-                                        echo "<img src = 'resources/products/{$product->name}.jpg' alt='{product->name}'";
-                                        echo "<p>{$product->name}</p>";
+                                    echo "<a href='#'>";
+                                        echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
+                                        echo "<p>".$product->name."</p>";
                                         echo "<p>&#8364;&#160;25.99</p>";
                                     echo "</a>";
                         }
