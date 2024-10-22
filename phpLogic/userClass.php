@@ -6,12 +6,22 @@
 
         public function login($username, $password)
         {
-            //connect to database
-            if($username == "user" && $password == "1234")
+            $filePath = 'data/users.txt';
+            if (file_exists($filePath)) 
             {
-                $this->isLoggedIn = true;
-                return true;
-            }
+                $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                foreach($lines as $line) 
+                {
+                    $user = explode(":", $line);
+                    if($user[0] == $username && $user[1] == $password)
+                    {
+                        $this->isLoggedIn = true;
+                        $this->username = $username;
+                        // get other user data
+                        return true;
+                    }
+                }
+            } 
             return false;
         }
         public function logout()
