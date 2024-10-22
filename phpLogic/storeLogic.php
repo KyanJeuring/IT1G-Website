@@ -65,6 +65,11 @@
     
     $_SESSION['shoppingCart']->calculatePrices();
 
+    if($checkout)
+    {
+        $contentSwitcher->displayPage("OrderConfirmed");
+    }
+
     //TODO
     // validate if the form is filled out correctly
     // if not, display an error message
