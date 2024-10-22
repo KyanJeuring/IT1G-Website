@@ -39,7 +39,7 @@
         </div>
         <div id="navLinks">
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
-                <?php if($contentSwitcher->currentPage->name != "Home") printNavLinks($pageToDisplay); ?>
+                <?php if($contentSwitcher->currentPage->name != "Home") printNavLinks($contentSwitcher->currentPage); ?>
             </form>
         </div>
         <div id="offerButton">
