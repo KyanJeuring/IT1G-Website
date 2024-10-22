@@ -192,9 +192,9 @@
             </div>
         </div>
 
-        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">
-            <input type="hidden" name="navBtn" id="Checkout">
-            <input type="hidden" nave="checkout" value="true">
+        <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="POST">        
+            <input type="hidden" name="navBtn" value="Checkout">
+            <input type="hidden" name="checkout" value="true">
             <input class="checkoutButton" type="submit" value="Checkout">
         </form>
     </div>
