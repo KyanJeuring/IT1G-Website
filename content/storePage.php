@@ -54,6 +54,18 @@
                         <input type="checkbox" name="color" value="pink" style="accent-color: var(--companyPink);">
                         <label for="color">Pink</label>
                     </div>
+                    <div>
+                        <input type="checkbox" name="color" value="white" style="accent-color: var(--productWhite);">
+                        <label for="color">White</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" value="grey" style="accent-color: var(--productGrey);">
+                        <label for="color">Grey</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" value="multicolor" style="accent-color: var(--productMulti);">
+                        <label for="color">Multicolor</label>
+                    </div>
                 </div>
 
                 <div id="design">
@@ -71,12 +83,28 @@
                         <label for="design">Unique</label>
                     </div>
                 </div>
+
+                <div id="material">
+                    <p>Filter by Material</p>
+                    <div>
+                        <input type="checkbox" name="material" value="cotton">
+                        <label for="material">Cotton</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="material" value="wool">
+                        <label for="material">Wool</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="material" value="fibre">
+                        <label for="material">Sustainable Fibre</label>
+                    </div>
+                </div>
             </form> 
         </div>
     </aside> 
 
     <main>
-        <div id="bar">
+        <div class="bar">
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class="search">
                 <input type="search" name="search" placeholder="Search">
                 <!-- TODO: style this button / make it an icon -->
@@ -95,12 +123,14 @@
                         public $name;
                         public $color;
                         public $design;
+                        public $material;
     
-                        public function __construct($name, $color, $design)
+                        public function __construct($name, $color, $design, $material)
                         {
                             $this->name = $name;
                             $this->color = $color;
                             $this->design = $design;
+                            $this->material = $material;
                         }
 
 
@@ -110,24 +140,24 @@
                       // list of products
                     $products =
                     [
-                        new product('Ocean Breeze', 'blue', 'striped',),
-                        new product('Navy Drift', 'green', 'striped'),
-                        new product('Sunny Socks', 'yellow', 'solid'),
-                        new product('Glam Walkers', 'pink', 'striped'),
-                        new product('Crimson Web', 'orange', 'striped'),
-                        new product('Cool Blue', 'blue', 'solid'),
-                        new product('Cool Navy', 'green', 'solid'),
-                        new product('Cotton Candy', 'pink', 'solid'),
-                        new product('Tomato', 'orange', 'solid'),
-                        new product('Lemon Whirl', 'yellow', 'striped'),
-                        new product('Sporty', 'white', 'striped'),
-                        new product('Long Stripes', 'multicolor', 'striped'),
-                        new product('White Dream', 'white', 'solid'),
-                        new product('Grey Dream', 'grey', 'solid'),
-                        new product('Confusion', 'multicolor', 'unique'),
-                        new product('Wooble Double', 'multicolor', 'unique'),
-                        new product('Splashy Colors', 'multicolor', 'unique'),
-                        new product('Warm Flowers', 'color', 'unique'),
+                        new product('Ocean Breeze', 'blue', 'striped', 'cotton'),
+                        new product('Navy Drift', 'green', 'striped', 'cotton'),
+                        new product('Sunny Socks', 'yellow', 'solid', 'cotton'),
+                        new product('Glam Walkers', 'pink', 'striped', 'cotton'),
+                        new product('Crimson Web', 'orange', 'striped', 'cotton'),
+                        new product('Cool Blue', 'blue', 'solid', 'cotton'),
+                        new product('Cool Navy', 'green', 'solid', 'cotton'),
+                        new product('Cotton Candy', 'pink', 'solid', 'cotton'),
+                        new product('Tomato', 'orange', 'solid', 'cotton'),
+                        new product('Lemon Whirl', 'yellow', 'striped', 'cotton'),
+                        new product('Sporty', 'white', 'solid', 'wool'),
+                        new product('Long Stripes', 'multicolor', 'striped', 'sustainable fibre'),
+                        new product('White Dream', 'white', 'solid', 'wool'),
+                        new product('Grey Dream', 'grey', 'solid', 'wool'),
+                        new product('Confusion', 'multicolor', 'unique','sustainable fibre'),
+                        new product('Wooble Double', 'multicolor', 'unique', 'sustainable fibre'),
+                        new product('Splashy Colors', 'multicolor', 'unique', 'sustainable fibre'),
+                        new product('Warm Flowers', 'color', 'unique', 'sustainable fibre'),
                     ];
                 
     
@@ -142,6 +172,7 @@
                         $nameMatch = false;
                         $designMatch = false;
                         $colorMatch = false;
+                        $materialMatch = false;
 
                         //product check
                         if (isset($product->name)) 
@@ -156,23 +187,27 @@
                         {
                             $colorMatch = strpos(strtolower($product->color), $searchQuery) !== false;
                         }
+                        if (isset($product->material)) 
+                        {
+                            $materialMatch = strpos(strtolower($product->material), $searchQuery) !== false;
+                        }
 
                         //if there's a match, it enters the filtered products variable
-                        if ($nameMatch || $colorMatch || $designMatch) 
+                        if ($nameMatch || $colorMatch || $designMatch || $materialMatch) 
                         {
                             $filteredProducts[] = $product;
                         }
                     }
-                    //product display (the echos are temporary, I will update them with the actual products when the time comes)
+                    //product display
                     if (isset($filteredProducts)) 
                     {
                         echo "<div id='products'>";
 
                         foreach ($filteredProducts as $product) 
                         {
-                                    echo "<a href '#'>";
-                                        echo "<img src = 'resources/products/{$product->name}.jpg' alt='{product->name}'";
-                                        echo "<p>{$product->name}</p>";
+                                    echo "<a href='#'>";
+                                        echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
+                                        echo "<p>".$product->name."</p>";
                                         echo "<p>&#8364;&#160;25.99</p>";
                                     echo "</a>";
                         }
