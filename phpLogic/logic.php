@@ -61,8 +61,7 @@
                 new page("About", "content/aboutPage.php", []),
                 new page("Shop", "content/storePage.php", []),
                 new page("Contact", "content/contactPage.php", []),
-                new page("Login", "content/login.php", []),
-                new page("Signup", "content/signup.php", []),
+                new page("UserPage", "content/userPage.php", []),
                 new page("Checkout", "content/checkoutPage.php", [])
             ]);
         }

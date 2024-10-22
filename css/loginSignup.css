@@ -1,29 +1,25 @@
 .forms
 {
-    display: grid;
+    display: flex;
     margin: 0 auto;
-    width: 50%;
-    grid-template-columns: repeat(2, 1fr);
-    
+    justify-content: center;
 }
 
-.forms > div
+.forms > .form
 {
+    width: 30vw;
     display: flex;
-    padding: 10%;
+    padding: 5%;
     text-align: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.forms > #leftForm
+.verticalSeparatorLine
 {
-    border-right: 2px solid var(--companyBlue);
-}
-
-.forms > #rightForm
-{
-    border-left: 2px solid var(--companyBlue);
+    background-color: var(--companyBlue);
+    width: 4px;
+    display: inline-block;
 }
 
 .forms h1
