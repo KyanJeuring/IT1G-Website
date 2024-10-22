@@ -2,6 +2,7 @@
     <div class="form">
         <img src="resources\Logo's\png\sunny_logos_blue.png" alt="Sunny Socks Logo">
         <h1>Welcome back</h1>
+        <?php if($_SESSION["user"]->isLoggedIn) echo "<h1>".$_SESSION["user"]->username."</h1>" ?>
         <p>Glad to see you again 👋</p>
         <p>Login to your account below</p>
         <?php echo $alert; ?>
