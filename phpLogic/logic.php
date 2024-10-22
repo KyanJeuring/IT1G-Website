@@ -7,7 +7,7 @@
 
     if(!empty($pageName)) 
     {
-        $pageToDisplay = $contentSwitcher->findPage($pageName);
+        $contentSwitcher->displayPage($pageName);
     }
 
     // page class represents a page on the website
@@ -54,6 +54,7 @@
     class contentSwitcher
     {
         public $rootPage;
+        public $currentPage;
         
         public function __construct()
         {
@@ -62,7 +63,9 @@
                 new page("Shop", "content/storePage.php", []),
                 new page("Contact", "content/contactPage.php", []),
                 new page("UserPage", "content/userPage.php", []),
-                new page("Checkout", "content/checkoutPage.php", [])
+                new page("Checkout", "content/checkoutPage.php", [
+                    new page("OrderConfirmed", "content/orderConfirmed.php", [])
+                ])
             ]);
         }
 
@@ -88,6 +91,11 @@
             }
             
             return false;
+        }
+
+        function displayPage($pageName)
+        {
+            $this->currentPage = $this->findPage($pageName);
         }
     }
 ?>
