@@ -67,7 +67,6 @@
 
     if($checkout)
     {
-        var_dump($_SESSION['shoppingCart']);
         $contentSwitcher->displayPage("OrderConfirmed");
     }
 
