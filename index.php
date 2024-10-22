@@ -3,6 +3,7 @@
     require_once("phpLogic/shoppingCart.php");
     require_once("phpLogic/userClass.php");
     session_start();
+    // session_destroy();
     
     include("phpLogic/userLogic.php");
     include("phpLogic/storeLogic.php");
