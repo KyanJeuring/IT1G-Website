@@ -132,7 +132,7 @@
                         new product('Cotton Candy', 'pink', 'solid'),
                         new product('Tomato', 'orange', 'solid'),
                         new product('Lemon Whirl', 'yellow', 'striped'),
-                        new product('Sporty', 'white', 'striped'),
+                        new product('Sporty', 'white', 'solid'),
                         new product('Long Stripes', 'multicolor', 'striped'),
                         new product('White Dream', 'white', 'solid'),
                         new product('Grey Dream', 'grey', 'solid'),
