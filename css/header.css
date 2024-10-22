@@ -1,5 +1,6 @@
 #header
 {
+    z-index: 2;
     position: sticky;
     display: flex;
     flex-direction: row;
@@ -8,8 +9,18 @@
     width: 100%;
     padding: 1.25rem 2.5rem;
     top: 0;
-
     background-color: white;
+}
+
+#header button
+{
+    fill: var(--companyBlue);
+    opacity: 0.8;
+}
+
+#header button:hover
+{
+    opacity: 1;
 }
 
 #header .section
@@ -18,9 +29,15 @@
     flex-direction: row;
     height: 100%;
     gap: 2rem;
+    align-items: center;
 }
 
-.section.center
+#header .section.left button
+{
+    height: 100%;
+}
+
+#header .section.center
 {
     position: absolute;
     left: 50%;
@@ -28,13 +45,58 @@
     top: 0;
 }
 
-#header button
+#header .section.center button
 {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    color: var(--companyBlue);
+    height: 25%;
     font-size: 1.25rem;
-    height: 100%;
 }
 
-#header .icon
+#header .section p
 {
-    padding: 20%;
+    font-family: NexaLight;
+}
+
+#header .section.right
+{
+    display: inline-flex;
+    justify-content: right;
+}
+
+.barNav
+{
+    display: inline-flex;
+}
+
+.barNav input
+{
+    height: 2em;
+    width: 10em;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-family: "NexaLight";
+    color: var(--companyBlue);
+    padding-inline: 5%;
+}
+
+.barNav input:focus
+{
+    outline: none;
+}
+
+.barNav svg
+{
+    vertical-align: middle;
+    fill: var(--companyBlue);
+    opacity: 0.8;
+    margin-inline: 1em 0;
+}
+
+.barNav svg:hover
+{
+    opacity: 1;
 }

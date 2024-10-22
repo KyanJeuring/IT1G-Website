@@ -140,6 +140,6 @@
     </section>
 
     <?php
-        include 'newsletterSignUpForm.php'
+        include ('newsletterSignUpForm.php');
     ?>
 </main>

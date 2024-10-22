@@ -1,0 +1,18 @@
+.toTopButton
+{
+    display: flex;
+    justify-content: center;
+    border: 5px solid var(--companyBlue);
+    background-color: #fff;;
+    border-radius: 50%;
+    padding: 0.3em;
+    z-index: 1;
+    bottom: 1em;
+    right: 2em;
+    position: fixed;
+}
+
+.toTopButton svg
+{
+    fill: var(--companyBlue);
+}

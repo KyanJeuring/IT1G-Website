@@ -1,0 +1,212 @@
+.backgroundImageContainer
+{
+    background-image: url("../resources/otherPhotos/NaturePicture.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.backgroundImageContainer > h1
+{
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    padding: 5%;
+    font-size: 2rem;
+}
+.contentOfThePage
+{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    padding: 5% 15% 5% 15%;
+}
+
+.contentOfThePage > div
+{
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    border-radius: 20px;
+    background-color: #1e407aa2;
+    padding: 5%;
+    color: #fff;
+}
+
+.contentOfThePage > div p
+{
+    padding-inline: 1em;
+}
+
+
+.boxPositivity
+{
+    grid-column: 1/3;
+    grid-row: 1/3;
+
+}
+
+.boxColorful
+{
+    grid-column: 4/6;
+    grid-row: 2/3;
+}
+
+.boxBeneficial
+{
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+
+.heroHeaderAboutContainer
+{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 5% 10%;
+    column-gap: 5%;
+}
+.familyPicture
+{
+    grid-column: 1/2;
+}
+.companyMotives
+{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/3;
+    justify-content: center;
+    row-gap: 5%;
+}
+.companyMotives > h2
+{
+    font-size: 20px;
+}
+.companyMotives > h1
+{
+    font-size: 20px;
+}
+
+.slider-wrapper
+{
+    position: relative;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+.slider
+{
+    margin: 15%;
+    display: flex;
+    aspect-ratio: 20 / 11;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.slider .review
+{
+    margin-inline: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    background-color: var(--companyBlue);
+    border-radius: 15px;
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+    color: #fff;
+}
+.review > section
+{
+    padding: 5%;
+    display: flex;
+    align-items: center;
+}
+.review p
+{
+    padding-block: 0 5%;
+}
+.review h3
+{
+    padding-block: 5% 5%;
+    
+}
+.review h2
+{
+    display: flex;
+    align-items: center;
+    padding: 0%;
+}
+
+.review .reviewStars
+{
+    width: 35%;
+}
+
+.normalText
+{
+    font-family: "NexaLight";
+    
+}
+.normalText p
+{
+    margin: 10px;
+}
+.rS1
+{
+    grid-column: 1/2;
+}
+
+.rS2
+{
+    grid-column: 2/3;
+}
+
+.review .photoCustomer
+{
+    padding-block: 30%;
+    padding-inline: 10%;
+}
+
+.nameAndStars
+{
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 0 2%;
+}
+
+.review .qMU
+{
+    display: flex;
+    justify-content: left;
+}
+
+.review .qMD
+{
+    display: flex;
+    justify-content: right;
+}
+
+.slider-nav
+{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider-nav a
+{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: rgb(253, 252, 252);
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+.slider-nav a:hover
+{
+    opacity: 1;
+}

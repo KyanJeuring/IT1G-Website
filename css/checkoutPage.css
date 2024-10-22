@@ -1,0 +1,304 @@
+#checkout
+{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    gap: 5vw;
+    margin: 5vh 10vw;
+}
+
+#checkout p
+{
+    font-family: nexaLight;
+}
+
+#checkout input[type="submit"]
+{
+    font-size: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 0.25rem 1rem;
+    font-family: NexaBold;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#checkout .errorMessage
+{
+    all: unset;
+    color: red;
+    background-color: white;
+    font-size: 100% !important;
+    border: 0.1rem solid rgba(255, 0, 0, 0.25);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#checkout .separatorLine
+{
+    width: 100%;
+    height: 1px;
+    margin: 0 0.5rem;
+    background-color: var(--companyBlue);
+}
+
+/* PAYMENT FORM */
+#checkout .paymentForm
+{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#checkout .paymentForm section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#checkout .sectionHeading
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    font-size: 1.75rem;
+    text-wrap: nowrap;
+}
+
+#checkout .sectionSummary
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.25rem;
+    text-wrap: nowrap;
+    
+    padding: 0.5rem 5%;
+    background-color: var(--companyBlue);
+    color: white;
+    border-radius: 10rem;
+}
+
+#checkout .deliveryInfoForm
+{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 3rem;
+    padding: 5rem;
+
+    border-radius: 1.5rem;
+    border: 0.1rem solid var(--companyBlue);
+    color: var(--companyBlue);
+    background-color: #D2D8E4;
+}
+
+#checkout .deliveryInfoForm section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+#checkout .deliveryInfoForm label
+{
+    font-size: 1.5rem;
+}
+
+#checkout .deliveryInfoForm input[type="text"]
+{
+    all: unset;
+
+    max-width: 80%;
+    height: 2.5rem;
+    border-radius: 5rem;
+    padding: 0 0 0 1.5rem;
+
+    background-color: white;
+    border: 0.1rem solid var(--companyBlue);
+}
+
+#checkout .deliveryInfoForm #first-name
+{
+    width: 20%;
+}
+
+#checkout .deliveryInfoForm #last-name
+{
+    width: 20%;
+}
+#checkout .deliveryInfoForm #country-code
+{
+    width: 5%;
+}
+
+#checkout .deliveryInfoForm #phone
+{
+    width: 30%;
+}
+
+#checkout .deliveryInfoForm #house-number
+{
+    width: 12%;
+}
+
+#checkout .deliveryInfoForm #postal-code
+{
+    width: 15%;
+}
+
+#checkout .deliveryInfoForm input[type="submit"]
+{
+    border: 0.1rem solid var(--companyBlue);
+    background-color: var(--companyBlue);
+    color: white;
+}
+
+#checkout .deliveryInfoForm input[type="submit"]:hover
+{
+    background-color: white;
+    color: var(--companyBlue);
+}
+
+/* PAYMENT SELECTOR */
+
+#checkout .paymentSelector
+{
+    padding: 4rem;
+
+    border-radius: 1.5rem;
+    background-color: var(--companyBlue);
+}
+
+#checkout .paymentSelector input[type="submit"]
+{
+    grid-column: 1 / 2;
+    border: 0.1rem solid white;
+    background-color: var(--companyBlue);
+    color: white;
+}
+
+#checkout .paymentSelector input[type="submit"]:hover
+{
+    border: 0.1rem solid var(--companyBlue);
+    background-color: white;
+    color: var(--companyBlue);
+}
+
+#checkout .paymentSelector
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+
+    gap: 3rem;
+}
+
+/* hide radio */
+#checkout .paymentSelector [type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* radio style */
+#checkout .paymentSelector [type=radio] + img {
+    height: 5rem;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    box-sizing: content-box;
+    border: 0.25rem solid transparent;
+}
+
+/* checked style */
+#checkout .paymentSelector [type=radio]:checked + img {
+    border: 0.25rem solid white;
+}
+
+/* SUMMARY */
+
+#checkout .inLine
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#checkout .summary h1
+{
+    font-size: 2rem;
+    text-align: center;
+}
+
+#checkout .summary h2
+{
+    font-size: 1.5rem;
+}
+
+#checkout .summary p
+{
+    font-size: 1.25rem;
+}
+
+#checkout .summary
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#checkout .summary [type="submit"]
+{
+    font-size: 1.25rem;
+}
+
+#checkout .summary input[type="text"]
+{
+    width: 60%;
+    height: 2.25rem;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+
+    background-color: white;
+    border: 0.1rem solid var(--companyBlue);
+}
+
+#checkout .summary > div
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    background-color: var(--companyBlue);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+#checkout .donationInfo p
+{
+    font-size: 1rem;
+}
+
+#checkout input[type="submit"].checkoutButton 
+{
+    width: 100%;
+    padding: 1rem;
+    font-size: 2rem;
+    border: 0.2rem solid var(--companyBlue);
+    background-color: white;
+    color: var(--companyBlue);
+}
+
+#checkout input[type="submit"].checkoutButton:hover
+{
+    border: 0.2rem solid var(--companyBlue);
+    background-color: var(--companyBlue);
+    color: white;
+}

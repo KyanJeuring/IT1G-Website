@@ -15,10 +15,14 @@
     --companyPink: #e990b9;
     --companyOrange: #f15b39;
     --companyYellow: #fecd3e;
+    --productWhite: #eeeeee;
+    --productGrey: #cac6c6;
+    --productMulti: #000000;
 }
 
 *
 {
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -27,10 +31,16 @@
 html
 {
     scroll-behavior: smooth;
+    overflow: hidden;
+    height: 100%;
 }
 
 body
 {
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
     font-family: "NexaLight";
 }
 

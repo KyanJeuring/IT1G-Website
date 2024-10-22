@@ -49,7 +49,7 @@ footer li
     padding: 3% 0;
 }
 
-footer a
+footer a, footer a:visited
 {
     text-decoration: none;
     color: #fff;
@@ -60,14 +60,36 @@ footer a:hover
     color: var(--companyOrange);
 }
 
-.socials
+.socialsDesktop
 {
+    display: block;
     padding: 2%;
 }
 
 .socials > a
 {
     margin: 3%;
+}
+
+.socials svg
+{
+    fill: #fff;
+}
+
+.socials svg:hover
+{
+    fill: var(--companyOrange);
+}
+
+.socialsMobile
+{
+    display: none;
+    padding: 2% 2% 5% 2%;
+}
+
+.socialsMobile > a
+{
+    margin: 1%;
 }
 
 /* Make a responsive footer for mobile view*/
@@ -114,5 +136,15 @@ footer a:hover
         list-style-type: none;
         padding: 5%;
         padding-top: 0%;
+    }
+
+    .socialsDesktop
+    {
+        display: none;
+    }
+
+    .socialsMobile
+    {
+        display: block;
     }
 }
