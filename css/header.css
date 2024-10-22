@@ -59,3 +59,43 @@
 {
     font-family: NexaLight;
 }
+
+#header .section.right
+{
+    display: inline-flex;
+    justify-content: right;
+}
+
+.barNav
+{
+    display: inline-flex;
+}
+
+.barNav input
+{
+    height: 2em;
+    width: 10em;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 25px;
+    font-size: 1.1em;
+    font-family: "NexaLight";
+    color: var(--companyBlue);
+    padding-inline: 5%;
+}
+
+.barNav input:focus
+{
+    outline: none;
+}
+
+.barNav svg
+{
+    vertical-align: middle;
+    fill: #000;
+    margin-inline: 1em;
+}
+
+.barNav svg:hover
+{
+    fill: var(--companyOrange);
+}

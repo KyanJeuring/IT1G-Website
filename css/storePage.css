@@ -104,7 +104,7 @@ main
 
 /* CATALOGUE */
 
-#bar .search input
+.bar input
 {
     width: 30%;
     height: 3em;
@@ -117,18 +117,18 @@ main
     color: var(--companyBlue);
 }
 
-#bar .search input:focus
+.bar input:focus
 {
     outline: none;
 }
 
-#bar svg
+.bar svg
 {
     vertical-align: middle;
     fill: #000;
 }
 
-#bar svg:hover
+.bar svg:hover
 {
     fill: var(--companyOrange);
 }
