@@ -1,6 +1,7 @@
 <?php
     // PREPARE SESSION DATA
-    if (!isset($_SESSION['shoppingCart']) || empty($_SESSION['shoppingCart'])) {
+    if (!isset($_SESSION['shoppingCart']) || empty($_SESSION['shoppingCart']))
+    {
         $_SESSION['shoppingCart'] = new shoppingCart();
     }  
     
@@ -47,10 +48,21 @@
     if(isset($paymentMethod)) $_SESSION['shoppingCart']->paymentMethod = $paymentMethod;
 
     //error messages
-    $incompleteShippingInfo = empty($_SESSION['shoppingCart']->firstName) || empty($_SESSION['shoppingCart']->lastName) || empty($_SESSION['shoppingCart']->email) || empty($_SESSION['shoppingCart']->countryCode) || empty($_SESSION['shoppingCart']->phone) || empty($_SESSION['shoppingCart']->streetAddress) || empty($_SESSION['shoppingCart']->houseNumber) || empty($_SESSION['shoppingCart']->postalCode) || empty($_SESSION['shoppingCart']->city) || empty($_SESSION['shoppingCart']->shippingCountry);
+    $incompleteShippingInfo = 
+                            empty($_SESSION['shoppingCart']->firstName) || 
+                            empty($_SESSION['shoppingCart']->lastName) || 
+                            empty($_SESSION['shoppingCart']->email) || 
+                            empty($_SESSION['shoppingCart']->countryCode) || 
+                            empty($_SESSION['shoppingCart']->phone) || 
+                            empty($_SESSION['shoppingCart']->streetAddress) || 
+                            empty($_SESSION['shoppingCart']->houseNumber) || 
+                            empty($_SESSION['shoppingCart']->postalCode) || 
+                            empty($_SESSION['shoppingCart']->city) || 
+                            empty($_SESSION['shoppingCart']->shippingCountry);
     $missingPaymentMethod = empty($_SESSION['shoppingCart']->paymentMethod);
     $invalidCoupon = isset($coupon) && !empty($coupon) && $_SESSION['shoppingCart']->currentCoupon == null;
     $invalidDonation = isset($donation) && $donation == false;
+    
     $_SESSION['shoppingCart']->calculatePrices();
 
     //TODO
