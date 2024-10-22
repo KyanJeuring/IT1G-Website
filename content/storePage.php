@@ -107,12 +107,14 @@
                         public $name;
                         public $color;
                         public $design;
+                        public $material;
     
-                        public function __construct($name, $color, $design)
+                        public function __construct($name, $color, $design, $material)
                         {
                             $this->name = $name;
                             $this->color = $color;
                             $this->design = $design;
+                            $this->material = $material;
                         }
 
 
@@ -122,24 +124,24 @@
                       // list of products
                     $products =
                     [
-                        new product('Ocean Breeze', 'blue', 'striped',),
-                        new product('Navy Drift', 'green', 'striped'),
-                        new product('Sunny Socks', 'yellow', 'solid'),
-                        new product('Glam Walkers', 'pink', 'striped'),
-                        new product('Crimson Web', 'orange', 'striped'),
-                        new product('Cool Blue', 'blue', 'solid'),
-                        new product('Cool Navy', 'green', 'solid'),
-                        new product('Cotton Candy', 'pink', 'solid'),
-                        new product('Tomato', 'orange', 'solid'),
-                        new product('Lemon Whirl', 'yellow', 'striped'),
-                        new product('Sporty', 'white', 'solid'),
-                        new product('Long Stripes', 'multicolor', 'striped'),
-                        new product('White Dream', 'white', 'solid'),
-                        new product('Grey Dream', 'grey', 'solid'),
-                        new product('Confusion', 'multicolor', 'unique'),
-                        new product('Wooble Double', 'multicolor', 'unique'),
-                        new product('Splashy Colors', 'multicolor', 'unique'),
-                        new product('Warm Flowers', 'color', 'unique'),
+                        new product('Ocean Breeze', 'blue', 'striped', 'cotton'),
+                        new product('Navy Drift', 'green', 'striped', 'cotton'),
+                        new product('Sunny Socks', 'yellow', 'solid', 'cotton'),
+                        new product('Glam Walkers', 'pink', 'striped', 'cotton'),
+                        new product('Crimson Web', 'orange', 'striped', 'cotton'),
+                        new product('Cool Blue', 'blue', 'solid', 'cotton'),
+                        new product('Cool Navy', 'green', 'solid', 'cotton'),
+                        new product('Cotton Candy', 'pink', 'solid', 'cotton'),
+                        new product('Tomato', 'orange', 'solid', 'cotton'),
+                        new product('Lemon Whirl', 'yellow', 'striped', 'cotton'),
+                        new product('Sporty', 'white', 'solid', 'wool'),
+                        new product('Long Stripes', 'multicolor', 'striped', 'sustainable fibre'),
+                        new product('White Dream', 'white', 'solid', 'wool'),
+                        new product('Grey Dream', 'grey', 'solid', 'wool'),
+                        new product('Confusion', 'multicolor', 'unique','sustainable fibre'),
+                        new product('Wooble Double', 'multicolor', 'unique', 'sustainable fibre'),
+                        new product('Splashy Colors', 'multicolor', 'unique', 'sustainable fibre'),
+                        new product('Warm Flowers', 'color', 'unique', 'sustainable fibre'),
                     ];
                 
     
@@ -154,6 +156,7 @@
                         $nameMatch = false;
                         $designMatch = false;
                         $colorMatch = false;
+                        $materialMatch = false;
 
                         //product check
                         if (isset($product->name)) 
@@ -168,9 +171,13 @@
                         {
                             $colorMatch = strpos(strtolower($product->color), $searchQuery) !== false;
                         }
+                        if (isset($product->material)) 
+                        {
+                            $materialMatch = strpos(strtolower($product->material), $searchQuery) !== false;
+                        }
 
                         //if there's a match, it enters the filtered products variable
-                        if ($nameMatch || $colorMatch || $designMatch) 
+                        if ($nameMatch || $colorMatch || $designMatch || $materialMatch) 
                         {
                             $filteredProducts[] = $product;
                         }
