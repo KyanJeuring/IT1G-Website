@@ -98,6 +98,5 @@
 
 .barNav svg:hover
 {
-    fill: var(--companyOrange);
     opacity: 1;
 }
