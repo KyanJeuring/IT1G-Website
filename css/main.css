@@ -50,7 +50,7 @@ button
 {
     all: unset;
     /* make sure all buttons still change your cursor to hand while hovering. Even after all:unset */
-    cursor: pointer !important;
+    cursor: pointer;
 }
 
 #content
