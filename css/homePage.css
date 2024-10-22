@@ -171,7 +171,7 @@
 
 #galleryLeftButton:hover
 {
-    cursor: url("../resources/icons/arrowLeftCursor.png") 30 30, auto;
+    cursor: url("../resources/icons/arrowLeftCursor_small.png") 30 30, auto;
 }
 
 #galleryRightButton:hover
