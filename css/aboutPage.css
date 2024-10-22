@@ -1,6 +1,6 @@
 .backgroundImageContainer
 {
-    background-image: url("../resources/otherPhotos/NaturePicture.png");
+    background-image: url("../resources/reviews/NaturePicture.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -142,14 +142,13 @@
     width: 35%;
 }
 
+.normalText:is(span)
+{
+    margin-inline: 5px;
+}
 .normalText
 {
     font-family: "NexaLight";
-    
-}
-.normalText p
-{
-    margin: 10px;
 }
 .rS1
 {
