@@ -54,6 +54,18 @@
                         <input type="checkbox" name="color" value="pink" style="accent-color: var(--companyPink);">
                         <label for="color">Pink</label>
                     </div>
+                    <div>
+                        <input type="checkbox" name="color" value="white" style="accent-color: var(--productWhite);">
+                        <label for="color">White</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" value="grey" style="accent-color: var(--productGrey);">
+                        <label for="color">Grey</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="color" value="multicolor" style="accent-color: var(--productMulti);">
+                        <label for="color">Multicolor</label>
+                    </div>
                 </div>
 
                 <div id="design">
