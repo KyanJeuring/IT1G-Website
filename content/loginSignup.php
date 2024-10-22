@@ -1,5 +1,5 @@
 <div class="forms" id="login">
-    <div id="leftForm">
+    <div class="form">
         <img src="resources\Logo's\png\sunny_logos_blue.png" alt="Sunny Socks Logo">
         <h1>Welcome back</h1>
         <p>Glad to see you again 👋</p>
@@ -18,7 +18,10 @@
             <?php endif; ?>
         </form>
     </div>
-    <div id="rightForm">
+    <?php if(!$_SESSION["user"]->isLoggedIn): ?>
+    <div class="verticalSeparatorLine"></div>
+    <div class="form">
         <h1>Other Login Options</h1>
     </div>
+    <?php endif; ?>
 </div>
