@@ -13,7 +13,7 @@
         }
     }
 
-    class shoppingCart 
+    class ShoppingCart 
     {
         //user info
         public $firstName;

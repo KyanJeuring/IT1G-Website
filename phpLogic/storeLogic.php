@@ -2,7 +2,7 @@
     // PREPARE SESSION DATA
     if (!isset($_SESSION['shoppingCart']) || empty($_SESSION['shoppingCart']))
     {
-        $_SESSION['shoppingCart'] = new shoppingCart();
+        $_SESSION['shoppingCart'] = new ShoppingCart();
     }  
     
     // INPUT DATA VALIDATION
