@@ -83,6 +83,22 @@
                         <label for="design">Unique</label>
                     </div>
                 </div>
+
+                <div id="material">
+                    <p>Filter by Material</p>
+                    <div>
+                        <input type="checkbox" name="material" value="cotton">
+                        <label for="material">Cotton</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="material" value="wool">
+                        <label for="material">Wool</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="material" value="fibre">
+                        <label for="material">Sustainable Fibre</label>
+                    </div>
+                </div>
             </form> 
         </div>
     </aside> 

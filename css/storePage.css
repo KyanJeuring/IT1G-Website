@@ -95,7 +95,11 @@ main
 #design > *
 {
     margin-bottom: 1em;
-    gap: 0.5em;
+}
+
+#material > *
+{
+    margin-bottom: 1em;
 }
 
 /* CATALOGUE */
