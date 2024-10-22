@@ -88,7 +88,7 @@
     </aside> 
 
     <main>
-        <div id="bar">
+        <div class="bar">
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class="search">
                 <input type="search" name="search" placeholder="Search">
                 <!-- TODO: style this button / make it an icon -->
