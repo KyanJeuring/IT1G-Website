@@ -53,11 +53,6 @@
 
         public function register($username, $password)
         {
-            if(str_contains($username, ":") || str_contains($password, ":"))
-            {
-                //username and password cannot contain ':' because it is used as a delimiter
-                return false;
-            }
             $filePath = 'data/users.json';
             if (file_exists($filePath)) 
             {
