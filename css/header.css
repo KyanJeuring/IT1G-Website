@@ -91,11 +91,13 @@
 .barNav svg
 {
     vertical-align: middle;
-    fill: #000;
-    margin-inline: 1em;
+    fill: var(--companyBlue);
+    opacity: 0.8;
+    margin-inline: 1em 0;
 }
 
 .barNav svg:hover
 {
     fill: var(--companyOrange);
+    opacity: 1;
 }
