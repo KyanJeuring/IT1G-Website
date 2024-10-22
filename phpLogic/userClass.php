@@ -22,14 +22,14 @@
 
         public function login($username, $password)
         {
-            $filePath = 'data/users.txt';
+            $filePath = 'data/users.json';
             if (file_exists($filePath)) 
             {
-                $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-                foreach($lines as $line) 
+                $existingUsers = json_decode(file_get_contents($filePath), true);
+                foreach($existingUsers as $user)
                 {
-                    $user = explode(":", $line);
-                    if($user[0] == $username && $user[1] == $password)
+                    var_dump($user);
+                    if($user["username"] == $username && $user["password"] == $password)
                     {
                         $this->isLoggedIn = true;
                         $this->username = $username;
