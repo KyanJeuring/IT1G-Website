@@ -1,12 +1,12 @@
-#chatBox
+/* #chatBox
 {
     display: flex;
     flex-direction: column;
     justify-content: start;
 
     position: fixed;
-    right: 1rem;
-    bottom: 1rem;
+    right: 2em;
+    bottom: 8em;
     z-index: 1;
     width: 4vw;
     height: 4vw;
@@ -29,4 +29,124 @@
 {
     filter: brightness(0) saturate(100%) invert(18%) sepia(19%) saturate(6011%) hue-rotate(203deg) brightness(93%) contrast(87%);
     aspect-ratio: 1/1;
+} */
+
+
+.chatBot
+{
+    position: fixed;
+    bottom: 8em;
+    right: 2em;
+    
+    width: 20rem;
+    overflow: hidden;
+
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+    
+}
+
+.chatBot header
+{
+    background: #1E407A;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.chatBot header h2
+{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.chatBot .chatBox
+{
+    height: 20rem;
+    overflow-y: auto;
+    padding: 1rem 2rem 5rem;
+}
+
+.chatBox .chat
+{
+    display: flex;
+}
+
+.chatBox .outgoing
+{
+    justify-content: flex-end;
+    margin: 2rem 0;
+}
+
+.chatBox .chat img
+{
+    align-self: flex-end;
+    text-align: center;
+
+    width: 40px;
+    height: 40px;
+}
+
+.chatBox .chat p
+{
+    background: #1E407A;
+    color: white;
+    max-width: 75%;
+
+    padding: 1rem 2rem;    
+    border-radius: 1rem 1rem 0 1rem;
+    font-size: 0.9rem;
+}
+
+.chatBox .incoming p
+{
+    color: black;
+    background: #f2f2f2;
+
+    border-radius: 1rem 1rem 1rem 0;
+}
+
+
+.chatBot .chatInput
+{
+    position: absolute;
+    bottom: 0;
+    
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+
+    border-top: 1px solid #cccccc;
+    background: white;
+
+    display: flex;
+    gap: 1em;
+}
+
+.chatInput textarea
+{
+    border: none;
+    outline: none;
+    resize: none;
+
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem 1rem 0;
+
+    width: 100%;
+    height: 3rem;
+    
+}
+
+.chatBot .chatInput button img
+{
+    cursor: pointer;
+    width: 1.4rem;
+    height: 1.4rem;
+
+    visibility: hidden;
+}
+
+.chatInput textarea:valid ~ button img
+{
+    visibility: visible;
 }
