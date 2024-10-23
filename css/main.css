@@ -33,6 +33,7 @@ html
     scroll-behavior: smooth;
     overflow: hidden;
     height: 100%;
+    overscroll-behavior: none;
 }
 
 body
