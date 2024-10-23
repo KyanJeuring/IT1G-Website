@@ -1,4 +1,4 @@
-<div id="checkout">
+<main id="checkout">
     <!-- MAIN FORM -->
     <div class="paymentForm">
         <section class="itemsInCart">
@@ -6,14 +6,47 @@
                 <h2>1. Items in cart</h2>
                 <div class="separatorLine"></div>
             </div>
-            <div class="itemsList">
-                <!-- TODO: automate with php -->
-
+            <?php if(count($_SESSION["shoppingCart"]->items) > 0): ?>
+                <ul class="itemsList">
+                    <?php foreach($_SESSION["shoppingCart"]->items as $item): ?>
+                        <li class="item">                                      
+                            <div>
+                                <img src = 'resources/products/Confusion.jpg' alt='ProductImg'> 
+                                <h1>Confusion</h1>
+                            </div>
+                            <div>
+                                <p>&#8364;&#160;25.99</p>
+                                <form action="<?php echo $_SERVER["PHP_SELF"];?>" method=POST>
+                                    <input type="hidden" name="removeFromCart" value="{itemName}">
+                                    <button type="submit" name="navBtn" value="Checkout">
+                                        <img class="icon" src="resources/icons/svg/trash.svg" alt="trashIcon">
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+            <?php if (isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
+            <div class="coupon item">
+                <div>
+                    <img class="icon" src="resources/icons/svg/tag.svg" alt="tagIcon">
+                    <h1><?php echo $_SESSION["shoppingCart"]->currentCoupon->code . " -" . $_SESSION["shoppingCart"]->currentCoupon->discount . "%"; ?></h1>
+                </div>
+                <div>
+                    <p><?php echo "&#8364;&#160;-" . $_SESSION["shoppingCart"]->discount;?></p>
+                    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method=POST>
+                        <input type="hidden" name="couponRst" value="true">
+                        <button type="submit" name="navBtn" value="Checkout">
+                            <img class="icon" src="resources/icons/svg/trash.svg" alt="trashIcon">
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="coupon"></div>
+            <?php endif; ?>
             <div class="sectionSummary">
                 <h3>Total: </h3>
-                <p><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->itemsTotal; ?></p>
+                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
             </div>
         </section>
 
@@ -198,4 +231,4 @@
             <input class="checkoutButton" type="submit" value="Checkout">
         </form>
     </div>
-</div>
+</main>

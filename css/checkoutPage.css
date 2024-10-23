@@ -41,6 +41,63 @@
     background-color: var(--companyBlue);
 }
 
+/* ITEMS SUMMARY */
+#checkout .itemsList, #checkout .coupon
+{
+    border: 0.1rem solid var(--companyBlue);
+}
+
+#checkout .itemsInCart .item
+{
+    background-color: #D2D8E4;
+    color: var(--companyBlue);
+}
+
+#checkout .itemsInCart .itemsList .item:nth-child(odd)
+{
+    background-color: var(--companyBlue);
+    color: white;    
+}
+
+#checkout .itemsInCart .icon
+{
+    padding: 1rem;
+}
+
+#checkout .itemsInCart .itemsList .item:nth-child(odd) .icon
+{
+    filter: none;
+}
+
+#checkout .itemsInCart .item .icon
+{
+    filter: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(4372%) hue-rotate(201deg) brightness(96%) contrast(88%);
+}
+
+#checkout .itemsInCart .item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    font-size: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+#checkout .itemsInCart .item div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+}
+
+#checkout .item.coupon
+{
+    background-color: #D2D8E4;
+}
+
 /* PAYMENT FORM */
 #checkout .paymentForm
 {

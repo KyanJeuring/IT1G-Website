@@ -13,8 +13,33 @@
         }
     }
 
+    class Order
+    {
+        public $items = [];
+
+        public $discount;
+        public $donation;
+        public $shippingCost;
+        public $totalPrice;
+
+        public $firstName;
+        public $lastName;
+        public $email;
+        public $countryCode;
+        public $phone;
+        public $streetAddress;
+        public $houseNumber;
+        public $postalCode;
+        public $city;
+        public $shippingCountry;
+        public $paymentMethod;
+    }
+
     class ShoppingCart 
     {
+        //items
+        public $items = [];
+
         //user info
         public $firstName;
         public $lastName;
@@ -43,8 +68,10 @@
 
         public function getItemsTotal() 
         {
-            //TODO: get items total from items   
-            $this->itemsTotal = 125.34; // example
+            foreach($this->items as $item) 
+            {
+                $this->itemsTotal += $item->price;
+            }
             return $this->itemsTotal;
         }
 
@@ -118,6 +145,43 @@
             }
             // coupon not found
             return false;
+        }
+
+        public function submitOrder() 
+        {
+            $filePath = 'data/orders.json';
+            
+            //check if database is available
+            if(!file_exists($filePath)) 
+            {
+                return false;
+            }
+
+            // create order object
+            $order = new Order();
+            $order->items = $this->items;
+            $order->discount = $this->discount;
+            $order->donation = $this->donation === null ? 0 : $this->donation;
+            $order->shippingCost = $this->shippingCost;
+            $order->totalPrice = $this->totalPrice;
+            $order->firstName = $this->firstName;
+            $order->lastName = $this->lastName;
+            $order->email = $this->email;
+            $order->countryCode = $this->countryCode;
+            $order->phone = $this->phone;
+            $order->streetAddress = $this->streetAddress;
+            $order->houseNumber = $this->houseNumber;
+            $order->postalCode = $this->postalCode;
+            $order->city = $this->city;
+            $order->shippingCountry = $this->shippingCountry;
+            $order->paymentMethod = $this->paymentMethod;
+
+            // save order to file
+            $orders = json_decode(file_get_contents($filePath), true);
+            array_push($orders, $order);
+            file_put_contents($filePath, json_encode($orders, JSON_PRETTY_PRINT));
+        
+            return $order;
         }
    }
 ?>
