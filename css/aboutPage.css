@@ -194,7 +194,8 @@
 
 .slider-nav
 {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
     column-gap: 1rem;
     position: absolute;
     bottom: 2em;
@@ -207,10 +208,13 @@
     height: 0.8rem;
     border-radius: 50%;
     background-color: rgb(253, 252, 252);
-    opacity: 0.75;
+    opacity: 0.5;
     transition: opacity ease 250ms;
 }
+
 .slider-nav a:hover
 {
     opacity: 1;
+    width: 1rem;
+    height: 1rem;
 }
