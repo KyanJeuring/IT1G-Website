@@ -65,13 +65,14 @@
     
     $_SESSION['shoppingCart']->calculatePrices();
 
-    if($checkout)
+    // TODO check if cart is empty
+    if($checkout && !$incompleteShippingInfo && !$missingPaymentMethod)
     {
-        $contentSwitcher->displayPage("OrderConfirmed");
+        $order = $_SESSION['shoppingCart']->submitOrder();
+        if($order !== false)
+        {
+            $_SESSION['shoppingCart'] = new ShoppingCart();
+            $contentSwitcher->displayPage("OrderConfirmed");
+        }
     }
-
-    //TODO
-    // validate if the form is filled out correctly
-    // if not, display an error message
-    // if it is, save the data to the session and redirect thank you page
 ?>

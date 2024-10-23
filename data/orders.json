@@ -1,0 +1,20 @@
+[
+    {
+        "items": [],
+        "discount": 0,
+        "donation": 0,
+        "shippingCost": 14.99,
+        "totalPrice": 140.33,
+        "firstName": "Pete",
+        "lastName": "PKJfds",
+        "email": "test@test.test",
+        "countryCode": 32,
+        "phone": 234234,
+        "streetAddress": "NSDA",
+        "houseNumber": 21,
+        "postalCode": "fdsfsd",
+        "city": "fsd",
+        "shippingCountry": "gs",
+        "paymentMethod": "applePay"
+    }
+]
