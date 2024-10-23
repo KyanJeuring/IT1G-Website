@@ -2,7 +2,7 @@
     // PREPARE SESSION DATA
     if (!isset($_SESSION['user']) || empty($_SESSION['user']))
     {
-        $_SESSION['user'] = new User();
+        $_SESSION['user'] = new UserHandler();
     } 
 
     // DEAL WITH INPUT

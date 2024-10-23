@@ -2,7 +2,7 @@
     // PREPARE SESSION DATA
     if (!isset($_SESSION['shoppingCart']) || empty($_SESSION['shoppingCart']))
     {
-        $_SESSION['shoppingCart'] = new shoppingCart();
+        $_SESSION['shoppingCart'] = new ShoppingCart();
     }  
     
     // INPUT DATA VALIDATION
@@ -64,6 +64,11 @@
     $invalidDonation = isset($donation) && $donation == false;
     
     $_SESSION['shoppingCart']->calculatePrices();
+
+    if($checkout)
+    {
+        $contentSwitcher->displayPage("OrderConfirmed");
+    }
 
     //TODO
     // validate if the form is filled out correctly

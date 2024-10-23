@@ -13,7 +13,7 @@
         }
     }
 
-    class shoppingCart 
+    class ShoppingCart 
     {
         //user info
         public $firstName;
@@ -93,17 +93,10 @@
         {
             // load coupons from file
             // return empty array if file does not exist
-            $filePath = 'data/validCoupons.txt';
+            $filePath = 'data/validCoupons.json';
             if (file_exists($filePath)) 
             {
-                $lines = file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-                $coupons = [];
-                foreach($lines as $line) 
-                {
-                    $coupon = explode(":", $line);
-                    array_push($coupons, new Coupon($coupon[0], intval($coupon[1])));
-                }
-                return $coupons;
+                return json_decode(file_get_contents($filePath), true);
             } 
             else 
             {
@@ -114,12 +107,11 @@
         public function applyCoupon($coupon) 
         {
             //apply coupon if it is valid
-            //search for coupon in $this->coupons
             foreach($this->loadCoupons() as $c)
             {
-                if($c->code == $coupon)
+                if($c["code"]== $coupon)
                 {
-                    $this->currentCoupon = $c;
+                    $this->currentCoupon = new Coupon($c["code"], $c["discount"]);
                     $this->calculatePrices();
                     return true;
                 }

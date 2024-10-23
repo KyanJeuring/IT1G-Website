@@ -4,9 +4,9 @@
     require_once("phpLogic/userClass.php");
     session_start();
     
+    include("phpLogic/logic.php");
     include("phpLogic/userLogic.php");
     include("phpLogic/storeLogic.php");
-    include("phpLogic/logic.php");
 ?>
 
 <!DOCTYPE html>
@@ -29,6 +29,8 @@
         <link rel="stylesheet" href="./css/toTopButton.css" type="text/css">
         <link rel="stylesheet" href="./css/checkoutPage.css" type="text/css">
         <link rel="stylesheet" href="./css/contactPage.css" type="text/css">
+        <link rel="stylesheet" href="./css/orderConfirmed.css" type="text/css">
+        <link rel="stylesheet" href="./css/newsletterSignUpForm.css" type="text/css">
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
     </head>
@@ -39,7 +41,7 @@
         </div>
         <div id="navLinks">
             <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
-                <?php if($pageToDisplay->name != "Home") printNavLinks($pageToDisplay); ?>
+                <?php if($contentSwitcher->currentPage->name != "Home") printNavLinks($contentSwitcher->currentPage); ?>
             </form>
         </div>
         <div id="offerButton">
@@ -56,7 +58,7 @@
         <div id="content">
             <?php
                 // display content based on current location. See logic.php for more info
-                include($pageToDisplay->location);
+                include($contentSwitcher->currentPage->location);
             ?>
         </div>
         <button class="toTopButton" onclick="document.getElementById('top').scrollIntoView({ behavior: 'smooth' });"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 320 512"><path d="M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l256 0c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"/></svg></button>
