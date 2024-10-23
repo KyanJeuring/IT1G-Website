@@ -2,5 +2,41 @@
     {
         "code": "FUNSOX",
         "discount": 30
-    }    
+    },
+    {
+        "code": "Alex",
+        "discount": 20
+    }
+    ,
+    {
+        "code": "Arad",
+        "discount": 19
+    }
+    ,
+    {
+        "code": "Flavius",
+        "discount": 19
+    }
+    ,
+    {
+        "code": "Kyan",
+        "discount": 18
+    }
+    ,
+    {
+        "code": "Marcell",
+        "discount": 20
+    },
+    {
+        "code": "Peter",
+        "discount": 20
+    },
+    {
+        "code": "Viktoria",
+        "discount": 17
+    },
+    {
+        "code": "IT1G",
+        "discount": 100
+    }
 ]
