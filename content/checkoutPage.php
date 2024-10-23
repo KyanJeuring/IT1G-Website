@@ -46,7 +46,7 @@
             <?php endif; ?>
             <div class="sectionSummary">
                 <h3>Total: </h3>
-                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
+                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal - $_SESSION["shoppingCart"]->discount; ?></p>
             </div>
         </section>
 
