@@ -7,7 +7,7 @@
 
     if(!empty($pageName)) 
     {
-        $contentSwitcher->displayPage("Home");
+        $contentSwitcher->displayPage($pageName);
     }
 
     // page class represents a page on the website
