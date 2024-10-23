@@ -68,3 +68,21 @@
     padding: 5% 80% 5% 20%;
     font-size: 20px;
 }
+
+#success
+{
+    grid-column: 2 / 3;
+    background-color: rgb(91, 231, 91);
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-right: 2%;
+    border-radius: 10px;
+    width: 45%;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#success p
+{
+    font-size: large;
+}

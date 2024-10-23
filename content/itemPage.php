@@ -32,5 +32,13 @@
             </button>
             <input type="hidden" name="navBtn" value="Item">
         </form>
+        <?php
+            if($addToCart == true)
+            {
+                echo "<div id='success'>";
+                    echo "<p>Item added to cart successfully!</p>";
+                echo "</div>";
+            }
+        ?>
     </aside>
 </main>
