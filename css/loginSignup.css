@@ -1,41 +1,39 @@
 .forms
 {
-    display: grid;
+    display: flex;
     margin: 0 auto;
-    width: 50%;
-    grid-template-columns: repeat(2, 1fr);
-    
+    justify-content: center;
 }
 
-.forms > div
+.forms > .form
 {
+    width: 30vw;
     display: flex;
-    padding: 10%;
+    padding: 5%;
     text-align: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.forms > #leftForm
+.verticalSeparatorLine
 {
-    border-right: 2px solid var(--companyOrange);
-}
-
-.forms > #rightForm
-{
-    border-left: 2px solid var(--companyOrange);
+    background-color: var(--companyBlue);
+    width: 4px;
+    display: inline-block;
 }
 
 .forms h1
 {
+    font-size: 2.5em;
     font-family: "NexaLight";
-    color: var(--companyOrange);
+    color: var(--companyBlue);
 }
 
 .forms p
 {
+    font-size: 1.3em;
     font-family: "NexaLight";
-    color: var(--companyOrange);
+    color: var(--companyBlue);
 }
 
 .forms input
@@ -55,10 +53,16 @@
     padding: 2%;
     margin: 3% 0;
     font-size: 1.5rem;
-    border: 3px solid var(--companyOrange);
+    border: 3px solid var(--companyBlue);
     border-radius: 15px;
-    background-color: var(--companyOrange);
+    background-color: var(--companyBlue);
     color: #fff;
+}
+
+.forms button:hover
+{
+    background-color: #fff;
+    color: var(--companyBlue);
 }
 
 .errorMessage

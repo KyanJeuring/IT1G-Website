@@ -1,13 +1,13 @@
 <?php
     // instantiate contentSwitcher
     $contentSwitcher = new contentSwitcher();
-    $pageToDisplay = $contentSwitcher->rootPage;
     
-    if($_SERVER["REQUEST_METHOD"] === "POST")
+    $pageName = filter_input(INPUT_POST, "navBtn");
+    $pageToDisplay = $contentSwitcher->rootPage;
+
+    if(!empty($pageName)) 
     {
-        // get the page name from the button that was clicked
-        $pageName = filter_input(INPUT_POST, "navBtn");
-        if(!empty($pageName)) $pageToDisplay = $contentSwitcher->findPage($pageName);
+        $contentSwitcher->displayPage($pageName);
     }
 
     // page class represents a page on the website
@@ -54,6 +54,7 @@
     class contentSwitcher
     {
         public $rootPage;
+        public $currentPage;
         
         public function __construct()
         {
@@ -61,8 +62,13 @@
                 new page("About", "content/aboutPage.php", []),
                 new page("Shop", "content/storePage.php", []),
                 new page("Contact", "content/contactPage.php", []),
-                new page("Login", "content/loginSignup.php", [])
+                new page("UserPage", "content/userPage.php", []),
+                new page("Checkout", "content/checkoutPage.php", [
+                    new page("OrderConfirmed", "content/orderConfirmed.php", [])
+                ])
             ]);
+
+            $this->displayPage("Home");
         }
 
         function findPage($pageName, $parentPage = null)
@@ -87,6 +93,11 @@
             }
             
             return false;
+        }
+
+        function displayPage($pageName)
+        {
+            $this->currentPage = $this->findPage($pageName);
         }
     }
 ?>

@@ -3,6 +3,11 @@
     font-size: 3rem;
 }
 
+.pageContainer p
+{
+    font-family: NexaLight;
+}
+
 .semitransparentContentBox
 {
     background:rgba(30,64,122,0.75);
@@ -49,13 +54,55 @@
 }
 
 .ctaButtonArrow,
-.ctaButton
-{
+.ctaButton {
     background-color: #F15B39;
+    color: white;
 
     padding: 1em 2em;
     border-radius: 2em;
+
+    position:relative;
+    overflow: hidden;
+
+    z-index: 1;
 }
+
+.ctaButtonArrow:hover,
+.ctaButton:hover
+{
+    color: white;
+    padding: 1em 2em;
+    border-radius: 2em;
+
+    position: relative;
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+/* Animating the button */
+.ctaButton::after,
+.ctaButtonArrow::after 
+{
+    content: "";
+    background: #FECD3E;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 100%;
+    bottom: -100%;
+    transition: top 0.35s ease, bottom 0.35s ease;
+}
+
+/* Set the position of the animation after (it literally covers the whole button) */
+.ctaButton:hover::after,
+.ctaButtonArrow:hover::after 
+{
+    top: 0;
+    bottom: 0;
+}
+
 
 .semitransparentContentBox .ctaButtonArrow,
 .semitransparentContentBox .ctaButton
@@ -88,9 +135,9 @@
     display: grid;
     width: 100%;
     height: 100%;
-    margin: 3rem;
+    margin: 3dvh 8dvw;
 
-    background-image: url('../resources/socksImages/summer_socks_homepage.png');
+    background-image: url('../resources/socksImages/autumn_socks_homepage.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,21 +156,28 @@
 
 .galleryButton
 {
-    margin: 1rem;
+    border-radius: 2rem;
 }
 
 #galleryLeftButton
 {
-    grid-area: 2 / 1 / 2 / 1;
-    justify-self: start;
+    grid-area: 1 / 1 / 4 / 2;
 }
 
 #galleryRightButton
 {
-    grid-area: 2 / 3 / 2 / 3;
-    justify-self: end;
+    grid-area: 1 / 3 / 4 / 4;
 }
 
+#galleryLeftButton:hover
+{
+    cursor: url("../resources/icons/arrowLeftCursor_smallWhite.png") 30 30, auto;
+}
+
+#galleryRightButton:hover
+{
+    cursor: url('../resources/icons/arrowRightCursor_smallWhite.png') 30 30, auto;
+}
 
 /* Product Catalog Section */
 
@@ -132,16 +186,172 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    
+    min-height: 100vh;
+    margin: 0 8dvw;
 }
 
 .productCatalog
 {
     display: grid;
-    grid-template-columns: repeat(4, 15vw);
-    grid-template-rows: repeat(2, 30vh);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    
+    gap: 3rem;
+    margin: 2rem;
 }
 
 .productPrices
 {
-    display: inline-flex;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.productBox
+{
+    border-radius: 1rem;
+    color: white;
+}
+
+.productInfoBox
+{
+    padding: 1rem;
+    background-color: #1E407A;
+
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.productImage
+{
+    min-width: 100%;
+    height: 80%;
+    margin-bottom: -1rem;
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.productName
+{
+    font-size: 1.6rem;
+}
+
+.productSlogan
+{
+    font-size: 0.8rem;
+    color: lightgrey;
+}
+
+.productOldPrice
+{
+    font-size: 0.7rem;
+    color: lightgrey;
+    text-decoration: line-through;
+}
+
+
+/* Grid container with information about company (the one that looks like a blog) */
+
+
+.aboutGridContainer
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 3fr 4fr 4fr;
+
+    max-height: 100dvh;
+    gap: 1.5rem;
+
+    margin: 2dvh 8dvw;
+    padding: 2dvh 2dvw;
+}
+
+.aboutGridContainer > *
+{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    border-radius: 1.8rem;
+    color: white;
+}
+
+#box1
+{
+    grid-area: 1 / 1 / 4 / 3;
+    background-image: url('../resources/otherPhotos/girlStandingWearingSocks.png');
+}
+
+#box2
+{
+    grid-area: 1 / 3 / 2 / 5;
+    background-color: #FECD3E;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box3
+{
+    grid-area: 2 / 3 / 3 / 5;
+    background-color: #1E407A;
+}
+
+#box4,
+#box5,
+#box6
+{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+#box4
+{
+    background-image: url(../resources/otherPhotos/fatherHelpingDaughter.png);
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+#box5
+{
+    background-image: url(../resources/otherPhotos/personReading.png);
+}
+
+#box6
+{
+    background-image: url(../resources/otherPhotos/happyPeopleSunset.png);
+}
+
+#box7
+{
+    grid-area: 4 / 2 / 5 / 5;
+    background-color: #1E407A;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#box7 > p
+{
+    font-size: 1.5rem;
+}
+
+#box7 > .ctaButton
+{
+    width: auto;
+}
+
+#box3,
+#box7
+{
+    padding: 2rem;
 }

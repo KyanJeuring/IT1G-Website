@@ -92,14 +92,19 @@ main
     margin-bottom: 1.5em;
 }
 
-#size > *
+#design > *
+{
+    margin-bottom: 1em;
+}
+
+#material > *
 {
     margin-bottom: 1em;
 }
 
 /* CATALOGUE */
 
-#bar .search input
+.bar input
 {
     width: 30%;
     height: 3em;
@@ -112,9 +117,20 @@ main
     color: var(--companyBlue);
 }
 
-#bar .search input:focus
+.bar input:focus
 {
     outline: none;
+}
+
+.bar svg
+{
+    vertical-align: middle;
+    fill: #000;
+}
+
+.bar svg:hover
+{
+    fill: var(--companyOrange);
 }
 
 #products

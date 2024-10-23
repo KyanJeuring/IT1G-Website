@@ -49,7 +49,7 @@ footer li
     padding: 3% 0;
 }
 
-footer a
+footer a, footer a:visited
 {
     text-decoration: none;
     color: #fff;
@@ -60,24 +60,34 @@ footer a:hover
     color: var(--companyOrange);
 }
 
-.socials1
+.socialsDesktop
 {
     display: block;
     padding: 2%;
 }
 
-.socials1 > a
+.socials > a
 {
     margin: 3%;
 }
 
-.socials2
+.socials svg
+{
+    fill: #fff;
+}
+
+.socials svg:hover
+{
+    fill: var(--companyOrange);
+}
+
+.socialsMobile
 {
     display: none;
     padding: 2% 2% 5% 2%;
 }
 
-.socials2 > a
+.socialsMobile > a
 {
     margin: 1%;
 }
@@ -128,12 +138,12 @@ footer a:hover
         padding-top: 0%;
     }
 
-    .socials1
+    .socialsDesktop
     {
         display: none;
     }
 
-    .socials2
+    .socialsMobile
     {
         display: block;
     }

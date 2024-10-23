@@ -1,0 +1,46 @@
+#orderSummary
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    margin: 5vh auto;
+    padding: 2.5rem;
+    width: 35vw;
+
+    border: 0.25rem solid var(--companyBlue);
+    border-radius: 2.5rem;
+}
+
+#orderSummary h1
+{
+    font-size: 2.5rem;
+    font-family: NexaBold;
+}
+
+#orderSummary .checkmark
+{
+    color: rgb(0, 255, 0);
+    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(2352%) hue-rotate(59deg) brightness(104%) contrast(101%);
+    width: 30%;
+}
+
+#orderSummary .returnButton
+{
+    font-size: 1.5rem;
+    border: 0.25rem solid var(--companyBlue);
+    background-color: var(--companyBlue);
+    color: white;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    font-family: NexaBold;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#orderSummary .returnButton:hover
+{
+    background-color: white;
+    color: var(--companyBlue);
+}
