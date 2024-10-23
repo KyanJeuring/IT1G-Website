@@ -15,147 +15,135 @@
         <h1 class="headerText">Browse Our Collections</h1>
         <div class="galleryCarousel">
             <!-- setting up carousel structure such as: button-left | info box | button-right -->
-            <button class="galleryButton" id="galleryLeftButton"><img src="" alt="image of arrow pointing to the left"></button>
+            <button class="galleryButton" id="galleryLeftButton" onclick="prevImage()"></button>
             <div class="semitransparentContentBox">
-                <h1 class="headerText">Summer Breeze</h1>
-                <p class="generalText">Keep cool and stylish with our lightweight summer socks, ideal for every sun-filled adventure.</p>
-                <button class="ctaButton">Summary Collection</button>
+            <h1 class="headerText" id="carouselHeader">Summer Breeze</h1>
+            <p class="generalText" id="carouselText">Keep cool and stylish with our lightweight summer socks, ideal for every sun-filled adventure.</p>
+            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+                <button class="ctaButton" type="submit" name="navBtn" value="Shop">Summary Collection</button>
+            </form>
             </div>
-            <button class="galleryButton" id="galleryRightButton"><img src="" alt="image of arrow pointing to the right"></button>
-        </div>        
+            <button class="galleryButton" id="galleryRightButton" onclick="nextImage()"></button>
+        </div>
+
+        <script src="javascript/carousel.js"></script>
     </section>
 
     <!-- Short product catalog section (container) -->
-    <section class="productCatalogSection">
+    <section class="productCatalogSection"> 
         <h1 class="headerText">Our Products</h1>
 
         <!-- creating the box which products will be structured in -->
         <div class="productCatalog">
             <!-- Creating the box containers -->
-            <div class="productBox">
-                <img src="../resources/socksImages/blue.png" alt="image of product item" class="productImage">
-                <div class="productInfoBox">
-                    <h2 class="productName">Socks</h2>
-                    <p class="productSlogan">Slogan</p>
-                    <div class="productPrices">
-                        <p class="productNewPrice">&#8364;&#160;New Price</p>
-                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                       
-                    </div>
-                </div>
-            </div>
-            <div class="productBox">
-                <img src="" alt="image of product item" class="productImage">
-                <div class="productInfoBox">
-                    <h2 class="productName">Socks</h2>
-                    <p class="productSlogan">Slogan</p>
-                    <div class="productPrices">
-                        <p class="productNewPrice">&#8364;&#160;New Price</p>
-                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                       
-                    </div>
-                </div>
-            </div>
-            <div class="productBox">
-                <img src="" alt="image of product item" class="productImage">
-                <div class="productInfoBox">
-                    <h2 class="productName">Socks</h2>
-                    <p class="productSlogan">Slogan</p>
-                    <div class="productPrices">
-                        <p class="productNewPrice">&#8364;&#160;New Price</p>
-                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
-                    </div>
-                </div>
-            </div>
-            <div class="productBox">
-                <img src="" alt="image of product item" class="productImage">
-                <div class="productInfoBox">
-                    <h2 class="productName">Socks</h2>
-                    <p class="productSlogan">Slogan</p>
-                    <div class="productPrices">
-                        <p class="productNewPrice">&#8364;&#160;New Price</p>
-                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
-                    </div>
-                </div>
-            </div>
-            <div class="productBox">
-                <img src="" alt="image of product item" class="productImage">
-                <div class="productInfoBox">
-                    <h2 class="productName">Socks</h2>
-                    <p class="productSlogan">Slogan</p>
-                    <div class="productPrices">
-                        <p class="productNewPrice">&#8364;&#160;New Price</p>
-                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
-                    </div>
-                </div>
-            </div>
-            <div class="productBox">
-                <img src="" alt="image of product item" class="productImage">
-                <div class="productInfoBox">
-                    <h2 class="productName">Socks</h2>
-                    <p class="productSlogan">Slogan</p>
-                    <div class="productPrices">
-                        <p class="productNewPrice">&#8364;&#160;New Price</p>
-                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
-                    </div>
-                </div>
-            </div>
-            <div class="productBox">
-                <img src="" alt="image of product item" class="productImage">
-                <div class="productInfoBox">
-                    <h2 class="productName">Socks</h2>
-                    <p class="productSlogan">Slogan</p>
-                    <div class="productPrices">
-                        <p class="productNewPrice">&#8364;&#160;New Price</p>
-                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
-                    </div>
-                </div>
-            </div>
-            <div class="productBox">
-                <img src="" alt="image of product item" class="productImage">
-                <div class="productInfoBox">
-                    <h2 class="productName">Socks</h2>
-                    <p class="productSlogan">Slogan</p>
-                    <div class="productPrices">
-                        <p class="productNewPrice">&#8364;&#160;New Price</p>
-                        <p class="productOldPrice">&#8364;&#160;Old Price</p>                        
-                    </div>
-                </div>
-            </div>
+            <?php
+            $products = [
+                [
+                    'image' => 'resources\socksImages\3ColourSocks(available_in_15_combinations).png',
+                    'name' => 'Socks',
+                    'slogan' => 'Slogan',
+                    'newPrice' => '$ New Price',
+                    'oldPrice' => '$ Old Price'
+                ],
+                [
+                    'image' => 'resources\socksImages\comfy.png',
+                    'name' => 'Socks',
+                    'slogan' => 'Slogan',
+                    'newPrice' => '$ New Price',
+                    'oldPrice' => '$ Old Price'
+                ],
+                [
+                    'image' => 'resources\socksImages\green.png',
+                    'name' => 'Socks',
+                    'slogan' => 'Slogan',
+                    'newPrice' => '$ New Price',
+                    'oldPrice' => '$ Old Price'
+                ],
+                [
+                    'image' => 'resources\socksImages\image2.png',
+                    'name' => 'Socks',
+                    'slogan' => 'Slogan',
+                    'newPrice' => '$ New Price',
+                    'oldPrice' => '$ Old Price'
+                ],
+                [
+                    'image' => 'resources\socksImages\image3.png',
+                    'name' => 'Socks',
+                    'slogan' => 'Slogan',
+                    'newPrice' => '$ New Price',
+                    'oldPrice' => '$ Old Price'
+                ],
+                [
+                    'image' => 'resources\socksImages\red.png',
+                    'name' => 'Socks',
+                    'slogan' => 'Slogan',
+                    'newPrice' => '$ New Price',
+                    'oldPrice' => '$ Old Price'
+                ],
+                [
+                    'image' => 'resources\socksImages\image4.png',
+                    'name' => 'Socks',
+                    'slogan' => 'Slogan',
+                    'newPrice' => '$ New Price',
+                    'oldPrice' => '$ Old Price'
+                ],
+                [
+                    'image' => 'resources\socksImages\image5.png',
+                    'name' => 'Socks',
+                    'slogan' => 'Slogan',
+                    'newPrice' => '$ New Price',
+                    'oldPrice' => '$ Old Price'
+                ]
+            ];
+
+            foreach ($products as $product) {
+                echo '<div class="productBox">';
+                echo '<img src="' . $product['image'] . '" alt="image of product item" class="productImage">';
+                echo '<div class="productInfoBox">';
+                echo '<h2 class="productName">' . $product['name'] . '</h2>';
+                echo '<p class="productSlogan">' . $product['slogan'] . '</p>';
+                echo '<div class="productPrices">';
+                echo '<p class="productNewPrice">' . $product['newPrice'] . '</p>';
+                echo '<p class="productOldPrice">' . $product['oldPrice'] . '</p>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+            ?>
         </div>
-        
-        <!-- cta button that takes user to the products catalog -->
-        <button class="ctaButton">See More</button>
+        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+            <button class="ctaButton" id="productsCtaButton" type="submit" name="navBtn" value="Shop">See More</button>
+        </form>
     </section>
 
     <!-- About section that gives information about the company (container) -->
-    <section class="aboutGridContainer">
-        <div class="aboutGridElement">
-            <img src="" alt="image of lady standing on towel wearing socks">
+     <section class="aboutGridContainer">
+        <div class="aboutGridElement" id="box1">
         </div>
-        <div class="aboutGridElement">
-            <h1>Why We Do This</h1>
+        <div class="aboutGridElement" id="box2">
+            <h1 class="headerText">Why We Do This</h1>
         </div>
-        <div class="aboutGridElement">
+        <div class="aboutGridElement" id="box3">
             <h1 class="headerText">Let's Change</h1>
             <h1 class="headerText">The World</h1>
             <h1 class="headerText">One Sock At A Time</h1>
         </div>
-        <div class="aboutGridElement">
-            <img src="" alt="image of happy father putting on socks for child">
+        <div class="aboutGridElement" id="box4">
             <h2>#Change</h2>
         </div>
-        <div class="aboutGridElement">
-            <img src="" alt="">
+        <div class="aboutGridElement" id="box5">
             <h2>#Freedom</h2>
         </div>
-        <div class="aboutGridElement">
-            <img src="" alt="">
+        <div class="aboutGridElement" id="box6">
             <h2>#Explore</h2>
         </div>
-        <div class="aboutGridElement">
+        <div class="aboutGridElement" id="box7">
             <p>
                 At Sunny, we blend style with sustainability to make a positive impact with every pair of socks. We embrace eco-friendly materials and fair labor practices because we believe in doing good for both our planet and its people.
             </p>
-            <button class="ctaButton">Learn More</button>
+            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+                <button class="ctaButton" type="submit" name="navBtn" value="About">Learn More</button>
+            </form>
         </div>
     </section>
 
