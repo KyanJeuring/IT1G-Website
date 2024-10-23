@@ -59,13 +59,23 @@
     color: var(--companyBlue);
 }
 
+#checkout .itemsList .item .trashIcon
+{
+    height: 40%;
+}
+
+#checkout .itemsList .item:nth-child(even) .trashIcon
+{
+    filter: brightness(0) saturate(100%) invert(18%) sepia(25%) saturate(4372%) hue-rotate(201deg) brightness(96%) contrast(88%);
+}
+
 #checkout .itemsList .item
 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     height: 5rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     padding-right: 1.5rem;
 }
 
