@@ -64,7 +64,7 @@
     padding: 1rem;
 }
 
-#checkout .itemsInCart .item:nth-child(odd) .icon
+#checkout .itemsInCart .itemsList .item:nth-child(odd) .icon
 {
     filter: none;
 }
