@@ -18,17 +18,30 @@
                         <form action="<?php echo $_SERVER["PHP_SELF"];?>" method=POST>
                             <input type="hidden" name="removeFromCart" value="{itemName}">
                             <button type="submit" name="navBtn" value="Checkout">
-                                <img class="trashIcon" src="resources/icons/svg/trash.svg" alt="trashIcon">
+                                <img class="icon" src="resources/icons/svg/trash.svg" alt="trashIcon">
                             </button>
                         </form>
                     </div>
                 </li>
                 <?php endfor; ?>
             </ul>
-            <div class="coupon"></div>
+            <div class="coupon item">
+                <div>
+                    <img class="icon" src="resources/icons/svg/tag.svg" alt="tagIcon">
+                    <h1>COUPON CODE</h1>
+                </div>
+                <div>
+                    <form action="<?php echo $_SERVER["PHP_SELF"];?>" method=POST>
+                        <input type="hidden" name="couponRst" value="true">
+                        <button type="submit" name="navBtn" value="Checkout">
+                            <img class="icon" src="resources/icons/svg/trash.svg" alt="trashIcon">
+                        </button>
+                    </form>
+                </div>
+            </div>
             <div class="sectionSummary">
                 <h3>Total: </h3>
-                <p><?php echo "&#8364;&#160;" . $_SESSION["shoppingCart"]->itemsTotal; ?></p>
+                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
             </div>
         </section>
 
