@@ -25,12 +25,14 @@
                 </li>
                 <?php endfor; ?>
             </ul>
+            <?php if (isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
             <div class="coupon item">
                 <div>
                     <img class="icon" src="resources/icons/svg/tag.svg" alt="tagIcon">
-                    <h1>COUPON CODE</h1>
+                    <h1><?php echo $_SESSION["shoppingCart"]->currentCoupon->code . " -" . $_SESSION["shoppingCart"]->currentCoupon->discount . "%"; ?></h1>
                 </div>
                 <div>
+                    <p><?php echo "&#8364;&#160;-" . $_SESSION["shoppingCart"]->discount;?></p>
                     <form action="<?php echo $_SERVER["PHP_SELF"];?>" method=POST>
                         <input type="hidden" name="couponRst" value="true">
                         <button type="submit" name="navBtn" value="Checkout">
@@ -39,6 +41,7 @@
                     </form>
                 </div>
             </div>
+            <?php endif; ?>
             <div class="sectionSummary">
                 <h3>Total: </h3>
                 <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
