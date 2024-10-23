@@ -41,7 +41,7 @@
                     <div>
                         <input type="checkbox" name="color" value="blue" style="accent-color: var(--companyBlue);">
                         <label for="color">Blue</label>
-                    </div>                    
+                    </div>
                     <div>
                         <input type="checkbox" name="color" value="yellow" style="accent-color: var(--companyYellow);">
                         <label for="color">Yellow</label>
@@ -77,7 +77,7 @@
                     <div>
                         <input type="checkbox" name="design" value="striped">
                         <label for="design">Striped</label>
-                    </div>                    
+                    </div>
                     <div>
                         <input type="checkbox" name="design" value="unique">
                         <label for="design">Unique</label>
@@ -99,125 +99,115 @@
                         <label for="material">Sustainable Fibre</label>
                     </div>
                 </div>
-            </form> 
+            </form>
         </div>
-    </aside> 
+    </aside>
 
     <main>
         <div class="bar">
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class="search">
                 <input type="search" name="search" placeholder="Search">
                 <!-- TODO: style this button / make it an icon -->
-                <button type="submit" name="navBtn" value="Shop"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg></button>
+                <button type="submit" name="navBtn" value="Shop"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+                        <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg></button>
             </form>
         </div>
 
-        
-        
         <div class="product-list">
-                <?php
+            <?php
 
-                    // product class
-                    class product
-                    {
-                        public $name;
-                        public $color;
-                        public $design;
-                        public $material;
-    
-                        public function __construct($name, $color, $design, $material)
-                        {
-                            $this->name = $name;
-                            $this->color = $color;
-                            $this->design = $design;
-                            $this->material = $material;
-                        }
+            // product class
+            class product
+            {
+                public $name;
+                public $color;
+                public $design;
+                public $material;
+                public $price;
 
+                public function __construct($name, $color, $design, $material, $price)
+                {
+                    $this->name = $name;
+                    $this->color = $color;
+                    $this->design = $design;
+                    $this->material = $material;
+                    $this->price = $price;
+                }
+            }
 
+            // list of products
+            $products =
+                [
+                    new product('Ocean Breeze', 'blue', 'striped', 'cotton', 25.99),
+                    new product('Navy Drift', 'green', 'striped', 'cotton', 25.99),
+                    new product('Sunny Socks', 'yellow', 'solid', 'cotton', 25.99),
+                    new product('Glam Walkers', 'pink', 'striped', 'cotton', 25.99),
+                    new product('Crimson Web', 'orange', 'striped', 'cotton', 25.99),
+                    new product('Cool Blue', 'blue', 'solid', 'cotton', 25.99),
+                    new product('Cool Navy', 'green', 'solid', 'cotton', 25.99),
+                    new product('Cotton Candy', 'pink', 'solid', 'cotton', 25.99),
+                    new product('Tomato', 'orange', 'solid', 'cotton', 25.99),
+                    new product('Lemon Whirl', 'yellow', 'striped', 'cotton', 25.99),
+                    new product('Sporty', 'white', 'solid', 'wool', 25.99),
+                    new product('Long Stripes', 'multicolor', 'striped', 'sustainable fibre', 25.99),
+                    new product('White Dream', 'white', 'solid', 'wool', 25.99),
+                    new product('Grey Dream', 'grey', 'solid', 'wool', 25.99),
+                    new product('Confusion', 'multicolor', 'unique', 'sustainable fibre', 25.99),
+                    new product('Wooble Double', 'multicolor', 'unique', 'sustainable fibre', 25.99),
+                    new product('Splashy Colors', 'multicolor', 'unique', 'sustainable fibre', 25.99),
+                    new product('Warm Flowers', 'color', 'unique', 'sustainable fibre', 25.99),
+                ];
 
-                    }
-    
-                      // list of products
-                    $products =
-                    [
-                        new product('Ocean Breeze', 'blue', 'striped', 'cotton'),
-                        new product('Navy Drift', 'green', 'striped', 'cotton'),
-                        new product('Sunny Socks', 'yellow', 'solid', 'cotton'),
-                        new product('Glam Walkers', 'pink', 'striped', 'cotton'),
-                        new product('Crimson Web', 'orange', 'striped', 'cotton'),
-                        new product('Cool Blue', 'blue', 'solid', 'cotton'),
-                        new product('Cool Navy', 'green', 'solid', 'cotton'),
-                        new product('Cotton Candy', 'pink', 'solid', 'cotton'),
-                        new product('Tomato', 'orange', 'solid', 'cotton'),
-                        new product('Lemon Whirl', 'yellow', 'striped', 'cotton'),
-                        new product('Sporty', 'white', 'solid', 'wool'),
-                        new product('Long Stripes', 'multicolor', 'striped', 'sustainable fibre'),
-                        new product('White Dream', 'white', 'solid', 'wool'),
-                        new product('Grey Dream', 'grey', 'solid', 'wool'),
-                        new product('Confusion', 'multicolor', 'unique','sustainable fibre'),
-                        new product('Wooble Double', 'multicolor', 'unique', 'sustainable fibre'),
-                        new product('Splashy Colors', 'multicolor', 'unique', 'sustainable fibre'),
-                        new product('Warm Flowers', 'color', 'unique', 'sustainable fibre'),
-                    ];
-                
-    
-                    // Search query checker
-                    if(isset($_POST["search"])) $searchQuery = strtolower(filter_input(INPUT_POST, "search"));
-                    else $searchQuery = "";
-                    $filteredProducts = []; 
-                    
-                    // product loop
-                    foreach($products as $product)
-                    {
-                        $nameMatch = false;
-                        $designMatch = false;
-                        $colorMatch = false;
-                        $materialMatch = false;
+            // Search query checker
+            if (isset($_POST["search"])) $searchQuery = strtolower(filter_input(INPUT_POST, "search"));
+            else $searchQuery = "";
+            $filteredProducts = [];
 
-                        //product check
-                        if (isset($product->name)) 
-                        {
-                            $nameMatch = strpos(strtolower($product->name), $searchQuery) !== false;
-                        }
-                        if (isset($product->design)) 
-                        {
-                            $designMatch = strpos(strtolower($product->design), $searchQuery) !== false;
-                        }
-                        if (isset($product->color)) 
-                        {
-                            $colorMatch = strpos(strtolower($product->color), $searchQuery) !== false;
-                        }
-                        if (isset($product->material)) 
-                        {
-                            $materialMatch = strpos(strtolower($product->material), $searchQuery) !== false;
-                        }
+            // product loop
+            foreach ($products as $product) {
+                $nameMatch = false;
+                $designMatch = false;
+                $colorMatch = false;
+                $materialMatch = false;
 
-                        //if there's a match, it enters the filtered products variable
-                        if ($nameMatch || $colorMatch || $designMatch || $materialMatch) 
-                        {
-                            $filteredProducts[] = $product;
-                        }
-                    }
-                    //product display
-                    if (isset($filteredProducts)) 
-                    {
-                        echo "<form action='" . $_SERVER['PHP_SELF'] . "' method='POST'>";
-                        echo "<div id='products'>";
+                //product check
+                if (isset($product->name)) {
+                    $nameMatch = strpos(strtolower($product->name), $searchQuery) !== false;
+                }
+                if (isset($product->design)) {
+                    $designMatch = strpos(strtolower($product->design), $searchQuery) !== false;
+                }
+                if (isset($product->color)) {
+                    $colorMatch = strpos(strtolower($product->color), $searchQuery) !== false;
+                }
+                if (isset($product->material)) {
+                    $materialMatch = strpos(strtolower($product->material), $searchQuery) !== false;
+                }
 
-                        foreach ($filteredProducts as $product) 
-                        {
-                            echo "<button type='submit' name='itemToDisplay' value='".json_encode($product)."'>";
-                                echo "<input type='hidden' name='navBtn' value='Item'>";
-                                echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
-                                echo "<p>".$product->name."</p>";
-                                echo "<p>&#8364;&#160;25.99</p>";
-                            echo "</button>";
-                        }
+                //if there's a match, it enters the filtered products variable
+                if ($nameMatch || $colorMatch || $designMatch || $materialMatch) {
+                    $filteredProducts[] = $product;
+                }
+            }
+            //product display
+            if (isset($filteredProducts)) {
+                echo "<form action='" . $_SERVER['PHP_SELF'] . "' method='POST'>";
+                echo "<div id='products'>";
 
-                        echo "</div>";
-                        echo "</form>";
-                    }   
-                ?>
-            </div>
+                foreach ($filteredProducts as $product) {
+                    echo "<button type='submit' name='itemToDisplay' value='" . json_encode($product) . "'>";
+                    echo "<input type='hidden' name='navBtn' value='Item'>";
+                    echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
+                    echo "<p>" . $product->name . "</p>";
+                    echo "<p>&#8364;&#160;25.99</p>";
+                    echo "</button>";
+                }
+
+                echo "</div>";
+                echo "</form>";
+            }
+            ?>
+        </div>
     </main>
 </div>

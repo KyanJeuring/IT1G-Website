@@ -23,7 +23,8 @@
     $coupon = filter_input(INPUT_POST, "coupon");
     $couponRst = filter_input(INPUT_POST, "couponRst", FILTER_VALIDATE_BOOLEAN);
     $checkout = filter_input(INPUT_POST, "checkout", FILTER_VALIDATE_BOOLEAN);
-
+    $removeFromCart = filter_input(INPUT_POST, "removeFromCart");
+    
     // MAIN
     // coupon handling
     if($couponRst) $_SESSION['shoppingCart']->currentCoupon = null;
@@ -63,6 +64,13 @@
     $invalidCoupon = isset($coupon) && !empty($coupon) && $_SESSION['shoppingCart']->currentCoupon == null;
     $invalidDonation = isset($donation) && $donation == false;
     
+    //remove item from cart
+    if(isset($removeFromCart))
+    {
+        $_SESSION['shoppingCart']->removeFromCart($removeFromCart);
+    }
+
+    //calculate prices so they can  be displayed
     $_SESSION['shoppingCart']->calculatePrices();
 
     // TODO check if cart is empty

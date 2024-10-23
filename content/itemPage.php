@@ -22,8 +22,8 @@
             echo "<p>" . ucfirst($product->material) .  " Socks</p>";
         ?>
         <div id="price">
-            <h2>$ 26.99</h2>
-            <h2>$ 32.00</h2>
+            <h2><?php echo "&#8364;&#160;".$product->price; ?></h2>
+            <h2><?php echo "&#8364;&#160;".round($product->price*1.25, 2); ?></h2>
         </div>
         <p>Step Into Luxury With Our Premium Socks, Meticulously Crafted For Supreme Comfort And Enduring Style. Made With High-Quality, Soft Cotton Blends, These Socks Are Gentle On Your Skin And Provide Excellent Breathability To Keep Your Feet Cool And Dry All Day Long.</p>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">

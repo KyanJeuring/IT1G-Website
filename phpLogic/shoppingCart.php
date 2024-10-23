@@ -68,6 +68,7 @@
 
         public function getItemsTotal() 
         {
+            $this->itemsTotal = 0;
             foreach($this->items as $item) 
             {
                 $this->itemsTotal += $item->price;
@@ -144,6 +145,18 @@
                 }
             }
             // coupon not found
+            return false;
+        }
+
+        public function removeFromCart($itemName) {
+            foreach($this->items as $key => $item)
+            {
+                if($item->name == $itemName)
+                {
+                    unset($_SESSION['shoppingCart']->items[$key]);
+                    return true;
+                }
+            }
             return false;
         }
 
