@@ -137,7 +137,7 @@
     height: 100%;
     margin: 3dvh 8dvw;
 
-    background-image: url('../resources/socksImages/summer_socks_homepage.png');
+    background-image: url('../resources/socksImages/autumn_socks_homepage.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -171,12 +171,12 @@
 
 #galleryLeftButton:hover
 {
-    cursor: url("../resources/icons/arrowLeftCursor_small.png") 30 30, auto;
+    cursor: url("../resources/icons/arrowLeftCursor_smallWhite.png") 30 30, auto;
 }
 
 #galleryRightButton:hover
 {
-    cursor: url('../resources/icons/arrowRightCursor_small.png') 30 30, auto;
+    cursor: url('../resources/icons/arrowRightCursor_smallWhite.png') 30 30, auto;
 }
 
 /* Product Catalog Section */

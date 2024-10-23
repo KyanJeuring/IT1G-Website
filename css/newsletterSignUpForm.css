@@ -1,0 +1,95 @@
+/* Creating the newsletter form and centering itself and the content inside */
+
+.newsletterForm
+{
+    background-color: #1E407A;
+    color: white;
+
+    border-radius: 2rem;
+
+    max-width: 40dvw;
+    min-height: 24dvh;
+    margin: 6dvh auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+/* Styling header and paragraph below it */
+
+.newsletterForm h2
+{
+    font-size: 2rem;
+}
+
+.newsletterForm p
+{
+    align-self: flex-end;
+    text-align: right;
+    width: 100%;
+}
+
+
+/* Styling the form input fields */
+
+.newsletterForm .emailInputField
+{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.formSubInputWithButton
+{
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* Styling the inputs (for the button to be inside of the input field) */
+
+.formInputField
+{
+    position: relative;
+    display: inline-block;
+    border-radius: 1rem;
+}
+
+.formInputField .emailInput
+{
+    padding-right: 60px;
+    padding: 0.5rem 6rem 0.5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+.formInputField .subscribeButton
+{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    bottom: 5px;
+
+    cursor: pointer;
+    
+    border: none;
+    border-radius: 1rem;
+
+    background-color: #F15B39;
+    color: white;
+
+    padding: 0.2em 0.8em;
+}
+
+
+/* creating the button animations */
+
+.subscribeButton:hover
+{
+    background-color: #FECD3E;
+    color: white;
+}

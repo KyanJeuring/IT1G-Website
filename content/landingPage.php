@@ -15,18 +15,22 @@
         <h1 class="headerText">Browse Our Collections</h1>
         <div class="galleryCarousel">
             <!-- setting up carousel structure such as: button-left | info box | button-right -->
-            <button class="galleryButton" id="galleryLeftButton"></button>
+            <button class="galleryButton" id="galleryLeftButton" onclick="prevImage()"></button>
             <div class="semitransparentContentBox">
-                <h1 class="headerText">Summer Breeze</h1>
-                <p class="generalText">Keep cool and stylish with our lightweight summer socks, ideal for every sun-filled adventure.</p>
-                <button class="ctaButton">Summary Collection</button>
+            <h1 class="headerText" id="carouselHeader">Summer Breeze</h1>
+            <p class="generalText" id="carouselText">Keep cool and stylish with our lightweight summer socks, ideal for every sun-filled adventure.</p>
+            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+                <button class="ctaButton" type="submit" name="navBtn" value="Shop">Summary Collection</button>
+            </form>
             </div>
-            <button class="galleryButton" id="galleryRightButton"></button>
+            <button class="galleryButton" id="galleryRightButton" onclick="nextImage()"></button>
         </div>
+
+        <script src="javascript/carousel.js"></script>
     </section>
 
     <!-- Short product catalog section (container) -->
-    <section class="productCatalogSection">
+    <section class="productCatalogSection"> 
         <h1 class="headerText">Our Products</h1>
 
         <!-- creating the box which products will be structured in -->
@@ -107,7 +111,9 @@
             }
             ?>
         </div>
-        <button class="ctaButton" id="productsCtaButton">See More</button>
+        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+            <button class="ctaButton" id="productsCtaButton" type="submit" name="navBtn" value="Shop">See More</button>
+        </form>
     </section>
 
     <!-- About section that gives information about the company (container) -->
@@ -135,7 +141,9 @@
             <p>
                 At Sunny, we blend style with sustainability to make a positive impact with every pair of socks. We embrace eco-friendly materials and fair labor practices because we believe in doing good for both our planet and its people.
             </p>
-            <button class="ctaButton">Learn More</button>
+            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+                <button class="ctaButton" type="submit" name="navBtn" value="About">Learn More</button>
+            </form>
         </div>
     </section>
 
