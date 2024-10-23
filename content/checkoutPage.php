@@ -6,25 +6,27 @@
                 <h2>1. Items in cart</h2>
                 <div class="separatorLine"></div>
             </div>
-            <ul class="itemsList">
-                <?php for($i = 0; $i < 4; $i++): ?>
-                <li class="item">                                      
-                    <div>
-                        <img src = 'resources/products/Confusion.jpg' alt='ProductImg'> 
-                        <h1>Confusion</h1>
-                    </div>
-                    <div>
-                        <p>&#8364;&#160;25.99</p>
-                        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method=POST>
-                            <input type="hidden" name="removeFromCart" value="{itemName}">
-                            <button type="submit" name="navBtn" value="Checkout">
-                                <img class="icon" src="resources/icons/svg/trash.svg" alt="trashIcon">
-                            </button>
-                        </form>
-                    </div>
-                </li>
-                <?php endfor; ?>
-            </ul>
+            <?php if(count($_SESSION["shoppingCart"]->items) > 0): ?>
+                <ul class="itemsList">
+                    <?php foreach($_SESSION["shoppingCart"]->items as $item): ?>
+                        <li class="item">                                      
+                            <div>
+                                <img src = 'resources/products/Confusion.jpg' alt='ProductImg'> 
+                                <h1>Confusion</h1>
+                            </div>
+                            <div>
+                                <p>&#8364;&#160;25.99</p>
+                                <form action="<?php echo $_SERVER["PHP_SELF"];?>" method=POST>
+                                    <input type="hidden" name="removeFromCart" value="{itemName}">
+                                    <button type="submit" name="navBtn" value="Checkout">
+                                        <img class="icon" src="resources/icons/svg/trash.svg" alt="trashIcon">
+                                    </button>
+                                </form>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
             <?php if (isset($_SESSION["shoppingCart"]->currentCoupon)): ?>
             <div class="coupon item">
                 <div>

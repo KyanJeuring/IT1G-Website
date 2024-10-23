@@ -68,8 +68,10 @@
 
         public function getItemsTotal() 
         {
-            //TODO: get items total from items   
-            $this->itemsTotal = 125.34; // example
+            foreach($this->items as $item) 
+            {
+                $this->itemsTotal += $item->price;
+            }
             return $this->itemsTotal;
         }
 

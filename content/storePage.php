@@ -213,13 +213,6 @@
                         }
                         echo "</div>";
                     }   
-
-                    // DEMO PRODUCTS - REMOVE LATER
-                    $_SESSION["shoppingCart"]->items = [
-                        new product('Cool Navy', 'green', 'solid', 'cotton'),
-                        new product('Cotton Candy', 'pink', 'solid', 'cotton'),
-                        new product('Tomato', 'orange', 'solid', 'cotton'),
-                    ];
                 ?>
             </div>
     </main>
