@@ -1,4 +1,4 @@
-<div id="checkout">
+<main id="checkout">
     <!-- MAIN FORM -->
     <div class="paymentForm">
         <section class="itemsInCart">
@@ -6,10 +6,20 @@
                 <h2>1. Items in cart</h2>
                 <div class="separatorLine"></div>
             </div>
-            <div class="itemsList">
-                <!-- TODO: automate with php -->
-
-            </div>
+            <ul class="itemsList">
+                <?php for($i = 0; $i < 4; $i++): ?>
+                <li class="item">                                      
+                    <div>
+                        <img src = 'resources/products/Confusion.jpg' alt='ProductImg'> 
+                        <h1>Confusion</h1>
+                    </div>
+                    <div>
+                        <p>&#8364;&#160;25.99</p>
+                        <img src="resources/icons/svg/trash.svg" alt="trashIcon">
+                    </div>
+                </li>
+                <?php endfor; ?>
+            </ul>
             <div class="coupon"></div>
             <div class="sectionSummary">
                 <h3>Total: </h3>

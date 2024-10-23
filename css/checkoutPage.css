@@ -41,6 +41,43 @@
     background-color: var(--companyBlue);
 }
 
+/* ITEMS SUMMARY */
+#checkout .itemsList
+{
+    border: 0.1rem solid var(--companyBlue);
+}
+
+#checkout .itemsList .item:nth-child(odd)
+{
+    background-color: var(--companyBlue);
+    color: white;    
+}
+
+#checkout .itemsList .item:nth-child(even)
+{
+    background-color: white;
+    color: var(--companyBlue);
+}
+
+#checkout .itemsList .item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5rem;
+    font-size: 1.25rem;
+    padding-right: 1.5rem;
+}
+
+#checkout .itemsList .item div
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+}
+
 /* PAYMENT FORM */
 #checkout .paymentForm
 {
