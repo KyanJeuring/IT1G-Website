@@ -7,7 +7,7 @@
 
     if(!empty($pageName)) 
     {
-        $contentSwitcher->displayPage($pageName);
+        $contentSwitcher->displayPage("Home");
     }
 
     // page class represents a page on the website
@@ -67,6 +67,8 @@
                     new page("OrderConfirmed", "content/orderConfirmed.php", [])
                 ])
             ]);
+
+            $this->displayPage("Home");
         }
 
         function findPage($pageName, $parentPage = null)
