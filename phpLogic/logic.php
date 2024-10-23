@@ -59,10 +59,12 @@
         {
             $this->rootPage = new page("Home", "content/landingPage.php", [
                 new page("About", "content/aboutPage.php", []),
-                new page("Shop", "content/storePage.php", []),
+                new page("Shop", "content/storePage.php", [
+                    new page("Item", "content/itemPage.php", [])
+                ]),
                 new page("Contact", "content/contactPage.php", []),
                 new page("UserPage", "content/userPage.php", []),
-                new page("Checkout", "content/checkoutPage.php", [])
+                new page("Checkout", "content/checkoutPage.php", []),
             ]);
         }
 

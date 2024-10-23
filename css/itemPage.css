@@ -1,0 +1,70 @@
+#item
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 10%;
+}
+
+#item img
+{
+    grid-column: 1 / 2;
+    width: 80%;
+    height: 60vh;
+}
+
+#item #info > *
+{
+    padding-bottom: 5%;
+    position: relative;
+    right: 15%;
+}
+
+#item #info
+{
+    grid-column: 2 / 3;
+}
+
+#item #info p
+{
+    font-family: Nexa Light;
+    font-weight: bolder;
+    margin-right: 20%;
+}
+
+#price > *
+{
+    display: inline;
+    padding-right: 5%;
+}
+
+#price h2:nth-child(2)
+{
+    color: rgb(129, 129, 129);
+    text-decoration: line-through;
+}
+
+#item #info h1
+{
+    font-size: 30px;
+}
+
+#item #info h2
+{
+    font-size: 25px;
+}
+
+#info form button
+{
+    width: 30%;
+    white-space: nowrap;
+}
+
+#info form button p
+{
+    background-color: #f15b39;
+    margin-right: 0%;
+    color: white;
+    border-radius: 30px;
+    padding: 5% 80% 5% 20%;
+    font-size: 20px;
+}

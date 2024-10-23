@@ -201,17 +201,21 @@
                     //product display
                     if (isset($filteredProducts)) 
                     {
+                        echo "<form action='" . $_SERVER['PHP_SELF'] . "' method='POST'>";
                         echo "<div id='products'>";
 
                         foreach ($filteredProducts as $product) 
                         {
-                                    echo "<a href='#'>";
-                                        echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
-                                        echo "<p>".$product->name."</p>";
-                                        echo "<p>&#8364;&#160;25.99</p>";
-                                    echo "</a>";
+                            echo "<button type='submit' name='itemToDisplay' value='".json_encode($product)."'>";
+                                echo "<input type='hidden' name='navBtn' value='Item'>";
+                                echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
+                                echo "<p>".$product->name."</p>";
+                                echo "<p>&#8364;&#160;25.99</p>";
+                            echo "</button>";
                         }
+
                         echo "</div>";
+                        echo "</form>";
                     }   
                 ?>
             </div>
