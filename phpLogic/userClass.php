@@ -28,7 +28,6 @@
                 $existingUsers = json_decode(file_get_contents($filePath), true);
                 foreach($existingUsers as $user)
                 {
-                    var_dump($user);
                     if($user["username"] == $username && $user["password"] == $password)
                     {
                         $this->isLoggedIn = true;
