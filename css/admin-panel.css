@@ -1,0 +1,130 @@
+body
+{
+    padding: 0;
+    margin: 0;
+    background-color: beige;
+}
+#admin-panel-title
+{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: #1e407a;
+    color: white;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+#admin-panel-container
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.admin-box
+{
+    background-color: #1e407a;
+    width: 40dvw;
+    height: 70dvh;
+    padding-inline: 2rem;
+    padding-block: 0.5rem;
+    overflow: hidden;
+}
+.admin-box-title
+{
+    color: white;
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+    border: 2px solid white;
+}
+form
+{
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+}
+form input
+{
+    background-color: white;
+    border: 0;
+    border-radius: 0;
+}
+.add-product-label
+{
+    margin-block: 1rem;
+    border-bottom: 1px solid white;
+}
+form textarea
+{
+    height: 4rem;
+    width: 15dvw;
+}
+#drop-zone 
+{
+    width: 10dvw;
+    height: 10dvh;
+    border: 2px dashed white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-block: 1rem;
+}
+#add-image-admin
+{
+    background: 0;
+    margin-right: -5rem;
+}
+.admin-item
+{
+    color: white;
+}
+h2
+{
+    border-bottom: 1px solid white;
+}
+ul
+{
+    line-height: 2rem;
+    column-count: 2;
+    column-gap: 2rem;
+    height: auto;
+    overflow: auto;
+}
+#newsletter-members
+{
+    font-size: 2rem;
+    line-height: 3rem;
+    overflow-x: hidden;
+}
+#admin-chat-box
+{
+    background-color: white;
+    max-width: 100%;
+    height: 60%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#user-message
+{
+    align-self: flex-start;
+    background-color: #1e407a;
+    color: white;
+    max-width: 40%;
+    max-height: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0;
+}
+#send-message-box
+{
+    align-self: flex-end;
+    display: flex;
+    background-color: lightgrey;
+    width: 100%;
+}
