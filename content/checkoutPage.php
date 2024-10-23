@@ -11,13 +11,13 @@
                     <?php foreach($_SESSION["shoppingCart"]->items as $item): ?>
                         <li class="item">                                      
                             <div>
-                                <img src = 'resources/products/Confusion.jpg' alt='ProductImg'> 
-                                <h1>Confusion</h1>
+                                <img src = 'resources/products/<? echo $item->name; ?>.jpg' alt='ProductImg'> 
+                                <h1><? echo $item->name; ?></h1>
                             </div>
                             <div>
-                                <p>&#8364;&#160;25.99</p>
+                                <p><? echo "&#8364;&#160;".$item->price; ?></p>
                                 <form action="<?php echo $_SERVER["PHP_SELF"];?>" method=POST>
-                                    <input type="hidden" name="removeFromCart" value="{itemName}">
+                                    <input type="hidden" name="removeFromCart" value="<? echo $item->name; ?>">
                                     <button type="submit" name="navBtn" value="Checkout">
                                         <img class="icon" src="resources/icons/svg/trash.svg" alt="trashIcon">
                                     </button>
@@ -46,7 +46,7 @@
             <?php endif; ?>
             <div class="sectionSummary">
                 <h3>Total: </h3>
-                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal; ?></p>
+                <p><?php echo "&#8364;&#160;".$_SESSION["shoppingCart"]->itemsTotal - $_SESSION["shoppingCart"]->discount; ?></p>
             </div>
         </section>
 
