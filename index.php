@@ -32,6 +32,7 @@
         <link rel="stylesheet" href="./css/orderConfirmed.css" type="text/css">
         <link rel="stylesheet" href="./css/newsletterSignUpForm.css" type="text/css">
         <link rel="stylesheet" href="./css/addReview.css" type="text/css">
+        <link rel="stylesheet" href="./css/admin-panel.css" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>

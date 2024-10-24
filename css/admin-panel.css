@@ -1,10 +1,4 @@
-body
-{
-    padding: 0;
-    margin: 0;
-    background-color: beige;
-}
-#admin-panel-title
+#adminPanelPage #admin-panel-title
 {
     display: flex;
     justify-content: center;
@@ -14,14 +8,14 @@ body
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
-#admin-panel-container
+#adminPanelPage #admin-panel-container
 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
 }
-.admin-box
+#adminPanelPage .admin-box
 {
     background-color: #1e407a;
     width: 40dvw;
@@ -30,7 +24,7 @@ body
     padding-block: 0.5rem;
     overflow: hidden;
 }
-.admin-box-title
+#adminPanelPage .admin-box-title
 {
     color: white;
     text-align: center;
@@ -38,7 +32,7 @@ body
     width: 100%;
     border: 2px solid white;
 }
-form
+#adminPanelPage form
 {
     color: white;
     display: flex;
@@ -46,23 +40,23 @@ form
     flex-direction: row;
     gap: 1rem;
 }
-form input
+#adminPanelPage form input
 {
     background-color: white;
     border: 0;
     border-radius: 0;
 }
-.add-product-label
+#adminPanelPage .add-product-label
 {
     margin-block: 1rem;
     border-bottom: 1px solid white;
 }
-form textarea
+#adminPanelPage form textarea
 {
     height: 4rem;
     width: 15dvw;
 }
-#drop-zone 
+#adminPanelPage #drop-zone 
 {
     width: 10dvw;
     height: 10dvh;
@@ -73,20 +67,20 @@ form textarea
     color: white;
     margin-block: 1rem;
 }
-#add-image-admin
+#adminPanelPage #add-image-admin
 {
     background: 0;
     margin-right: -5rem;
 }
-.admin-item
+#adminPanelPage .admin-item
 {
     color: white;
 }
-h2
+#adminPanelPage h2
 {
     border-bottom: 1px solid white;
 }
-ul
+#adminPanelPage ul
 {
     line-height: 2rem;
     column-count: 2;
@@ -94,13 +88,13 @@ ul
     height: auto;
     overflow: auto;
 }
-#newsletter-members
+#adminPanelPage #newsletter-members
 {
     font-size: 2rem;
     line-height: 3rem;
     overflow-x: hidden;
 }
-#admin-chat-box
+#adminPanelPage #admin-chat-box
 {
     background-color: white;
     max-width: 100%;
@@ -110,7 +104,7 @@ ul
     flex-direction: column;
     justify-content: space-between;
 }
-#user-message
+#adminPanelPage #user-message
 {
     align-self: flex-start;
     background-color: #1e407a;
@@ -121,7 +115,7 @@ ul
     border-radius: 1rem;
     border-bottom-left-radius: 0;
 }
-#send-message-box
+#adminPanelPage #send-message-box
 {
     align-self: flex-end;
     display: flex;
