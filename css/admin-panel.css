@@ -25,6 +25,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
+    margin: 5rem;
 }
 #adminPanelPage .admin-box
 {
@@ -55,6 +56,10 @@
     background-color: white;
     border: 0;
     border-radius: 0;
+}
+#adminPanelPage p
+{
+    font-family: NexaLight;
 }
 #adminPanelPage .add-product-label
 {
@@ -153,8 +158,4 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 0.25rem;
     padding: 0.5rem;
-}
-#adminPanelPage .order p
-{
-    font-family: NexaLight;
 }

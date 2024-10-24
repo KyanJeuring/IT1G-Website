@@ -1,4 +1,8 @@
 <?php
+    function getUsers() {
+        $filepath = "data/users.json";
+        return json_decode(file_get_contents($filepath), true);
+    }
     function getMailingList() {
         $filepath = "data/mailingList.txt";
         return explode("\n", file_get_contents($filepath));
@@ -115,6 +119,29 @@
                     <?php
                         foreach (getOrders() as $order) {
                             printOrder($order);
+                        }
+                    ?>
+                </ul>
+            </div>
+        </div>
+        <div class="admin-box">
+            <div class="admin-box-title">
+                <h1>Manage users</h1>
+            </div>
+            <div class="admin-item">
+                <div class="infoTable">
+                    <h5>Username:</h5>
+                    <h5>Type:</h5>
+                </div>
+                <ul id="users-list" class="scrollable">
+                    <?php
+                        foreach (getUsers() as $user) {
+                            ?>
+                            <li class='infoTable'>
+                            <p><?php echo $user["username"]; ?></p>
+                            <p><?php echo $user["isAdmin"] ? "Admin" : "User" ?></p>
+                            </li>
+                            <?php
                         }
                     ?>
                 </ul>
