@@ -42,57 +42,57 @@
                     'image' => 'resources\socksImages\3ColourSocks(available_in_15_combinations).png',
                     'name' => 'Socks',
                     'slogan' => 'Slogan',
-                    'newPrice' => '$ New Price',
-                    'oldPrice' => '$ Old Price'
+                    'newPrice' => 19.99,
+                    'oldPrice' => 24.99
                 ],
                 [
                     'image' => 'resources\socksImages\comfy.png',
                     'name' => 'Socks',
                     'slogan' => 'Slogan',
-                    'newPrice' => '$ New Price',
-                    'oldPrice' => '$ Old Price'
+                    'newPrice' => 19.99,
+                    'oldPrice' => 24.99
                 ],
                 [
                     'image' => 'resources\socksImages\green.png',
                     'name' => 'Socks',
                     'slogan' => 'Slogan',
-                    'newPrice' => '$ New Price',
-                    'oldPrice' => '$ Old Price'
+                    'newPrice' => 14.99,
+                    'oldPrice' => 18.99
                 ],
                 [
                     'image' => 'resources\socksImages\image2.png',
                     'name' => 'Socks',
                     'slogan' => 'Slogan',
-                    'newPrice' => '$ New Price',
-                    'oldPrice' => '$ Old Price'
+                    'newPrice' => 24.99,
+                    'oldPrice' => 34.50
                 ],
                 [
                     'image' => 'resources\socksImages\image3.png',
                     'name' => 'Socks',
                     'slogan' => 'Slogan',
-                    'newPrice' => '$ New Price',
-                    'oldPrice' => '$ Old Price'
+                    'newPrice' => 19.99,
+                    'oldPrice' => 24.99
                 ],
                 [
                     'image' => 'resources\socksImages\red.png',
                     'name' => 'Socks',
                     'slogan' => 'Slogan',
-                    'newPrice' => '$ New Price',
-                    'oldPrice' => '$ Old Price'
+                    'newPrice' => 14.99,
+                    'oldPrice' => 18.99
                 ],
                 [
                     'image' => 'resources\socksImages\image4.png',
                     'name' => 'Socks',
                     'slogan' => 'Slogan',
-                    'newPrice' => '$ New Price',
-                    'oldPrice' => '$ Old Price'
+                    'newPrice' => 24.99,
+                    'oldPrice' => 34.50
                 ],
                 [
                     'image' => 'resources\socksImages\image5.png',
                     'name' => 'Socks',
                     'slogan' => 'Slogan',
-                    'newPrice' => '$ New Price',
-                    'oldPrice' => '$ Old Price'
+                    'newPrice' => 24.99,
+                    'oldPrice' => 34.50
                 ]
             ];
 
@@ -103,8 +103,8 @@
                 echo '<h2 class="productName">' . $product['name'] . '</h2>';
                 echo '<p class="productSlogan">' . $product['slogan'] . '</p>';
                 echo '<div class="productPrices">';
-                echo '<p class="productNewPrice">' . $product['newPrice'] . '</p>';
-                echo '<p class="productOldPrice">' . $product['oldPrice'] . '</p>';
+                echo '<p class="productNewPrice">&#8364;&#160;' . $product['newPrice'] . '</p>';
+                echo '<p class="productOldPrice">&#8364;&#160;' . $product['oldPrice'] . '</p>';
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';
