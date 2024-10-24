@@ -9,6 +9,14 @@
     <button id="womenButton" type="submit" name="navBtn" value="Shop">WOMEN<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><polygon points="12 17.414 3.293 8.707 4.707 7.293 12 14.586 19.293 7.293 20.707 8.707 12 17.414"/></svg></button>
     <button class="shopButton" type="submit" name="navBtn" value="Shop">SHOP<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><polygon points="12 17.414 3.293 8.707 4.707 7.293 12 14.586 19.293 7.293 20.707 8.707 12 17.414"/></svg></button>
     <button id="contactButton" type="submit" name="navBtn" value="Contact">CONTACT<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><polygon points="12 17.414 3.293 8.707 4.707 7.293 12 14.586 19.293 7.293 20.707 8.707 12 17.414"/></svg></button>
+    <?php
+        if($_SESSION['user']->isLoggedIn && ($_SESSION['user']->username == 'admin'))
+        {
+            ?>
+            <button id="contactButton" type="submit" name="navBtn" value="Admin">ADMIN<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><polygon points="12 17.414 3.293 8.707 4.707 7.293 12 14.586 19.293 7.293 20.707 8.707 12 17.414"/></svg></button>
+            <?php
+        }
+    ?>
 </form>
 <form class="section right" action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
     <div class="barNav">
