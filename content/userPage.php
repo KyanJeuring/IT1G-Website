@@ -3,9 +3,19 @@
         <img src="resources\Logo's\png\sunny_logos_blue.png" alt="Sunny Socks Logo">
         <?php if(!$showRegistration): ?>
             <h1>Welcome back</h1>
-            <?php if($_SESSION["user"]->isLoggedIn) echo "<h1>".$_SESSION["user"]->username."</h1>" ?>
+            <?php 
+                if($_SESSION["user"]->isLoggedIn)
+                {
+                    echo "<h1>".$_SESSION["user"]->username."</h1>";
+                }
+                else
+                {
+            ?>
             <p>Glad to see you again 👋</p>
             <p>Login to your account below</p>
+            <?php
+                }
+            ?>
             <?php echo $alert; ?>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <?php if($_SESSION["user"]->isLoggedIn): ?>
