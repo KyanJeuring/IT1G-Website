@@ -69,6 +69,8 @@
                     new page("OrderConfirmed", "content/orderConfirmed.php", [])
                 ])
             ]);
+
+            $this->displayPage("Home");
         }
 
         function findPage($pageName, $parentPage = null)
