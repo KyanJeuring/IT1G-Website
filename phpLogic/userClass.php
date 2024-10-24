@@ -32,10 +32,7 @@
                     {
                         $this->isLoggedIn = true;
                         $this->username = $username;
-                        if(isset($user[2]) && $user[2] == "admin")
-                        {
-                            $this->isAdmin = true;
-                        }
+                        $this->isAdmin = $user["isAdmin"];
                         return true;
                     }
                 }

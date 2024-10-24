@@ -4,6 +4,7 @@
         <?php if(!$showRegistration): ?>
             <h1>Welcome back</h1>
             <?php 
+                var_dump($_SESSION["user"]);
                 if($_SESSION["user"]->isLoggedIn)
                 {
                     echo "<h1>".$_SESSION["user"]->username."</h1>";
@@ -28,6 +29,11 @@
                     <button type="submit" name="login" value="true">Login</button>
                 <?php endif; ?>
             </form>
+            <?php if($_SESSION["user"]->isAdmin === true): ?>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>" method="POST">
+                    <button type="submit" name="navBtn" value="Admin">Admin Panel</button>
+                </form>
+            <?php endif; ?>
             <?php if(!$_SESSION["user"]->isLoggedIn): ?>
                 <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                     <input type="hidden" name="showRegistration" value="true">
