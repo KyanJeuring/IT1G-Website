@@ -5,9 +5,13 @@
             <p class="keywords">Keywords</p>
 
             <div id="keywords">
-                <div class="spring">Spring x</div>
-                <div class="smart">Smart x</div>
-                <div class="modern">Modern x</div>
+                <?php
+                    if(isset($_POST['search']))
+                    {
+                        $keyword = filter_input(INPUT_POST, "search");
+                        echo "<p>" . ucfirst($keyword) . "</p>";
+                    }
+                ?>
             </div>
 
             <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" class="form">
