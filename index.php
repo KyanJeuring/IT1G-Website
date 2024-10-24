@@ -35,7 +35,7 @@
         <script src="javascript/main.js" type="module"></script>
     </head>
     <body>
-        <hr id="top">
+        <div id="top"></div>
         <div id="header">
             <?php include("content/header.php"); ?>
         </div>
