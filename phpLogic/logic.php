@@ -59,7 +59,9 @@
         public function __construct()
         {
             $this->rootPage = new page("Home", "content/landingPage.php", [
-                new page("About", "content/aboutPage.php", []),
+                new page("About", "content/aboutPage.php", [
+                    new page("AddReview", "content/addReview.php", []),
+                ]),
                 new page("Shop", "content/storePage.php", []),
                 new page("Contact", "content/contactPage.php", []),
                 new page("UserPage", "content/userPage.php", []),
