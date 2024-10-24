@@ -139,24 +139,24 @@
             // list of products
             $products =
                 [
-                    new product('Ocean Breeze', 'blue', 'striped', 'cotton', 25.99),
-                    new product('Navy Drift', 'green', 'striped', 'cotton', 25.99),
-                    new product('Sunny Socks', 'yellow', 'solid', 'cotton', 25.99),
-                    new product('Glam Walkers', 'pink', 'striped', 'cotton', 25.99),
-                    new product('Crimson Web', 'orange', 'striped', 'cotton', 25.99),
-                    new product('Cool Blue', 'blue', 'solid', 'cotton', 25.99),
-                    new product('Cool Navy', 'green', 'solid', 'cotton', 25.99),
-                    new product('Cotton Candy', 'pink', 'solid', 'cotton', 25.99),
-                    new product('Tomato', 'orange', 'solid', 'cotton', 25.99),
-                    new product('Lemon Whirl', 'yellow', 'striped', 'cotton', 25.99),
-                    new product('Sporty', 'white', 'solid', 'wool', 25.99),
-                    new product('Long Stripes', 'multicolor', 'striped', 'sustainable fibre', 25.99),
-                    new product('White Dream', 'white', 'solid', 'wool', 25.99),
-                    new product('Grey Dream', 'grey', 'solid', 'wool', 25.99),
-                    new product('Confusion', 'multicolor', 'unique', 'sustainable fibre', 25.99),
-                    new product('Wooble Double', 'multicolor', 'unique', 'sustainable fibre', 25.99),
-                    new product('Splashy Colors', 'multicolor', 'unique', 'sustainable fibre', 25.99),
-                    new product('Warm Flowers', 'color', 'unique', 'sustainable fibre', 25.99),
+                    new product('Ocean Breeze', 'blue', 'striped', 'cotton', 14.99),
+                    new product('Navy Drift', 'green', 'striped', 'cotton', 14.99),
+                    new product('Sunny Socks', 'yellow', 'solid', 'cotton', 14.99),
+                    new product('Glam Walkers', 'pink', 'striped', 'cotton', 14.99),
+                    new product('Crimson Web', 'orange', 'striped', 'cotton', 14.99),
+                    new product('Cool Blue', 'blue', 'solid', 'cotton', 14.99),
+                    new product('Cool Navy', 'green', 'solid', 'cotton', 14.99),
+                    new product('Cotton Candy', 'pink', 'solid', 'cotton', 14.99),
+                    new product('Tomato', 'orange', 'solid', 'cotton', 14.99),
+                    new product('Lemon Whirl', 'yellow', 'striped', 'cotton', 14.99),
+                    new product('Sporty', 'white', 'solid', 'wool', 19.99),
+                    new product('Long Stripes', 'multicolor', 'striped', 'sustainable fibre', 19.99),
+                    new product('White Dream', 'white', 'solid', 'wool', 19.99),
+                    new product('Grey Dream', 'grey', 'solid', 'wool', 19.99),
+                    new product('Confusion', 'multicolor', 'unique', 'sustainable fibre', 24.99),
+                    new product('Wooble Double', 'multicolor', 'unique', 'sustainable fibre', 24.99),
+                    new product('Splashy Colors', 'multicolor', 'unique', 'sustainable fibre', 24.99),
+                    new product('Warm Flowers', 'color', 'unique', 'sustainable fibre', 24.99),
                 ];
 
             // Search query checker
@@ -200,7 +200,7 @@
                     echo "<input type='hidden' name='navBtn' value='Item'>";
                     echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
                     echo "<p>" . $product->name . "</p>";
-                    echo "<p>&#8364;&#160;25.99</p>";
+                    echo "<p>&#8364;&#160;".$product->price."</p>";
                     echo "</button>";
                 }
 
