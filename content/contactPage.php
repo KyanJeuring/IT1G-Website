@@ -5,11 +5,11 @@
             <h1>Contact</h1>
         </div>
     </div>
-    <div id="mid-title">
-        <div id="mid-heading">
+    <div id="contact-mid-title">
+        <div id="contact-mid-heading">
             <h1>Get In Touch With Us</h1>
         </div>
-        <div id="mid-text">
+        <div id="contact-mid-text">
             <p>
                 For More Information About Our Product & Services.
                 Please Feel Free To Drop Us An <span class="new-line">Email.
@@ -18,13 +18,13 @@
         </div>
     </div>
     <section id="contact-us">
-        <div id="small-container">
-            <div id="left-side">
-                <div class="contact-row">
-                    <div class="row-image">
+        <div id="contact-small-container">
+            <div>
+                <div class="contact-details-row">
+                    <div class="contact-row-image">
                         <img src="resources/contactPage/Vector.png" alt="Icon of a map pin">
                     </div>
-                    <div class="row-text">
+                    <div class="contact-row-text">
                         <h2>
                             Address
                         </h2>
@@ -35,11 +35,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="contact-row">
-                    <div class="row-image">
+                <div class="contact-details-row">
+                    <div class="contact-row-image">
                         <img src="resources/contactPage/phone.png" alt="Icon of a phone">
                     </div>
-                    <div class="row-text">
+                    <div class="contact-row-text">
                         <h2>
                             Phone
                         </h2>
@@ -49,11 +49,11 @@
                         </p>
                     </div>
                 </div>
-                <div class="contact-row">
-                    <div class="row-image">
+                <div class="contact-details-row">
+                    <div class="contact-row-image">
                         <img src="resources/contactPage/bi_clock-fill.png" alt="Icon of a Clock">
                     </div>
-                    <div class="row-text">
+                    <div class="contact-row-text">
                         <h2>
                             Working time
                         </h2>
@@ -64,18 +64,18 @@
                     </div>
                 </div>
             </div>
-            <div id="right-side">
+            <div>
                 <form action="contactPage.php" id="contact-form">
-                    <div class="form-row">
+                    <div class="contact-form-row">
                         <div class="contact-labels">
                             <label for="name" id="name">Your Name</label>
                         </div>
                         <div>
                             <input type="text" name="contact-name" id="contact-name-input" class="contact-input" 
-                            placeholder="Steve"required>
+                            placeholder="Steve" required>
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="contact-form-row">
                         <div class="contact-labels">
                             <label for="email" id="contact-email">Email Address</label>
                         </div>
@@ -84,7 +84,7 @@
                             placeholder="steve.jobs@banana.com" required>
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="contact-form-row">
                         <div class="contact-labels">
                             <label for="subject" id="contact-subject">Subject</label>
                         </div>
@@ -93,7 +93,7 @@
                             placeholder="There's only 1 subject..." required>
                         </div>
                     </div>
-                    <div class="form-row">
+                    <div class="contact-form-row">
                         <div class="contact-labels">
                             <label for="message" id="contact-message">Message</label>
                         </div>
