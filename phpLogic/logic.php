@@ -66,8 +66,9 @@
                     new page("AddReview", "content/addReview.php", []),
                 ]),
                 new page("Contact", "content/contactPage.php", []),
-                new page("UserPage", "content/userPage.php", []),
-                new page("Admin", "content/adminPanel.php", []),
+                new page("UserPage", "content/userPage.php", [
+                    new page("Admin", "content/adminPanel.php", []),
+                ]),
                 new page("Checkout", "content/checkoutPage.php", [
                     new page("OrderConfirmed", "content/orderConfirmed.php", [])
                 ])
