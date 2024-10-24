@@ -4,7 +4,6 @@
         <?php if(!$showRegistration): ?>
             <h1>Welcome back</h1>
             <?php 
-                var_dump($_SESSION["user"]);
                 if($_SESSION["user"]->isLoggedIn)
                 {
                     echo "<h1>".$_SESSION["user"]->username."</h1>";
