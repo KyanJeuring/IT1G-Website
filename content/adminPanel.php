@@ -1,4 +1,8 @@
 <?php
+    function getMailingList() {
+        $filepath = "data/mailingList.txt";
+        return explode("\n", file_get_contents($filepath));
+    }
     function getOrders() {
         $filepath = "data/orders.json";
         return json_decode(file_get_contents($filepath), true);
@@ -107,7 +111,7 @@
             </div>
             <div class="admin-item">
                 <h2>New orders:</h2>
-                <ul id="orders-list">
+                <ul id="orders-list" class="scrollable">
                     <?php
                         foreach (getOrders() as $order) {
                             printOrder($order);
@@ -122,17 +126,12 @@
             </div>
             <div class="admin-item">
                 <h2>Latest Newsletter Members:</h2>
-                <ul id="newsletter-members">
-                    <li>Steve Jobs</li>
-                    <li>Tim Cook</li>
-                    <li>Elon Musk</li>
-                    <li>Matthew McCounaughey</li>
-                    <li>Matthew Perry</li>
-                    <li>Christoph Waltz</li>
-                    <li>Kurt Cobain</li>
-                    <li>David Gilmour</li>
-                    <li>Tyler Joseph</li>
-                    <li>Eddie Hall</li>
+                <ul id="newsletter-members" class="scrollable">
+                    <?php
+                        foreach (getMailingList() as $member) {
+                            echo "<li>$member</li>";    
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
