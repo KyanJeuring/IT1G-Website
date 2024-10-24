@@ -1,3 +1,59 @@
+<?php
+    function getOrders() {
+        $filepath = "data/orders.json";
+        return json_decode(file_get_contents($filepath), true);
+    }
+    function printOrder($order) {
+        ?>
+        <li class="order infoTable">
+            <h5>First Name:</h5>
+            <p><?php echo $order["firstName"]; ?></p>
+            <h5>Last Name:</h5>
+            <p><?php echo $order["lastName"]; ?></p>
+            <h5>Email:</h5>
+            <p><?php echo $order["email"]; ?></p>
+            <h5>Country Code:</h5>
+            <p><?php echo $order["countryCode"]; ?></p>
+            <h5>Phone:</h5>
+            <p><?php echo $order["phone"]; ?></p>
+            <h5>Address:</h5>
+            <p><?php echo $order["streetAddress"]; ?></p>
+            <h5>House Number:</h5>
+            <p><?php echo $order["houseNumber"]; ?></p>
+            <h5>Postal Code:</h5>
+            <p><?php echo $order["postalCode"]; ?></p>
+            <h5>City:</h5>
+            <p><?php echo $order["city"]; ?></p>
+            <h5>Country:</h5>
+            <p><?php echo $order["shippingCountry"]; ?></p>
+            <h5>Order Items:</h5>
+            <ul class=orderItems>
+            <?php foreach ($order["items"] as $item): ?>
+                <li class="orderItem infoTable">
+                    <h5>Name:</h5>
+                    <p><?php echo $item["name"]; ?></p>
+                    <h5>Color:</h5>
+                    <p><?php echo $item["color"]; ?></p>
+                    <h5>Design:</h5>
+                    <p><?php echo $item["design"]; ?></p>
+                    <h5>Material:</h5>
+                    <p><?php echo $item["material"]; ?></p>
+                    <h5>Price:</h5>
+                    <p><?php echo $item["price"]; ?></p>
+                </li>
+            <?php endforeach; ?>
+            </ul>
+            <h5>Donation:</h5>
+            <p><?php echo $order["donation"]; ?></p>
+            <h5>Shipping cost:</h5>
+            <p><?php echo $order["shippingCost"]; ?></p>
+            <h5>Total paid:</h5>
+            <p><?php echo $order["totalPrice"]; ?></p>
+        </li>
+        <?php
+    }
+?>
+
 <main id="adminPanelPage">
     <div id="admin-panel-title">
         <h1>
@@ -52,15 +108,11 @@
             <div class="admin-item">
                 <h2>New orders:</h2>
                 <ul id="orders-list">
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
-                    <li>Ocean Breeze - 2 pairs - Apple pay</li>
+                    <?php
+                        foreach (getOrders() as $order) {
+                            printOrder($order);
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
