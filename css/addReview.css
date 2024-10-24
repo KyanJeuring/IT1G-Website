@@ -1,0 +1,84 @@
+#reviewAddSection
+{
+    margin: 5em auto;
+    width: 40em;
+    border: 0.5em solid var(--companyBlue);
+    border-radius: 2em;
+}
+
+#reviewForm
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    color: var(--companyBlue);
+    font-family: 'NexaBold';
+    src: url('../resources/Fonts/Nexa_Bold.otf') format('opentype');
+    margin: 5%;
+}
+
+textarea
+{
+    width: 100%;
+    height: max-content;
+    resize: none;
+}
+
+#submitBtn
+ {
+    background-color: #1e407a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    grid-column: 2/3;
+}
+.stars
+{
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+    direction: rtl;
+}
+.stars label 
+{
+    display: inline-block;
+    cursor: pointer;
+    color: rgba(82, 79, 79, 0.37);
+}
+.stars label i
+{
+    transition: 0.1s ease-in;
+}
+.stars label:hover i, .stars label:hover ~ label i
+{
+    color: rgba(255, 187, 0, 0.899);
+}
+[type=radio]
+{
+    display: none;
+}
+.stars input[type="radio"]:checked + label i,
+.stars input[type="radio"]:checked ~ label i
+{
+    color:rgba(255, 187, 0, 0.899);
+}
+.submitMessage
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--companyBlue);
+    font-size: 30px;
+    margin: 20px;
+}
+.checkmarkForSubmission 
+{
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    margin-block: 5px;
+    filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(2352%) hue-rotate(59deg) brightness(104%) contrast(101%);
+    width: 20%;
+}

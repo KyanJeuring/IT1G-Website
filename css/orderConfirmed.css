@@ -21,7 +21,6 @@
 
 #orderSummary .checkmark
 {
-    color: rgb(0, 255, 0);
     filter: brightness(0) saturate(100%) invert(91%) sepia(8%) saturate(2352%) hue-rotate(59deg) brightness(104%) contrast(101%);
     width: 30%;
 }
