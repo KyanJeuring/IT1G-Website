@@ -65,45 +65,61 @@
                 </div>
             </div>
             <div>
-                <form action="contactPage.php" id="contact-form">
-                    <div class="contact-form-row">
-                        <div class="contact-labels">
-                            <label for="name" id="name">Your Name</label>
+                <?php
+                if(isset($_POST['submit']))
+                {
+                    echo "<div id='post-submit-text'>Thank you for reaching out to us! 
+                                <span class='new-line'>We will contact you soon!</span></div>";
+                }
+                else
+                {
+                    ?>
+                    <form action="content/contactPage.php" id="contact-form" method='POST'>
+                        <div class="contact-form-row">
+                            <div class="contact-labels">
+                                <label for="name" id="name">Your Name</label>
+                            </div>
+                            <div>
+                                <input type="text" name="contact-name" id="contact-name-input" class="contact-input" 
+                                placeholder="Steve" required>
+                            </div>
                         </div>
-                        <div>
-                            <input type="text" name="contact-name" id="contact-name-input" class="contact-input" 
-                            placeholder="Steve" required>
+                        <div class="contact-form-row">
+                            <div class="contact-labels">
+                                <label for="email" id="contact-email">Email Address</label>
+                            </div>
+                            <div>
+                                <input type="email" name="contact-email" id="contact-email-input" class="contact-input"
+                                placeholder="steve.jobs@banana.com" required>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-form-row">
-                        <div class="contact-labels">
-                            <label for="email" id="contact-email">Email Address</label>
+                        <div class="contact-form-row">
+                            <div class="contact-labels">
+                                <label for="subject" id="contact-subject">Subject</label>
+                            </div>
+                            <div>
+                                <input type="text" name="contact-subject" id="contact-subject-input" class="contact-input"
+                                placeholder="There's only 1 subject..." required>
+                            </div>
                         </div>
-                        <div>
-                            <input type="email" name="contact-email" id="contact-email-input" class="contact-input"
-                            placeholder="steve.jobs@banana.com" required>
+                        <div class="contact-form-row">
+                            <div class="contact-labels">
+                                <label for="message" id="contact-message">Message</label>
+                            </div>
+                            <div>
+                                <textarea type="text" name="contact-message" id="contact-message-input" class="contact-input"
+                                placeholder="In the array of my interests, you are [1]!" rows="5" required></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-form-row">
-                        <div class="contact-labels">
-                            <label for="subject" id="contact-subject">Subject</label>
-                        </div>
-                        <div>
-                            <input type="text" name="contact-subject" id="contact-subject-input" class="contact-input"
-                            placeholder="There's only 1 subject..." required>
-                        </div>
-                    </div>
-                    <div class="contact-form-row">
-                        <div class="contact-labels">
-                            <label for="message" id="contact-message">Message</label>
-                        </div>
-                        <div>
-                            <textarea type="text" name="contact-message" id="contact-message-input" class="contact-input"
-                            placeholder="In the array of my interests, you are [1]!" rows="5" required></textarea>
-                        </div>
-                    </div>
-                    <input type="submit" value="Submit" id="contact-submit">
-                </form>
+                        <button type="submit" value="Contact" name="navBtn" id="contact-submit">Submit</button>
+                    </form>
+
+                    <?php
+                    
+                }
+
+                ?>
+                
             </div>
         </div>
     </section>
