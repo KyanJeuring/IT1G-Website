@@ -1,36 +1,41 @@
-body
-{
-    padding: 0;
-    margin: 0;
-    background-color: beige;
-}
-#admin-panel-title
+#adminPanelPage #admin-panel-title
 {
     display: flex;
     justify-content: center;
     font-size: 1.5rem;
-    background-color: #1e407a;
+    background-color: var(--companyBlue);
     color: white;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
-#admin-panel-container
+
+#adminPanelPage .scrollable
+{
+    overflow-y: scroll;
+    max-height: 60vh;
+}
+
+#adminPanelPage .admin-box
+{
+    color: white;
+}
+#adminPanelPage #admin-panel-container
 {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
+    margin: 5rem;
 }
-.admin-box
+#adminPanelPage .admin-box
 {
-    background-color: #1e407a;
+    background-color: var(--companyBlue);
     width: 40dvw;
     height: 70dvh;
     padding-inline: 2rem;
     padding-block: 0.5rem;
-    overflow: hidden;
 }
-.admin-box-title
+#adminPanelPage .admin-box-title
 {
     color: white;
     text-align: center;
@@ -38,7 +43,7 @@ body
     width: 100%;
     border: 2px solid white;
 }
-form
+#adminPanelPage form
 {
     color: white;
     display: flex;
@@ -46,23 +51,27 @@ form
     flex-direction: row;
     gap: 1rem;
 }
-form input
+#adminPanelPage form input
 {
     background-color: white;
     border: 0;
     border-radius: 0;
 }
-.add-product-label
+#adminPanelPage p
+{
+    font-family: NexaLight;
+}
+#adminPanelPage .add-product-label
 {
     margin-block: 1rem;
     border-bottom: 1px solid white;
 }
-form textarea
+#adminPanelPage form textarea
 {
     height: 4rem;
     width: 15dvw;
 }
-#drop-zone 
+#adminPanelPage #drop-zone 
 {
     width: 10dvw;
     height: 10dvh;
@@ -73,34 +82,22 @@ form textarea
     color: white;
     margin-block: 1rem;
 }
-#add-image-admin
+#adminPanelPage #add-image-admin
 {
     background: 0;
     margin-right: -5rem;
 }
-.admin-item
-{
-    color: white;
-}
-h2
+#adminPanelPage h2
 {
     border-bottom: 1px solid white;
 }
-ul
-{
-    line-height: 2rem;
-    column-count: 2;
-    column-gap: 2rem;
-    height: auto;
-    overflow: auto;
-}
-#newsletter-members
+#adminPanelPage #newsletter-members
 {
     font-size: 2rem;
     line-height: 3rem;
     overflow-x: hidden;
 }
-#admin-chat-box
+#adminPanelPage #admin-chat-box
 {
     background-color: white;
     max-width: 100%;
@@ -110,10 +107,10 @@ ul
     flex-direction: column;
     justify-content: space-between;
 }
-#user-message
+#adminPanelPage #user-message
 {
     align-self: flex-start;
-    background-color: #1e407a;
+    background-color: var(--companyBlue);
     color: white;
     max-width: 40%;
     max-height: fit-content;
@@ -121,10 +118,44 @@ ul
     border-radius: 1rem;
     border-bottom-left-radius: 0;
 }
-#send-message-box
+#adminPanelPage #send-message-box
 {
     align-self: flex-end;
     display: flex;
     background-color: lightgrey;
     width: 100%;
+}
+
+#adminPanelPage #orders-list
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#adminPanelPage .order
+{
+    background-color: #1e497a;
+    border: 1px solid white;   
+}
+
+#adminPanelPage .order .orderItems
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: span 2;
+}
+#adminPanelPage .order .orderItem
+{
+    background-color: var(--companyBlue);
+    width: 50%;
+    border: 1px solid white;   
+}
+#adminPanelPage .infoTable
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+    padding: 0.5rem;
 }

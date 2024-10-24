@@ -1,3 +1,82 @@
 [
-
+    {
+        "items": [
+            {
+                "name": "Long Stripes",
+                "color": "multicolor",
+                "design": "striped",
+                "material": "sustainable fibre",
+                "price": 25.99
+            },
+            {
+                "name": "Long Stripes",
+                "color": "multicolor",
+                "design": "striped",
+                "material": "sustainable fibre",
+                "price": 25.99
+            },
+            {
+                "name": "Glam Walkers",
+                "color": "pink",
+                "design": "striped",
+                "material": "cotton",
+                "price": 25.99
+            },
+            {
+                "name": "Sunny Socks",
+                "color": "yellow",
+                "design": "solid",
+                "material": "cotton",
+                "price": 25.99
+            }
+        ],
+        "discount": 31.19,
+        "donation": 15,
+        "shippingCost": 0.99,
+        "totalPrice": 88.76,
+        "firstName": "Peter",
+        "lastName": "Kapsiar",
+        "email": "kapsiar888n@gmail.com",
+        "countryCode": 31,
+        "phone": 123455670,
+        "streetAddress": "Vleerackers",
+        "houseNumber": 25,
+        "postalCode": "idfk",
+        "city": "Emmen",
+        "shippingCountry": "Netherlands",
+        "paymentMethod": "googlePay"
+    },
+    {
+        "items": [
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 25.99
+            },
+            {
+                "name": "Ocean Breeze",
+                "color": "blue",
+                "design": "striped",
+                "material": "cotton",
+                "price": 25.99
+            }
+        ],
+        "discount": 15.59,
+        "donation": 0,
+        "shippingCost": 14.99,
+        "totalPrice": 51.38,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "doe@john.com",
+        "countryCode": 31,
+        "phone": 34543635,
+        "streetAddress": "There",
+        "houseNumber": 12,
+        "postalCode": "3241JK",
+        "city": "Far",
+        "shippingCountry": "Where",
+        "paymentMethod": "bitcoin"
+    }
 ]
