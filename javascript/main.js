@@ -1,6 +1,5 @@
 import { setupButtonListeners } from "./buttons.js";
 
-window.onload = function()
-{
+document.addEventListener("DOMContentLoaded", function() {
     setupButtonListeners();
-}
+});

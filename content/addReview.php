@@ -79,7 +79,7 @@
         <label for="reviewContentInput">Your Comment:</label>
        <textarea id="reviewContentInput" name="reviewContentInput" rows="4" cols="50" placeholder="Write A Review And Get 5% Discount"></textarea>
        <input type="hidden" name="submitReview" value="true">
-       <button id="submitBtn" type="submit" name="navBtn" value="AddReview">Write Your Own Review</button>
+       <button id="submitBtn" type="submit" name="navBtn" value="AddReview">Send Review</button>
     </form>
     <?php }?>
 </div>

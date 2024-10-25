@@ -26,6 +26,8 @@ textarea
 
 #submitBtn
  {
+    display: inline-flex;
+    margin: 0 auto;
     background-color: #1e407a;
     color: white;
     padding: 10px 20px;
@@ -33,6 +35,9 @@ textarea
     cursor: pointer;
     border-radius: 25px;
     grid-column: 2/3;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .stars
 {

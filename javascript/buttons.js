@@ -29,7 +29,6 @@ function toggleChat()
 export function setupButtonListeners()
 {
     setButtonOnClick("toggleOffer", function() { showOffer(); });
-    setButtonOnClick("chatBtn", function() { toggleChat(); });
 
     console.log("Buttons loaded successfully");
 }
