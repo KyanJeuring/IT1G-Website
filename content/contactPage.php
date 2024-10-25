@@ -33,9 +33,9 @@
                             Address
                         </h2>
                         <p>
-                            236 5th SE Avenue, 
-                            <span class="new-line">New York NY10000,</span>
-                            <span class="new-line">United States</span>
+                            Van Schaikweg 94, 
+                            <span class="new-line">7811 KL, Emmen</span>
+                            <span class="new-line">Netherlands</span>
                         </p>
                     </div>
                 </div>
