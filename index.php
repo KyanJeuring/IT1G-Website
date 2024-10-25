@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="./css/offerPopup.css" type="text/css">
         <link rel="stylesheet" href="./css/aboutPage.css" type="text/css">
         <link rel="stylesheet" href="./css/homePage.css" type="text/css">
+        <link rel="stylesheet" href="./css/chatBox.css" type="text/css">
         <link rel="stylesheet" href="./css/toTopButton.css" type="text/css">
         <link rel="stylesheet" href="./css/checkoutPage.css" type="text/css">
         <link rel="stylesheet" href="./css/contactPage.css" type="text/css">
@@ -36,9 +37,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
+        <script src="javascript/chatBot.js" defer></script>
+        
     </head>
     <body>
         <div id="top"></div>
+        <?php include("content/chatBox.php"); ?>
         <div id="header">
             <?php include("content/header.php"); ?>
         </div>

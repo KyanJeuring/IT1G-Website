@@ -1,8 +1,171 @@
-#chatBox
+.chatBotToggle
 {
     position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 5vw;
-    aspect-ratio: 1/1;
+    bottom: 7em;
+    right: 2em;
+
+    background: #1E407A;
+
+    border-radius: 50%;
+    border: solid 3px white;
+
+    padding: 1rem;
+
+    transition: all 0.2 ease;
+
+    width: 40px;
+    height: 40px;
+
+    z-index: 10;
 }
+
+/* styling the whole chat bot container (the whole chat) */
+.chatBot
+{
+    position: fixed;
+    bottom: 12em;
+    right: 2em;
+    
+    width: 20rem;
+
+    /* hide it at first */
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+
+    /* appear small at first, and on the bottom right of its position */
+    transform: scale(0.1);
+    transform-origin: bottom right; 
+    transition: all 0.1s ease;
+
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+                0 32px 64px -48px rgba(0, 0, 0, 0.5);
+
+    z-index: 10;
+}
+
+/* when the chat is expanded */
+.expandChat .chatBot
+{
+    transform: scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* stling the header container */
+.chatBot header
+{
+    background: #1E407A;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* styling header */
+.chatBot header h2
+{
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* styling the chatBox container where the messages take place, and allowing scrolling on y-axis */
+.chatBot .chatBox
+{
+    height: 20rem;
+    overflow-y: auto;
+    padding: 1rem 2rem 6rem;
+}
+
+/* displaying flex unlocks the attributes used in each of the styling below */
+.chatBox .chat
+{
+    display: flex;
+}
+
+/* setting the message of the user to the right */
+.chatBox .outgoing
+{
+    justify-content: flex-end;
+    margin: 2rem 0;
+}
+
+/* styling the chatBot's image */
+.chatBox .chat img
+{
+    align-self: flex-end;
+    text-align: center;
+
+    width: 40px;
+    height: 40px;
+}
+
+/* style the user's paragraphs */
+.chatBox .chat p
+{
+    background: #1E407A;
+    color: white;
+
+    max-width: 75%;
+    white-space: pre-wrap;
+
+    padding: 1rem 2rem;    
+    border-radius: 1rem 1rem 0 1rem;
+    font-size: 0.9rem;
+}
+
+/* style the incoming message paragraphs */
+.chatBox .incoming p
+{
+    color: black;
+    background: #f2f2f2;
+
+    border-radius: 1rem 1rem 1rem 0;
+}
+
+/* styling the whole container of the textarea and 'send button' */
+.chatBot .chatInput
+{
+    position: absolute;
+    bottom: 0;
+    
+    width: 100%;
+    padding: 0.4rem 0.8rem;
+
+    border-top: 1px solid #cccccc;
+    background: white;
+
+    display: flex;
+    gap: 1em;
+}
+
+/* styling the textarea */
+.chatInput textarea
+{
+    border: none;
+    outline: none;
+    resize: none;
+
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem 1rem 0;
+
+    width: 100%;
+    height: 3rem;
+}
+
+/* styling the 'send button' and hiding it */
+.chatBot .chatInput button img
+{
+    cursor: pointer;
+    width: 1.4rem;
+    height: 1.4rem;
+
+    visibility: hidden;
+}
+
+/* show the 'send button' if the textarea is valid (meaning if the user has typed anything) */
+.chatInput textarea:valid ~ button img
+{
+    visibility: visible;
+}
+
