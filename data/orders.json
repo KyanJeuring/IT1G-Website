@@ -49,6 +49,46 @@
     {
         "items": [
             {
+                "name": "Crimson Web",
+                "color": "orange",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Splashy Colors",
+                "color": "multicolor",
+                "design": "unique",
+                "material": "sustainable fibre",
+                "price": 24.99
+            },
+            {
+                "name": "White Dream",
+                "color": "white",
+                "design": "solid",
+                "material": "wool",
+                "price": 19.99
+            }
+        ],
+        "discount": 10.79,
+        "donation": 66,
+        "shippingCost": 0.99,
+        "totalPrice": 116.17,
+        "firstName": "Kyan",
+        "lastName": "Jeuring",
+        "email": "kyanjeuring@gmail.com",
+        "countryCode": 31,
+        "phone": 657818340,
+        "streetAddress": "Nieuw-Amsterdamsestraat",
+        "houseNumber": 66,
+        "postalCode": "7814VA",
+        "city": "Emmen",
+        "shippingCountry": "Netherlands",
+        "paymentMethod": "ideal"
+    },
+    {
+        "items": [
+            {
                 "name": "Navy Drift",
                 "color": "green",
                 "design": "striped",
