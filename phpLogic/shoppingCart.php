@@ -15,6 +15,8 @@
 
     class Order
     {
+        public $orderNumber;
+
         public $items = [];
 
         public $discount;
@@ -40,6 +42,8 @@
         //items
         public $items = [];
 
+        public $orderNumber;
+
         //user info
         public $firstName;
         public $lastName;
@@ -63,6 +67,9 @@
 
         public function __construct() 
         {
+            require_once("guidLogic.php");
+            $this->orderNumber = GUID();
+
             $this->calculatePrices();
         }
 
@@ -173,6 +180,7 @@
             // create order object
             $order = new Order();
             $order->items = $this->items;
+            $order->orderNumber = $this->orderNumber;
             $order->discount = $this->discount;
             $order->donation = $this->donation === null ? 0 : $this->donation;
             $order->shippingCost = $this->shippingCost;
