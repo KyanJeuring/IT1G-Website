@@ -1,5 +1,41 @@
 <?php
     $submitted = filter_input(INPUT_POST, 'formSubmitted', FILTER_VALIDATE_BOOLEAN);
+
+    class contactInput
+        {
+            public $contactName;
+            public $contactEmail;
+            public $contactSubject;
+            public $contactMessage;
+
+            public function __construct()
+            {
+                $this->contactName = filter_input(INPUT_POST, 'contactName');
+                $this->contactEmail = filter_input(INPUT_POST, 'contactEmail');
+                $this->contactSubject = filter_input(INPUT_POST, 'contactSubject');
+                $this->contactMessage = filter_input(INPUT_POST, 'contactMessage');
+
+            }
+            public function addContactMessage()
+            {
+                $filePath = 'data/contactMessage.json';
+                if (file_exists($filePath)) 
+                {
+                    $currentContact = json_decode(file_get_contents($filePath), true);
+                    array_push($currentContact, $this);
+                    file_put_contents($filePath, json_encode($currentContact, JSON_PRETTY_PRINT));
+
+                    return true;
+                }
+                return false;
+            }
+        }
+        $submitContact = filter_input(INPUT_POST, 'submitContact', FILTER_VALIDATE_BOOLEAN);
+        if($_SERVER['REQUEST_METHOD'] == 'POST' && $submitContact)
+        {
+            $contactInput = new contactInput;
+            $contactInput->addContactMessage();
+        }
 ?>
 
 <div id="contact-container">
@@ -70,7 +106,7 @@
             </div>
             <div>
                 <?php
-                if(isset($submitted) && $submitted)
+                if($_SERVER['REQUEST_METHOD'] == 'POST' && $submitContact)
                 {
                     echo "<div id='post-submit-text'>Thank you for reaching out to us! 
                                 <span class='new-line'>We will contact you soon!</span></div>";
@@ -81,41 +117,41 @@
                     <form action="<?php echo $_SERVER["PHP_SELF"]?>" id="contact-form" method='POST'>
                         <div class="contact-form-row">
                             <div class="contact-labels">
-                                <label for="name" id="name">Your Name</label>
+                                <label for="contactName" id="name">Your Name</label>
                             </div>
                             <div>
-                                <input type="text" name="contact-name" id="contact-name-input" class="contact-input" 
+                                <input type="text" name="contactName" id="contact-name-input" class="contact-input" 
                                 placeholder="Steve" required>
                             </div>
                         </div>
                         <div class="contact-form-row">
                             <div class="contact-labels">
-                                <label for="email" id="contact-email">Email Address</label>
+                                <label for="contactEmail" id="contact-email">Email Address</label>
                             </div>
                             <div>
-                                <input type="email" name="contact-email" id="contact-email-input" class="contact-input"
+                                <input type="email" name="contactEmail" id="contact-email-input" class="contact-input"
                                 placeholder="steve.jobs@banana.com" required>
                             </div>
                         </div>
                         <div class="contact-form-row">
                             <div class="contact-labels">
-                                <label for="subject" id="contact-subject">Subject</label>
+                                <label for="contactSubject" id="contact-subject">Subject</label>
                             </div>
                             <div>
-                                <input type="text" name="contact-subject" id="contact-subject-input" class="contact-input"
+                                <input type="text" name="contactSubject" id="contact-subject-input" class="contact-input"
                                 placeholder="There's only 1 subject..." required>
                             </div>
                         </div>
                         <div class="contact-form-row">
                             <div class="contact-labels">
-                                <label for="message" id="contact-message">Message</label>
+                                <label for="contactMessage" id="contact-message">Message</label>
                             </div>
                             <div>
-                                <textarea type="text" name="contact-message" id="contact-message-input" class="contact-input"
+                                <textarea type="text" name="contactMessage" id="contact-message-input" class="contact-input"
                                 placeholder="In the array of my interests, you are [1]!" rows="5" required></textarea>
                             </div>
                         </div>
-                        <input type="hidden" name="formSubmitted" value="true">
+                         <input type="hidden" name="submitContact" value="true">
                         <button type="submit" value="Contact" name="navBtn" id="contact-submit">Submit</button>
                     </form>
 
