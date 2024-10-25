@@ -15,6 +15,10 @@
     flex-direction: column;
 }
 
+.form
+{
+    gap: 1rem;
+}
 .form > svg:hover
 {
     scale: 1.1;
