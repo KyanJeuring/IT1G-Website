@@ -1,3 +1,7 @@
+<?php
+    $submitted = filter_input(INPUT_POST, 'formSubmitted', FILTER_VALIDATE_BOOLEAN);
+?>
+
 <div id="contact-container">
     <div id="contactPage-header">
         <img src="./resources/contactPage/contact-image.png" alt="Photo of a wired phone.">
@@ -66,7 +70,7 @@
             </div>
             <div>
                 <?php
-                if(isset($_POST['submit']))
+                if(isset($submitted) && $submitted)
                 {
                     echo "<div id='post-submit-text'>Thank you for reaching out to us! 
                                 <span class='new-line'>We will contact you soon!</span></div>";
@@ -74,7 +78,7 @@
                 else
                 {
                     ?>
-                    <form action="content/contactPage.php" id="contact-form" method='POST'>
+                    <form action="<?php echo $_SERVER["PHP_SELF"]?>" id="contact-form" method='POST'>
                         <div class="contact-form-row">
                             <div class="contact-labels">
                                 <label for="name" id="name">Your Name</label>
@@ -111,6 +115,7 @@
                                 placeholder="In the array of my interests, you are [1]!" rows="5" required></textarea>
                             </div>
                         </div>
+                        <input type="hidden" name="formSubmitted" value="true">
                         <button type="submit" value="Contact" name="navBtn" id="contact-submit">Submit</button>
                     </form>
 
