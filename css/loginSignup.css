@@ -15,6 +15,11 @@
     flex-direction: column;
 }
 
+.form > svg:hover
+{
+    scale: 1.1;
+}
+
 .verticalSeparatorLine
 {
     background-color: var(--companyBlue);
