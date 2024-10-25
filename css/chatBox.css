@@ -3,19 +3,13 @@
     position: fixed;
     bottom: 7em;
     right: 2em;
-
-    background: #1E407A;
-
+    background: var(--companyBlue);
     border-radius: 50%;
     border: solid 3px white;
-
     padding: 1rem;
-
     transition: all 0.2 ease;
-
     width: 40px;
     height: 40px;
-
     z-index: 10;
 }
 
@@ -25,24 +19,19 @@
     position: fixed;
     bottom: 12em;
     right: 2em;
-    
     width: 20rem;
-
     /* hide it at first */
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
-
     /* appear small at first, and on the bottom right of its position */
     transform: scale(0.1);
     transform-origin: bottom right; 
     transition: all 0.1s ease;
-
     background: white;
     border-radius: 1rem;
     box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
                 0 32px 64px -48px rgba(0, 0, 0, 0.5);
-
     z-index: 10;
 }
 
@@ -57,7 +46,7 @@
 /* stling the header container */
 .chatBot header
 {
-    background: #1E407A;
+    background: var(--companyBlue);
     text-align: center;
     padding: 1rem 0;
 }
@@ -103,7 +92,7 @@
 /* style the user's paragraphs */
 .chatBox .chat p
 {
-    background: #1E407A;
+    background: var(--companyBlue);
     color: white;
 
     max-width: 75%;

@@ -4,11 +4,9 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-
     margin: 5vh auto;
     padding: 2.5rem;
     width: 35vw;
-
     border: 0.25rem solid var(--companyBlue);
     border-radius: 2.5rem;
 }
@@ -16,7 +14,7 @@
 #orderSummary h1
 {
     font-size: 2.5rem;
-    font-family: NexaBold;
+    font-family: "NexaBold";
 }
 
 #orderSummary .checkmark
@@ -33,7 +31,7 @@
     color: white;
     border-radius: 1.5rem;
     padding: 1rem;
-    font-family: NexaBold;
+    font-family: "NexaBold";
     width: fit-content;
     cursor: pointer;
 }

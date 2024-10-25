@@ -2,14 +2,13 @@
 {
     display: grid;
     grid-template-columns: 3fr 1fr;
-
     gap: 5vw;
     margin: 5vh 10vw;
 }
 
 #checkout p
 {
-    font-family: nexaLight;
+    font-family: "NexaLight";
 }
 
 #checkout input[type="submit"]
@@ -17,7 +16,7 @@
     font-size: 1.5rem;
     border-radius: 1.5rem;
     padding: 0.25rem 1rem;
-    font-family: NexaBold;
+    font-family: "NexaBold";
     width: fit-content;
     cursor: pointer;
 }
@@ -76,8 +75,7 @@
 
 #checkout .itemsInCart .item
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     justify-content: space-between;
     height: 5rem;
     font-size: 1.5rem;
@@ -86,8 +84,7 @@
 
 #checkout .itemsInCart .item div
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     align-items: center;
     gap: 1rem;
     height: 100%;
@@ -115,24 +112,19 @@
 
 #checkout .sectionHeading
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     align-items: center;
-
     font-size: 1.75rem;
     text-wrap: nowrap;
 }
 
 #checkout .sectionSummary
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
-
     font-size: 1.25rem;
     text-wrap: nowrap;
-    
     padding: 0.5rem 5%;
     background-color: var(--companyBlue);
     color: white;
@@ -143,10 +135,8 @@
 {
     display: flex;
     flex-direction: column;
-    
     gap: 3rem;
     padding: 5rem;
-
     border-radius: 1.5rem;
     border: 0.1rem solid var(--companyBlue);
     color: var(--companyBlue);
@@ -169,12 +159,10 @@
 #checkout .deliveryInfoForm input[type="text"]
 {
     all: unset;
-
     max-width: 80%;
     height: 2.5rem;
     border-radius: 5rem;
     padding: 0 0 0 1.5rem;
-
     background-color: white;
     border: 0.1rem solid var(--companyBlue);
 }
@@ -226,7 +214,6 @@
 #checkout .paymentSelector
 {
     padding: 4rem;
-
     border-radius: 1.5rem;
     background-color: var(--companyBlue);
 }
@@ -251,7 +238,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
-
     gap: 3rem;
 }
 
@@ -281,8 +267,7 @@
 
 #checkout .inLine
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -321,7 +306,6 @@
     height: 2.25rem;
     border-radius: 0.5rem;
     padding: 0 1rem;
-
     background-color: white;
     border: 0.1rem solid var(--companyBlue);
 }
@@ -331,7 +315,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-
     background-color: var(--companyBlue);
     color: white;
     padding: 1.5rem;

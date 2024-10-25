@@ -1,7 +1,6 @@
 footer
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     flex-wrap: wrap;
     bottom: 0;
     margin: 0;

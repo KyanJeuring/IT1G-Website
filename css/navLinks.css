@@ -1,9 +1,7 @@
 #navLinks > form
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     gap: 1rem;
-
     background-color: white;
     padding: 0 12rem;
     vertical-align: middle;

@@ -2,7 +2,7 @@
 
 .newsletterForm
 {
-    background-color: #1E407A;
+    background-color: var(--companyBlue);
     color: white;
 
     border-radius: 2rem;
@@ -10,7 +10,6 @@
     max-width: 40dvw;
     min-height: 24dvh;
     margin: 6dvh auto;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,15 +72,11 @@
     top: 5px;
     right: 10px;
     bottom: 5px;
-
     cursor: pointer;
-    
     border: none;
     border-radius: 1rem;
-
-    background-color: #F15B39;
+    background-color: var(--companyOrange);
     color: white;
-
     padding: 0.2em 0.8em;
 }
 
@@ -90,6 +85,6 @@
 
 .subscribeButton:hover
 {
-    background-color: #FECD3E;
+    background-color: var(--companyYellow);
     color: white;
 }

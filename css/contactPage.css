@@ -54,7 +54,6 @@ body
 {
     display: grid;
     grid-template-columns: 17% 70% 17%;
-
     margin-top: 10dvh;
 }
 #contact-small-container

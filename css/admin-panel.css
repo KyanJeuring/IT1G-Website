@@ -46,9 +46,8 @@
 #adminPanelPage form
 {
     color: white;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    flex-direction: row;
     gap: 1rem;
 }
 #adminPanelPage form input
@@ -59,7 +58,7 @@
 }
 #adminPanelPage p
 {
-    font-family: NexaLight;
+    font-family: "NexaLight";
 }
 #adminPanelPage .add-product-label
 {
@@ -135,14 +134,13 @@
 
 #adminPanelPage .order
 {
-    background-color: #1e497a;
+    background-color: var(--companyBlue);
     border: 1px solid white;   
 }
 
 #adminPanelPage .order .orderItems
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     flex-wrap: wrap;
     grid-column: span 2;
 }

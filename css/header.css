@@ -2,8 +2,7 @@
 {
     z-index: 2;
     position: sticky;
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     justify-content: space-between;
     height: 86px;
     width: 100%;
@@ -25,8 +24,7 @@
 
 #header .section
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     height: 100%;
     gap: 2rem;
     align-items: center;
@@ -47,8 +45,7 @@
 
 #header .section.center button
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     gap: 0.5rem;
     color: var(--companyBlue);
     height: 25%;
@@ -57,7 +54,7 @@
 
 #header .section p
 {
-    font-family: NexaLight;
+    font-family: "NexaLight";
 }
 
 #header .section.right
@@ -111,19 +108,14 @@
     position: absolute;
     top: -2px;
     left: 15px;
-    
     background: rgb(162, 36, 36);
     color: white;
-
     width: 22px;
     height: 22px;
     text-align: center;
-    
     border-radius: 1000rem;
     padding: 3px;
-
-    font-family: NexaBold;
+    font-family: "NexaBold";
     font-size: 0.8rem;
-
     z-index: 3;
 }

@@ -26,14 +26,14 @@
 
 #item #info p
 {
-    font-family: Nexa Light;
+    font-family: "NexaLight";
     font-weight: bolder;
     margin-right: 20%;
 }
 
 #price > *
 {
-    display: inline;
+    display: inline-flex;
     padding-right: 5%;
 }
 
@@ -55,12 +55,10 @@
 
 #info form button
 {
-    background: #f15b39;
+    background: var(--companyOrange);
     color: white;
-
     border: solid 2px white;
     border-radius: 2rem;
-
     padding: 1rem 2rem;
     font-size: 1rem;
 }
@@ -68,16 +66,14 @@
 #info form button:hover
 {
     background: white;
-    color: #f15b39;
-    border: solid 2px #f15b39;
+    color: var(--companyOrange);
+    border: solid 2px var(--companyOrange);
 }
 
 #success
 {
     grid-column: 2;
     color: rgb(91, 231, 91);
-
     font-size: 1.4rem;
-
     text-align: start;
 }

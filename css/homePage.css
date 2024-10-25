@@ -5,18 +5,15 @@
 
 .pageContainer p
 {
-    font-family: NexaLight;
+    font-family: "NexaLight";
 }
 
 .semitransparentContentBox
 {
-    background:rgba(30,64,122,0.75);
-
+    background: var(--companyBlue);
     border-radius: 2rem;
     padding: 3rem;
-
     color: white;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,11 +24,9 @@
     min-width: 100dvw;
     min-height: 95dvh;
     background-image: url(../resources/otherPhotos/Hero.png);
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     display: grid;
     grid-template-columns: 1fr 1.4fr 1fr;
     grid-template-rows: repeat(4, 1fr);
@@ -55,15 +50,12 @@
 
 .ctaButtonArrow,
 .ctaButton {
-    background-color: #F15B39;
+    background-color: var(--companyOrange);
     color: white;
-
     padding: 1em 2em;
     border-radius: 2em;
-
     position:relative;
     overflow: hidden;
-
     z-index: 1;
 }
 
@@ -73,10 +65,8 @@
     color: white;
     padding: 1em 2em;
     border-radius: 2em;
-
     position: relative;
     overflow: hidden;
-
     z-index: 1;
 }
 
@@ -85,7 +75,7 @@
 .ctaButtonArrow::after 
 {
     content: "";
-    background: #FECD3E;
+    background: var(--companyYellow);
     position: absolute;
     z-index: -1;
     left: 0;
@@ -122,10 +112,8 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
     max-width: 80dvw;
     min-height: 100dvh;
-
     margin: 0 auto;
     padding: 3rem 0;
 }
@@ -136,15 +124,12 @@
     width: 100%;
     height: 100%;
     margin: 3dvh 8dvw;
-
     background-image: url('../resources/socksImages/summer_socks_homepage.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     grid-template-columns: 0.5fr 1fr 0.5fr;
     grid-template-rows: 0.6fr 1fr 0.6fr;
-
     border-radius: 2rem;
 }
 
@@ -187,7 +172,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     min-height: 100vh;
     margin: 0 8dvw;
 }
@@ -197,7 +181,6 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    
     gap: 3rem;
     margin: 2rem;
 }
@@ -218,8 +201,7 @@
 .productInfoBox
 {
     padding: 1rem;
-    background-color: #1E407A;
-
+    background-color: var(--companyBlue);
     border-bottom-left-radius: 0.4rem;
     border-bottom-right-radius: 0.4rem;
 }
@@ -229,7 +211,6 @@
     min-width: 100%;
     height: 80%;
     margin-bottom: -1rem;
-
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
@@ -274,7 +255,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     border-radius: 1.8rem;
     color: white;
 }
@@ -288,7 +268,7 @@
 #box2
 {
     grid-area: 1 / 3 / 2 / 5;
-    background-color: #FECD3E;
+    background-color: var(--companyYellow);
 
     display: flex;
     justify-content: center;
@@ -298,7 +278,7 @@
 #box3
 {
     grid-area: 2 / 3 / 3 / 5;
-    background-color: #1E407A;
+    background-color: var(--companyBlue);
 }
 
 #box4,
@@ -308,7 +288,6 @@
     display: flex;
     justify-content: center;
     align-items: end;
-
     font-size: 2rem;
     padding: 0.5rem;
 }
@@ -332,8 +311,7 @@
 #box7
 {
     grid-area: 4 / 2 / 5 / 5;
-    background-color: #1E407A;
-
+    background-color: var(--companyBlue);
     display: flex;
     flex-direction: column;
     justify-content: space-around;

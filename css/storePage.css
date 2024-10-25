@@ -39,8 +39,7 @@ main
 
 #keywords
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     flex-wrap: wrap;
     gap: 3px;
     margin-bottom: 1em;
@@ -137,8 +136,7 @@ main
 
 #products
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1.5em;

@@ -24,8 +24,7 @@
 
 .contentOfThePage > div
 {
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
     height: max-content;
     border-radius: 20px;
     background-color: #1e407aa2;
