@@ -28,11 +28,12 @@
     // ADDING ITEMS TO CART
     $item = filter_input(INPUT_POST, 'itemToDisplay');
     $addToCart = filter_input(INPUT_POST, "addToCart", FILTER_VALIDATE_BOOLEAN);
+    $product;
     if(isset($item)) 
     {
         $_SESSION['item'] = json_decode($item);
+        $product = $_SESSION['item'];
     }
-    $product = $_SESSION['item'];
 
     if(($addToCart == true) && (count($_SESSION['shoppingCart'] -> items) < 99))
     {
