@@ -202,6 +202,8 @@
             array_push($orders, $order);
             file_put_contents($filePath, json_encode($orders, JSON_PRETTY_PRINT));
         
+            // send email with a receipt
+            $GLOBALS["mailer"]->sendReceipt($order);
             return $order;
         }
    }
