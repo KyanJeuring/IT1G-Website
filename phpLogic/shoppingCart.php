@@ -148,7 +148,8 @@
             return false;
         }
 
-        public function removeFromCart($itemName) {
+        public function removeFromCart($itemName)
+        {
             foreach($this->items as $key => $item)
             {
                 if($item->name == $itemName)

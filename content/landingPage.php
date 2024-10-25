@@ -17,11 +17,11 @@
             <!-- setting up carousel structure such as: button-left | info box | button-right -->
             <button class="galleryButton" id="galleryLeftButton" onclick="prevImage()"></button>
             <div class="semitransparentContentBox">
-            <h1 class="headerText" id="carouselHeader">Summer Breeze</h1>
-            <p class="generalText" id="carouselText">Keep cool and stylish with our lightweight summer socks, ideal for every sun-filled adventure.</p>
-            <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
-                <button class="ctaButton" type="submit" name="navBtn" value="Shop">Summary Collection</button>
-            </form>
+                <h1 class="headerText" id="carouselHeader">Summer Breeze</h1>
+                <p class="generalText" id="carouselText">Keep cool and stylish with our lightweight summer socks, ideal for every sun-filled adventure.</p>
+                <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="POST">
+                    <button class="ctaButton" type="submit" name="navBtn" value="Shop">Summary Collection</button>
+                </form>
             </div>
             <button class="galleryButton" id="galleryRightButton" onclick="nextImage()"></button>
         </div>

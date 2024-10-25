@@ -164,37 +164,45 @@
             $filteredProducts = [];
 
             // product loop
-            foreach ($products as $product) {
+            foreach ($products as $product)
+            {
                 $nameMatch = false;
                 $designMatch = false;
                 $colorMatch = false;
                 $materialMatch = false;
 
                 //product check
-                if (isset($product->name)) {
+                if (isset($product->name)) 
+                {
                     $nameMatch = strpos(strtolower($product->name), $searchQuery) !== false;
                 }
-                if (isset($product->design)) {
+                if (isset($product->design)) 
+                {
                     $designMatch = strpos(strtolower($product->design), $searchQuery) !== false;
                 }
-                if (isset($product->color)) {
+                if (isset($product->color)) 
+                {
                     $colorMatch = strpos(strtolower($product->color), $searchQuery) !== false;
                 }
-                if (isset($product->material)) {
+                if (isset($product->material)) 
+                {
                     $materialMatch = strpos(strtolower($product->material), $searchQuery) !== false;
                 }
 
                 //if there's a match, it enters the filtered products variable
-                if ($nameMatch || $colorMatch || $designMatch || $materialMatch) {
+                if ($nameMatch || $colorMatch || $designMatch || $materialMatch) 
+                {
                     $filteredProducts[] = $product;
                 }
             }
             //product display
-            if (isset($filteredProducts)) {
+            if (isset($filteredProducts)) 
+            {
                 echo "<form action='" . $_SERVER['PHP_SELF'] . "' method='POST'>";
                 echo "<div id='products'>";
 
-                foreach ($filteredProducts as $product) {
+                foreach ($filteredProducts as $product) 
+                {
                     echo "<button type='submit' name='itemToDisplay' value='" . json_encode($product) . "'>";
                     echo "<input type='hidden' name='navBtn' value='Item'>";
                     echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
