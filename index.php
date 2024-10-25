@@ -1,5 +1,6 @@
 <?php
     // Classes need to be defined before session_start()
+    include("phpLogic/mailerClass.php");
     require_once("phpLogic/shoppingCart.php");
     require_once("phpLogic/userClass.php");
     session_start();

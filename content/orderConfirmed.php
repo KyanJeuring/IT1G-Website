@@ -3,6 +3,7 @@
         <img class="checkmark" src="resources/icons/svg/checkmark.svg" alt="checkmarkIcon">
         <h1>Thank you for your order</h1>
         <p>Your order has been submitted and will be shipped to you shortly.</p>
+        <?php echo $order->orderNumber;?>
         <!-- ADD ORDER SUMMARY -->
         <?php 
             // var_dump($order);
