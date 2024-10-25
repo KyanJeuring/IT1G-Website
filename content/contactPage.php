@@ -84,8 +84,8 @@
                             Phone
                         </h2>
                         <p>
-                            Mobile: +(84) 546-6789
-                            <span class="new-line">Hotline: +(84) 456-6789</span>
+                            Mobile: +31 591 123456
+                            <span class="new-line">Hotline: +31 591 654321</span>
                         </p>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                     Free Shipping
                 </h2>
                 <p>
-                    Order over 150$
+                    Order over &#8364;&#160;150
                 </p>
             </div>
         </div>
