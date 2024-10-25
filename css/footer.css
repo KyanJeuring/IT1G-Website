@@ -54,7 +54,7 @@ footer a, footer a:visited
     color: #fff;
 }
 
-footer a:hover
+footer a:hover, footer button:hover
 {
     color: var(--companyOrange);
 }

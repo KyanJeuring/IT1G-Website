@@ -35,7 +35,7 @@
         <link rel="stylesheet" href="./css/addReview.css" type="text/css">
         <link rel="stylesheet" href="./css/admin-panel.css" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-        <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="./resources/Favicons/png/SunnySocksIconBlue.png" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
         <script src="javascript/chatBot.js" defer></script>
         
@@ -84,20 +84,24 @@
             <section>
                 <h2>Products</h2>
                 <ul>
-                    <li><a href="#">Spring Socks</a></li>
-                    <li><a href="#">Summer Socks</a></li>
-                    <li><a href="#">Autumn Socks</a></li>
-                    <li><a href="#">Winter Socks</a></li>
+                    <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+                        <li><button type="submit" name="navBtn" value="Shop">Spring Socks</button></li>
+                        <li><button type="submit" name="navBtn" value="Shop">Summer Socks</button></li>
+                        <li><button type="submit" name="navBtn" value="Shop">Autumn Socks</button></li>
+                        <li><button type="submit" name="navBtn" value="Shop">Winter Socks</button></li>
+                    </form>
                 </ul>
             </section>
             <section>
                 <h2>Buying</h2>
                 <ul>
-                    <li><a href="#">shop</a></li>
-                    <li><a href="#">Terms Of Use</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">How It Works</a></li>
-                    <li><a href="#">Services</a></li>
+                    <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+                        <li><button type="submit" name="navBtn" value="Shop">Shop</button></li>
+                        <li><button type="submit" name="navBtn" value="Contact">Terms Of Use</button></li>
+                        <li><button type="submit" name="navBtn" value="Contact">Privacy</button></li>
+                        <li><button type="submit" name="navBtn" value="Contact">How It Works</button></li>
+                        <li><button type="submit" name="navBtn" value="Contact">Services</button></li>
+                    </form>
                 </ul>
             </section>
             <section>
