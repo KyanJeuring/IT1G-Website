@@ -1,0 +1,41 @@
+#emailContainer 
+{
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#emailContainer h2 
+{
+    color: #333;
+}
+
+#emailContainer table 
+{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#emailContainer th, 
+#emailContainer td 
+{
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#emailContainer th 
+{
+    text-align: left;
+    font-weight: bold;
+}
+
+#emailContainer .total 
+{
+    font-size: 1.2em;
+    margin-top: 15px;
+}
+
+#emailContainer .thank-you 
+{
+    margin-top: 20px;
+}
