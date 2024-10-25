@@ -33,6 +33,7 @@
         <link rel="stylesheet" href="./css/newsletterSignUpForm.css" type="text/css">
         <link rel="icon" href="./resources/Favicons/ico/SunnySocksIconBlue.ico" type="image/x-icon">
         <script src="javascript/main.js" type="module"></script>
+        <script src="javascript/chatBot.js" defer></script>
         
     </head>
     <body>
