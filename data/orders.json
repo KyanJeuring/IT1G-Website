@@ -118,5 +118,73 @@
         "city": "Far",
         "shippingCountry": "Where",
         "paymentMethod": "bitcoin"
+    },
+    {
+        "items": [
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Tomato",
+                "color": "orange",
+                "design": "solid",
+                "material": "cotton",
+                "price": 14.99
+            }
+        ],
+        "discount": 31.48,
+        "donation": 0,
+        "shippingCost": 14.99,
+        "totalPrice": 88.44,
+        "firstName": "asdasd",
+        "lastName": "adsasd",
+        "email": "example@example.com",
+        "countryCode": 31,
+        "phone": 12903123223,
+        "streetAddress": "asd",
+        "houseNumber": 12313,
+        "postalCode": "asd",
+        "city": "asdasd",
+        "shippingCountry": "asdasd",
+        "paymentMethod": "applePay"
     }
 ]

@@ -100,3 +100,30 @@
 {
     opacity: 1;
 }
+
+#cartButton
+{
+    position: relative;
+}
+
+#numberOfItemsInCart
+{
+    position: absolute;
+    top: -2px;
+    left: 15px;
+    
+    background: rgb(162, 36, 36);
+    color: white;
+
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    
+    border-radius: 1000rem;
+    padding: 3px;
+
+    font-family: NexaBold;
+    font-size: 0.8rem;
+
+    z-index: 3;
+}

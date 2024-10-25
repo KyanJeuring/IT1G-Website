@@ -7,7 +7,7 @@
     }
     $product = $_SESSION['item'];
 
-    if($addToCart == true)
+    if(($addToCart == true) && (count($_SESSION['shoppingCart'] -> items) < 99))
     {
         array_push($_SESSION["shoppingCart"]->items, $product);
     }
@@ -27,17 +27,20 @@
         </div>
         <p>Step Into Luxury With Our Premium Socks, Meticulously Crafted For Supreme Comfort And Enduring Style. Made With High-Quality, Soft Cotton Blends, These Socks Are Gentle On Your Skin And Provide Excellent Breathability To Keep Your Feet Cool And Dry All Day Long.</p>
         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
-            <button type="submit" name="addToCart" value=true>
-                <p>Add To Cart</p>
-            </button>
+            <button type="submit" name="addToCart" value=true>Add To Cart</button>
             <input type="hidden" name="navBtn" value="Item">
         </form>
         <?php
-            if($addToCart == true)
+            // if the user wants has clicked the add to cart button
+            if(($addToCart == true) && (count($_SESSION['shoppingCart'] -> items) < 99))
             {
-                echo "<div id='success'>";
-                    echo "<p>Item added to cart successfully!</p>";
-                echo "</div>";
+                echo "<p id='success'>Item added to cart successfully!</p>"; // display appropriate message
+                // display it using php and javascript so that it disapears after 2 seconds
+                echo "<script>
+                        setTimeout(function() {
+                            document.getElementById('success').style.display = 'none';
+                        }, 2000);
+                      </script>";
             }
         ?>
     </aside>

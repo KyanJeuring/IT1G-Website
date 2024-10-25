@@ -55,34 +55,29 @@
 
 #info form button
 {
-    width: 30%;
-    white-space: nowrap;
+    background: #f15b39;
+    color: white;
+
+    border: solid 2px white;
+    border-radius: 2rem;
+
+    padding: 1rem 2rem;
+    font-size: 1rem;
 }
 
-#info form button p
+#info form button:hover
 {
-    background-color: #f15b39;
-    margin-right: 0%;
-    color: white;
-    border-radius: 30px;
-    padding: 5% 80% 5% 20%;
-    font-size: 20px;
+    background: white;
+    color: #f15b39;
+    border: solid 2px #f15b39;
 }
 
 #success
 {
-    grid-column: 2 / 3;
-    background-color: rgb(91, 231, 91);
-    padding-left: 2%;
-    padding-top: 2%;
-    padding-right: 2%;
-    border-radius: 10px;
-    width: 45%;
-    text-align: center;
-    white-space: nowrap;
-}
+    grid-column: 2;
+    color: rgb(91, 231, 91);
 
-#success p
-{
-    font-size: large;
+    font-size: 1.4rem;
+
+    text-align: start;
 }
