@@ -76,26 +76,6 @@
                         echo "</section>";
                         echo "</div>";
                     }
-
-                    echo "<div id='R9' class='review'>";
-                    echo "<section id='rS1'>";
-                    echo "<img class='photoCustomer' src='resources/reviews/People/".$review->reviewID.".png' alt='photoCustomer'>";
-                    echo "</section>";
-                    echo "<section id='rS2'>";
-                    echo "<div>";
-                    echo "<div class='qMU'><img src='resources/reviews/qMU.png' alt='quotationMarks'></div>";
-                    echo "<div class='nameAndStars'>";
-                    echo "<h2>".$review->reviewerName." -<span class='normalText'>".$review->occupation."</span></h2>";
-                    echo "<img class='reviewStars' src='resources/reviews/".$review->rating.".png' alt='".$review->rating."'>";
-                    echo "</div>";
-                    echo "<div class='descriptionToTheReviews'>";
-                    echo "<h3>".$review->reviewTitle."</h3>";
-                    echo "<p class='normalText'>".$review->reviewContent."</p>";
-                    echo "</div>";
-                    echo "<div class='qMD'><img src='resources/reviews/qMD.png' alt='quotationMarks'></div>";
-                    echo "</div>";
-                    echo "</section>";
-                    echo "</div>";
                 ?>
             </div>
             <div class="slider-nav">
