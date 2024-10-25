@@ -7,6 +7,8 @@
 aside
 {
     grid-column: 1 / 2;
+    margin-top: 2em;
+    padding-bottom: 3em;
 }
 
 main
@@ -140,6 +142,7 @@ main
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 1.5em;
+    padding-bottom: 3em;
 }
 
 #products > *
