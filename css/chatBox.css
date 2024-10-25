@@ -28,12 +28,14 @@
     
     width: 20rem;
 
+    /* hide it at first */
     overflow: hidden;
     opacity: 0;
     pointer-events: none;
 
+    /* appear small at first, and on the bottom right of its position */
     transform: scale(0.1);
-    transform-origin: bottom right;
+    transform-origin: bottom right; 
     transition: all 0.1s ease;
 
     background: white;
@@ -44,6 +46,7 @@
     z-index: 10;
 }
 
+/* when the chat is expanded */
 .expandChat .chatBot
 {
     transform: scale(1);

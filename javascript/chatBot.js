@@ -1,11 +1,13 @@
+// declaring some important constants
 const chatInput = document.querySelector(".chatInput textarea");
 const sendChatBtn = document.querySelector(".chatInput button");
 const chatBox = document.querySelector(".chatBox");
 const chatBotToggle = document.querySelector(".chatBotToggle");
 
-let userMessage;
-const API_KEY = "";
+let userMessage; // the user's message
+const API_KEY = ""; // any API Key that works
 
+// when the message is being sent, enclose it into a list tag so that it displayed properly using css
 const createChatLi = (message, className) => {
     const chatLi = document.createElement("li");
     chatLi.classList.add("chat", className);
@@ -16,6 +18,7 @@ const createChatLi = (message, className) => {
     return chatLi;
 }
 
+// once the message is sent, generate a response accordingly
 const generateResponse = (incomingChatLi) => {
     const API_URL = "https://api.openai.com/v1/chat/completions";
     const messageElement = incomingChatLi.querySelector("p");
@@ -42,17 +45,18 @@ const generateResponse = (incomingChatLi) => {
 }
 
 const handleChat = (event) => {
-    event.preventDefault(); // Prevent default behavior if this is in a form
+    event.preventDefault(); // prevent default behavior if this is in a form
 
     userMessage = chatInput.value.trim();  // Update the global userMessage
-    if (!userMessage) return; // Exit if the message is empty
+    if (!userMessage) return; // exit if the message is empty
 
     chatBox.appendChild(createChatLi(userMessage, "outgoing"));
 
-    chatInput.value = ""; // Clear the input field after sending the message
+    chatInput.value = ""; // clear the input field after sending the message
 
-    chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom to show the latest message
+    chatBox.scrollTop = chatBox.scrollHeight; // scroll to the bottom to show the latest message
 
+    // making it so that the the bot prints out Thinking... before responding to the user
     setTimeout(() => {
         const incomingChatLi = createChatLi("Thinking...", "incoming");
         chatBox.appendChild(incomingChatLi);
@@ -60,5 +64,6 @@ const handleChat = (event) => {
     }, 600);
 }
 
+// event listeners => when the button is clicked, do the appropriate actions
 chatBotToggle.addEventListener("click", () => document.getElementById("chatBotButtonToggle").classList.toggle("expandChat"));
 sendChatBtn.addEventListener("click", handleChat);
