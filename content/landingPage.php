@@ -13,7 +13,7 @@
     <!-- gallery/carousel section (container) -->
     <section class="galleryContainer" id="galleryContainer">
         <h1 class="headerText">Browse Our Collections</h1>
-        <div class="galleryCarousel">
+        <div id="galleryCarousel">
             <!-- setting up carousel structure such as: button-left | info box | button-right -->
             <button class="galleryButton" id="galleryLeftButton" onclick="prevImage()"></button>
             <div class="semitransparentContentBox">

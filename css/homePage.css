@@ -130,14 +130,14 @@
     padding: 3rem 0;
 }
 
-.galleryCarousel
+#galleryCarousel
 {
     display: grid;
     width: 100%;
     height: 100%;
     margin: 3dvh 8dvw;
 
-    background-image: url('../resources/socksImages/autumn_socks_homepage.png');
+    background-image: url('../resources/socksImages/summer_socks_homepage.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -148,7 +148,7 @@
     border-radius: 2rem;
 }
 
-.galleryCarousel > .semitransparentContentBox
+#galleryCarousel > .semitransparentContentBox
 {
     grid-area: 2 / 2 / 3 / 3;
     gap: 2rem;
