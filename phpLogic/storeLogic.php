@@ -25,6 +25,20 @@
     $checkout = filter_input(INPUT_POST, "checkout", FILTER_VALIDATE_BOOLEAN);
     $removeFromCart = filter_input(INPUT_POST, "removeFromCart");
     
+    // ADDING ITEMS TO CART
+    $item = filter_input(INPUT_POST, 'itemToDisplay');
+    $addToCart = filter_input(INPUT_POST, "addToCart", FILTER_VALIDATE_BOOLEAN);
+    if(isset($item)) 
+    {
+        $_SESSION['item'] = json_decode($item);
+    }
+    $product = $_SESSION['item'];
+
+    if(($addToCart == true) && (count($_SESSION['shoppingCart'] -> items) < 99))
+    {
+        array_push($_SESSION["shoppingCart"]->items, $product);
+    }
+
     // MAIN
     // coupon handling
     if($couponRst) $_SESSION['shoppingCart']->currentCoupon = null;

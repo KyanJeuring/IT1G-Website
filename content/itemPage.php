@@ -1,17 +1,3 @@
-<?php 
-    $item = filter_input(INPUT_POST, 'itemToDisplay');
-    $addToCart = filter_input(INPUT_POST, "addToCart", FILTER_VALIDATE_BOOLEAN);
-    if(isset($item)) 
-    {
-        $_SESSION['item'] = json_decode($item);
-    }
-    $product = $_SESSION['item'];
-
-    if(($addToCart == true) && (count($_SESSION['shoppingCart'] -> items) < 99))
-    {
-        array_push($_SESSION["shoppingCart"]->items, $product);
-    }
-?>
 <main id="item">
     <?php
         echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";
