@@ -75,7 +75,7 @@
 
 #checkout .itemsInCart .item
 {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     height: 5rem;
     font-size: 1.5rem;
@@ -267,7 +267,7 @@
 
 #checkout .inLine
 {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
 }

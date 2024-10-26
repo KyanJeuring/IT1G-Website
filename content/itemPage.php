@@ -1,3 +1,7 @@
+<?php
+    $product = $_SESSION['item'];
+?>
+
 <main id="item">
     <?php
         echo "<img src = 'resources/products/{$product->name}.jpg' alt='{$product->name}'> ";

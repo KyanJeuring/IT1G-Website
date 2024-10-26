@@ -26,18 +26,17 @@
     $removeFromCart = filter_input(INPUT_POST, "removeFromCart");
     
     // ADDING ITEMS TO CART
-    $item = filter_input(INPUT_POST, 'itemToDisplay');
+    $itemToDisplay = filter_input(INPUT_POST, 'itemToDisplay');
     $addToCart = filter_input(INPUT_POST, "addToCart", FILTER_VALIDATE_BOOLEAN);
-    $product;
-    if(isset($item)) 
+    
+    if(isset($itemToDisplay)) 
     {
-        $_SESSION['item'] = json_decode($item);
-        $product = $_SESSION['item'];
+        $_SESSION['item'] = json_decode($itemToDisplay);
     }
 
-    if(($addToCart == true) && (count($_SESSION['shoppingCart'] -> items) < 99))
+    if(($addToCart === true) && (count($_SESSION['shoppingCart'] -> items) < 99))
     {
-        array_push($_SESSION["shoppingCart"]->items, $product);
+        array_push($_SESSION["shoppingCart"]->items, $_SESSION["item"]);
     }
 
     // MAIN

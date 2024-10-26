@@ -1,3 +1,71 @@
 [
-
+    {
+        "orderNumber": "CB8AE524-0F5D-4A9E-BB09-C273F7431727",
+        "items": [
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Tomato",
+                "color": "orange",
+                "design": "solid",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Lemon Whirl",
+                "color": "yellow",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Navy Drift",
+                "color": "green",
+                "design": "striped",
+                "material": "cotton",
+                "price": 14.99
+            },
+            {
+                "name": "Sunny Socks",
+                "color": "yellow",
+                "design": "solid",
+                "material": "cotton",
+                "price": 14.99
+            }
+        ],
+        "discount": 31.48,
+        "donation": 13,
+        "shippingCost": 0.99,
+        "totalPrice": 87.44,
+        "firstName": "Peter",
+        "lastName": "Kapsiar",
+        "email": "kapsiar888n@gmail.com",
+        "countryCode": 31,
+        "phone": 123455670,
+        "streetAddress": "Street",
+        "houseNumber": 12,
+        "postalCode": "3456",
+        "city": "City",
+        "shippingCountry": "Netherlands",
+        "paymentMethod": "visa"
+    }
 ]
